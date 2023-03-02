@@ -1,5 +1,4 @@
 #include <iostream>
-#include <thread>
 #include <vector>
 #define N 20
 
