@@ -48,8 +48,9 @@ int main(int argc, char* argv[]){
         threads.push_back(std::thread(job, start, end));
         start += size;
     }
+
+    for(int i = 0; i < numThreads; i++)    
+        threads[i].join();
+
     printVector(w);
-    //for(int i = 0; i < numThreads; i++)
-        
-        //threads[i].join();
 }
