@@ -1,56 +1,70 @@
-#include <thread>
 #include <iostream>
+#include <thread>
+#include <string>
 #include <vector>
-#define N 20
+#include <cmath>
 
-//shared resources
-std::vector<int> v(N);
-std::vector<int> w(N, 0);
-
+using namespace std; 
 
 int f(int value){
     return (2 * value) + 1;
 }
 
-void job(int start, int end){
-    for(int i = start; i < end; i++)
-        w[i] = f(v[i]); 
-}
-
-void printVector(std::vector<int> vect){
-    for(int i = 0; i < vect.size(); i++){
-        std::cout << vect[i] << " ";
+void job(vector<int>& v, vector<int>& w, int start, int end){
+    for(int i = start; i < end; i++){
+        w[i] = f(v[i]);
     }
-    std::cout << "\n";
 }
 
-//for simplicity we assume that N is a multiple of numThreads
-int main(int argc, char* argv[]){
-    uint32_t numThreads = (argc == 1) ? 4 : atoi(argv[1]);
+void printVector(vector<int> v){
+    for(int i = 0; i < v.size(); i++)
+        cout << v[i] << " ";
+    cout << "\n";
+}
 
-    if(numThreads > N){
-        std::cerr << "Number of Threads must be <= " << N << std::endl;
+int main(int argc, char* argv[]){    
+    int dim, numthreads;
+    
+    if(argc < 3){
+        cerr << "Too few Arguments!" << "\n";
         exit(EXIT_FAILURE);
     }
-    std::srand(time(nullptr));
+    else{
+        dim = atoi(argv[1]); //dim vector
+        numthreads = atoi(argv[2]); //number of threads
+    }
 
-    for(int i = 0; i < N; i++){
-        v[i] = std::rand() % 10;
+    vector<int> v(dim);
+    vector<int> u(v.size(), 0);
+    vector<thread> pool;
+   
+    for(int i = 0; i < dim; i++){
+        v[i] = i;
     }
     printVector(v);
-    //every thread take a portion of vector from i to i+size
-    uint32_t size = N / numThreads;  
 
-    std::vector<std::thread> threads;
-    int start = 0, end = size;
-    for(int i = 0; i < numThreads; i++){
-        end = start + size;
-        threads.push_back(std::thread(job, start, end));
+    int size;
+    if(numthreads <= dim)
+        size = ceil((float)dim / (float)numthreads); 
+    else
+        size = 1;
+
+    int start = 0, end;
+    for(int i = 0; i < min(dim, numthreads); i++){
+        if((start + size) > (dim - 1)){
+            end = dim;
+        }
+        else
+            end = start + size;
+            
+        pool.push_back(thread(job, ref(v), ref(u), start, end));
         start += size;
     }
 
-    for(int i = 0; i < numThreads; i++)    
-        threads[i].join();
+    for(int i = 0; i < pool.size(); i++){
+        pool[i].join();
+    }
 
-    printVector(w);
+    printVector(u);
+    
 }
