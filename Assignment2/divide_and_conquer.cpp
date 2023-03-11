@@ -13,17 +13,29 @@ int f(int value){
 }
 
 void job(vector<int>& v, vector<int>& w, int start, int end, uint32_t threshold, uint32_t k){
-    if((end - start) <= threshold){ //base case
+    if(abs((end - start)) <= threshold){ //base case
         for(int i = start; i < end; i++){
             w[i] = f(v[i]);
         }
     }
     else{ //recursive case
-        int mid = (start + end) / 2;
-        thread t1(job, ref(v), ref(w), start, mid, threshold);
-        thread t2(job, ref(v), ref(w), mid, end, threshold);
-        t1.join();
-        t2.join();
+        vector<thread> pool;
+        int length = end - start;
+        int size = ceil((float)length / float(k));
+        int tmpEnd;
+        for(int i = 0; i < k; i++){
+            if((start + size) > (end - 1)){
+                tmpEnd = end - 1;
+            }
+            else
+                tmpEnd = start + size;
+            pool.push_back(thread(job, ref(v), ref(w), start, tmpEnd, threshold, k));
+            start += size;
+        }
+
+        for(int i = 0; i < pool.size(); i++){
+            pool[i].join();
+        }
     }
 
 }
@@ -57,15 +69,17 @@ int main(int argc, char* argv[]){
     }
 
     utimer to("usec:");
-    if(length < threshold){ //sequential resolution
+    if(length <= threshold){ //sequential resolution
         transform(v.begin(), v.end(), w.begin(), f);
     }
-    else{ //parallel with divide and conquer
+    else{ //parallel with divide and conquer (k sub-groups)
         int mid = length / 2;
-        thread t1(job, ref(v), ref(w), 0, mid, threshold, k);
-        thread t2(job, ref(v), ref(w), mid, length, threshold, k);
+        vector<thread> pool;
 
-        t1.join();
-        t2.join();
+        for(int i = 0; i < k; i++)
+            pool.push_back(thread (job, ref(v), ref(w), 0, length, threshold, k));
+        
+        for(int i = 0; i < pool.size(); i++)
+            pool[i].join();
     }
 }
