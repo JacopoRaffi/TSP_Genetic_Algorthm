@@ -18,7 +18,6 @@ void job(vector<int>& v, vector<int>& w, int start, int end, uint32_t threshold)
     }
     else{ //recursive case
         int mid = (start + end) / 2;
-        cout << start << " " << end << " " << mid << "\n";
         thread t1(job, ref(v), ref(w), start, mid, threshold);
         thread t2(job, ref(v), ref(w), mid, end, threshold);
         t1.join();
