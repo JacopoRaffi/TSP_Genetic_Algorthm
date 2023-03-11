@@ -4,6 +4,8 @@
 #include <cmath>
 #include <algorithm>
 
+#include "../utimer.hpp"
+
 using namespace std;
 
 int f(int value){
@@ -52,8 +54,7 @@ int main(int argc, char* argv[]){
         v[i] = i;
     }
 
-    printVector(v);
-
+    utimer to("usec:");
     if(length < threshold){ //sequential resolution
         transform(v.begin(), v.end(), w.begin(), f);
     }
@@ -65,5 +66,4 @@ int main(int argc, char* argv[]){
         t1.join();
         t2.join();
     }
-    printVector(w);
 }
