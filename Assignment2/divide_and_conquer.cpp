@@ -12,7 +12,7 @@ int f(int value){
     return (2 * value) + 1;
 }
 
-void job(vector<int>& v, vector<int>& w, int start, int end, uint32_t threshold){
+void job(vector<int>& v, vector<int>& w, int start, int end, uint32_t threshold, uint32_t k){
     if((end - start) <= threshold){ //base case
         for(int i = start; i < end; i++){
             w[i] = f(v[i]);
@@ -38,15 +38,17 @@ int main(int argc, char* argv[]){
     /*
     * Parameters: 
     * Length of Vector
-    * Threshold m (base case of divide and conquer)      
+    * Threshold m (base case of divide and conquer)   
+    * k sub-groups   
     */
-    if(argc < 3){
+    if(argc < 4){
         cerr << "Too few Arguments" << endl;
         exit(EXIT_FAILURE);
     }
 
     uint32_t length = atoi(argv[1]);
-    uint32_t threshold = atoi(argv[2]); 
+    uint32_t threshold = atoi(argv[2]);
+    uint32_t k = atoi(argv[3]); 
     vector<int> v(length);
     vector<int> w(v.size(), 0);
 
@@ -60,8 +62,8 @@ int main(int argc, char* argv[]){
     }
     else{ //parallel with divide and conquer
         int mid = length / 2;
-        thread t1(job, ref(v), ref(w), 0, mid, threshold);
-        thread t2(job, ref(v), ref(w), mid, length, threshold);
+        thread t1(job, ref(v), ref(w), 0, mid, threshold, k);
+        thread t2(job, ref(v), ref(w), mid, length, threshold, k);
 
         t1.join();
         t2.join();
