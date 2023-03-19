@@ -21,7 +21,7 @@ int hash_to_reducer(string word, int dim){
     return hash_fun(word) % dim;        
 }
 
-void mapper(int start, int end, vector<string>& words, int reducers, vector<blockingqueue<pair<string, int>>>& reducer_queue){
+void mapper(int start, int end, vector<string>& words, vector<blockingqueue<pair<string, int>>>& reducer_queue){
     //first transform words in a vector of pair
     vector<pair<string, int>> out_map(end - start);
     transform(words.begin()+start, words.begin()+end, out_map.begin(), map_f);
@@ -40,7 +40,7 @@ void mapper(int start, int end, vector<string>& words, int reducers, vector<bloc
     //send pair <word, value> to reducer
     for(pair<string, int> p : pairs){
         //todo: insert in reducers queue
-        int index = hash_to_reducer(p.first, reducers);
+        int index = hash_to_reducer(p.first, reducer_queue.size());
     }
 }
 
