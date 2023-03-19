@@ -10,6 +10,7 @@
  * use a vector of queues (vector<queue>), remember to synchronize queues;
  * reducers are aync, they return a vector of pair (vector<word, int>);
  * thread main wil join async and fuse the vectors into a single one;
+ * it could be useful to create a blocking-queue;
 */
 
 
