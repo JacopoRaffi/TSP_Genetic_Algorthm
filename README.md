@@ -13,3 +13,6 @@ b) if the vector length is longer than m split the vector into 2 chunks (half an
 
 "Compute in parallel" means either using threads or asyncs, whatever you like. <br />
 Please consider the amount of overall threads/asyncs you'll generate. Also consider the possibility to split the vector of len > m in more than 2 subvectors, e.g. in k (param) sub vectors. <br />
+
+## Assignment 3:
+Parallel implementation of a google map reduce pattern, on shared memory multicore, using c++ threads. Sample sequential code discussed.
