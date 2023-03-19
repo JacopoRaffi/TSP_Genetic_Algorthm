@@ -11,7 +11,7 @@ class blockingqueue{
 public:
     T pop(){
         std::lock_guard<std::mutex>(m);
-        condition.wait(m, []() {return empty; });
+        condition.wait(m, [this]() {return empty; });
 
         T value = q.front();
         q.pop();

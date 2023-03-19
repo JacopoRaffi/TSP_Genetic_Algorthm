@@ -7,6 +7,7 @@
 #include <cmath>
 #include <algorithm>
 #include <functional>
+#include "blockingqueue.hpp"
 
 using namespace std;
 
@@ -20,7 +21,7 @@ int hash_to_reducer(string word, int dim){
     return hash_fun(word) % dim;        
 }
 
-void mapper(int start, int end, vector<string>& words, int reducers){
+void mapper(int start, int end, vector<string>& words, int reducers, vector<blockingqueue<pair<string, int>>>& reducer_queue){
     //first transform words in a vector of pair
     vector<pair<string, int>> out_map(end - start);
     transform(words.begin()+start, words.begin()+end, out_map.begin(), map_f);
@@ -64,6 +65,11 @@ int main(int argc, char* argv[]){
     }
 
     vector<thread> map_pool; 
+    vector<blockingqueue<pair<string, int>>> reducers_queues;
+    for(int i = 0; i < reducers; i++){
+        blockingqueue<pair<string, int>> queue;
+        reducers_queues.push_back(queue); 
+    }
     int size;
     uint32_t dim = words.size();
     if(mappers <= dim)
@@ -79,7 +85,7 @@ int main(int argc, char* argv[]){
         else
             end = start + size;
             
-        map_pool.push_back(thread(mapper, start, end, ref(words)));
+        map_pool.push_back(thread(mapper, start, end, ref(words), ref(reducers_queues)));
         start += size;
     }
     vector<future<pair<string, int>>> reduce_pool;
