@@ -21,6 +21,11 @@ int hash_to_reducer(string word, int dim){
     return hash_fun(word) % dim;        
 }
 
+//reducer made with async (parameter is its blockingqueue)
+vector<pair<string, int>> reducer(blockingqueue<pair<string, int>>& queue_i){
+
+}
+
 void mapper(int start, int end, vector<string>& words, vector<blockingqueue<pair<string, int>>>& reducer_queue){
     //first transform words in a vector of pair
     vector<pair<string, int>> out_map(end - start);
