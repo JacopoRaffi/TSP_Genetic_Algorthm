@@ -5,6 +5,7 @@
 #include <queue>
 #include <mutex>
 #include <condition_variable>
+#include <iostream>
 
 template<typename T>
 class blockingqueue{
@@ -15,8 +16,8 @@ public:
     }
 
     T pop(){
-        std::lock_guard<std::mutex>(*m);
-        condition->wait(*m, [this]() {return empty; });
+        std::unique_lock<std::mutex> lc(*m);
+        condition->wait(lc, [this]() {return !empty; });
 
         T value = q.front();
         q.pop();
@@ -26,7 +27,8 @@ public:
     }
 
     void push(T& value){
-        std::lock_guard<std::mutex>(*m);
+        std::unique_lock<std::mutex> lc(*m);
+        std::cout << "ciao\n";
         q.push(value);
         empty = false;
         condition->notify_all();
