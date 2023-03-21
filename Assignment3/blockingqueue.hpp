@@ -18,7 +18,7 @@ public:
 
     T pop(){
         std::unique_lock<std::mutex> lc(*m);
-        condition->wait(lc, [this]() {return (!empty); });
+        condition->wait(lc, [&]() {return (!empty); });
         T value = q.front();
         q.pop();
         empty = q.empty();
