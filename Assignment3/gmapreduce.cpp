@@ -11,6 +11,7 @@
 
 using namespace std;
 
+//TODO: remove atomic variable and study something for interrupt waiting thread
 atomic<int> num_elem = 0;
 
 pair<string, int> map_f(string word){
@@ -19,7 +20,6 @@ pair<string, int> map_f(string word){
 
 int hash_to_reducer(string word, int dim){
     hash<string> hash_fun;
-
     return hash_fun(word) % dim;        
 }
 
@@ -29,7 +29,10 @@ vector<pair<string, int>> reducer(blockingqueue<pair<string, int>>& queue_i, int
     map<string, int> mapRed;
 
     while(num_elem < n){
+        cout << num_elem << "\n";
+        cout << this_thread::get_id() << "\n";
         pair<string, int> p = queue_i.pop();
+        cout << p.first << " " << p.second << "\n";
         if(mapRed.contains(p.first)){
             mapRed[p.first] += p.second;
         }else{
