@@ -7,6 +7,7 @@
 #include <cmath>
 #include <algorithm>
 #include <functional>
+#include <atomic>
 #include "blockingqueue.hpp"
 
 using namespace std;
@@ -29,8 +30,6 @@ vector<pair<string, int>> reducer(blockingqueue<pair<string, int>>& queue_i, int
     map<string, int> mapRed;
 
     while(num_elem < n){
-        cout << num_elem << "\n";
-        cout << this_thread::get_id() << "\n";
         pair<string, int> p = queue_i.pop();
         cout << p.first << " " << p.second << "\n";
         if(mapRed.contains(p.first)){

@@ -4,6 +4,7 @@
 //a simplified blocking queue (max length is "infinite")
 #include <queue>
 #include <mutex>
+#include <atomic>
 #include <condition_variable>
 #include <iostream>
 
@@ -17,12 +18,11 @@ public:
 
     T pop(){
         std::unique_lock<std::mutex> lc(*m);
-        condition->wait(lc, [this]() {return !empty; });
-
+        condition->wait(lc, [this]() {return (!empty); });
         T value = q.front();
         q.pop();
         empty = q.empty();
-
+        
         return value;
     }
 
