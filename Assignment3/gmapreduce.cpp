@@ -35,16 +35,12 @@ vector<pair<string, int>> reducer(blockingqueue<pair<string, int>>& queue_i, int
         }else{
             mapRed[p.first] = p.second;
         }
-
         num_elem += p.second;
     }
-
     for(pair<string, int> pa : mapRed){
         v.push_back(pa);
     }
-
     return v;
-    
 }
 
 void mapper(int start, int end, vector<string>& words, vector<blockingqueue<pair<string, int>>>& reducer_queue){
