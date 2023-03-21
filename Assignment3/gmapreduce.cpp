@@ -11,6 +11,8 @@
 
 using namespace std;
 
+atomic<int> num_elem = 0;
+
 pair<string, int> map_f(string word){
     return make_pair(word, 1);
 }
@@ -22,8 +24,26 @@ int hash_to_reducer(string word, int dim){
 }
 
 //reducer made with async (parameter is its blockingqueue)
-vector<pair<string, int>> reducer(blockingqueue<pair<string, int>>& queue_i){
+vector<pair<string, int>> reducer(blockingqueue<pair<string, int>>& queue_i, int n){
     vector<pair<string, int>> v;
+    map<string, int> mapRed;
+
+    while(num_elem < n){
+        pair<string, int> p = queue_i.pop();
+        if(mapRed.contains(p.first)){
+            mapRed[p.first] += p.second;
+        }else{
+            mapRed[p.first] = p.second;
+        }
+
+        num_elem += p.second;
+    }
+
+    for(pair<string, int> pa : mapRed){
+        v.push_back(pa);
+    }
+
+    return v;
     
 }
 
@@ -89,7 +109,7 @@ int main(int argc, char* argv[]){
     }
     vector<future<vector<pair<string, int>>>> reduce_pool;
     for(int i = 0; i < reducers; i++){
-        reduce_pool.push_back(async(std::launch::async, reducer, ref(reducers_queues[i])));
+        reduce_pool.push_back(async(std::launch::async, reducer, ref(reducers_queues[i]), words.size()));
     }
 
     vector<pair<string, int>> output; //final output of the map-reduce
