@@ -28,7 +28,6 @@ public:
 
     void push(T& value){
         std::unique_lock<std::mutex> lc(*m);
-        std::cout << "ciao\n";
         q.push(value);
         empty = false;
         condition->notify_all();

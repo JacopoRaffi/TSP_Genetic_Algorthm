@@ -50,12 +50,6 @@ void mapper(int start, int end, vector<string>& words, vector<blockingqueue<pair
     }
 }
 
-/* TODO:
- * reducers are aync, they return a vector of pair (vector<word, int>);
- * thread main wil join async and fuse the vectors into a single one;
- * it could be useful to create a blocking-queue;
-*/
-
 int main(int argc, char* argv[]){
     if(argc < 3)
         cout << "At least 2 arguments!\n";
@@ -93,4 +87,6 @@ int main(int argc, char* argv[]){
         start += size;
     }
     vector<future<pair<string, int>>> reduce_pool;
+    for(int i = 0; i < mappers; i++)
+        map_pool[i].join();
 }
