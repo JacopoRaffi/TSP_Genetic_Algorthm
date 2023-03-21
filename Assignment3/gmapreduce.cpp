@@ -23,7 +23,8 @@ int hash_to_reducer(string word, int dim){
 
 //reducer made with async (parameter is its blockingqueue)
 vector<pair<string, int>> reducer(blockingqueue<pair<string, int>>& queue_i){
-
+    vector<pair<string, int>> v;
+    
 }
 
 void mapper(int start, int end, vector<string>& words, vector<blockingqueue<pair<string, int>>>& reducer_queue){
@@ -86,7 +87,20 @@ int main(int argc, char* argv[]){
         map_pool.push_back(thread(mapper, start, end, ref(words), ref(reducers_queues)));
         start += size;
     }
-    vector<future<pair<string, int>>> reduce_pool;
+    vector<future<vector<pair<string, int>>>> reduce_pool;
+    for(int i = 0; i < reducers; i++){
+        reduce_pool.push_back(async(std::launch::async, reducer, ref(reducers_queues[i])));
+    }
+
+    vector<pair<string, int>> output; //final output of the map-reduce
+    for(int i = 0; i < reducers; i++){
+        //merge of results of asyncs
+        vector<pair<string, int>> res = reduce_pool[i].get();
+        output.insert(output.end(), res.begin(), res.end());
+    }
+
     for(int i = 0; i < mappers; i++)
         map_pool[i].join();
+    
+    cout << "ciao";
 }
