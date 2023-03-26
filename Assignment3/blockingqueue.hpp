@@ -17,9 +17,12 @@ public:
         condition = new std::condition_variable();
     }
 
-    T pop(){
+    std::optional<T> pop(){
         std::unique_lock<std::mutex> lc(*m);
         condition->wait(lc, [&]() {return (!empty); });
+        if(empty){
+            return {};    
+        }
         T value = q.front();
         q.pop();
         empty = q.empty();
@@ -35,7 +38,7 @@ public:
     }
 
 private:
-    std::queue<std::optional<T>> q;
+    std::queue<T> q;
     std::mutex *m;
     std::condition_variable *condition;
     bool empty = true;
