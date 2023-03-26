@@ -7,6 +7,7 @@
 #include <atomic>
 #include <condition_variable>
 #include <iostream>
+#include <optional>
 
 template<typename T>
 class blockingqueue{
@@ -34,7 +35,7 @@ public:
     }
 
 private:
-    std::queue<T> q;
+    std::queue<std::optional<T>> q;
     std::mutex *m;
     std::condition_variable *condition;
     bool empty = true;
