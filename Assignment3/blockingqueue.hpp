@@ -20,17 +20,13 @@ public:
     std::optional<T> pop(){
         std::unique_lock<std::mutex> lc(*m);
         condition->wait(lc, [&]() {return (!empty); });
-        if(empty){
-            return {};    
-        }
-        T value = q.front();
+        std::optional<T> value = q.front();
         q.pop();
         empty = q.empty();
-        
         return value;
     }
 
-    void push(T& value){
+    void push(std::optional<T> value){
         std::unique_lock<std::mutex> lc(*m);
         q.push(value);
         empty = false;
@@ -38,7 +34,7 @@ public:
     }
 
 private:
-    std::queue<T> q;
+    std::queue<std::optional<T>> q;
     std::mutex *m;
     std::condition_variable *condition;
     bool empty = true;
