@@ -110,7 +110,7 @@ int main(int argc, char* argv[]){
     }
 
     for(int i = 0; i < mappers; i++)
-        map_pool[i].join();
+        map_pool[i].join();  
     
     for(int i = 0; i < reducers; i++)
         reducers_queues[i].push({});
