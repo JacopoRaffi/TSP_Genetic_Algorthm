@@ -12,7 +12,6 @@
 
 using namespace std;
 
-//TODO: remove atomic variable and study something for interrupt waiting thread
 atomic<int> num_elem = 0;
 
 pair<string, int> map_f(string word){
@@ -30,8 +29,12 @@ vector<pair<string, int>> reducer(blockingqueue<pair<string, int>>& queue_i, int
     map<string, int> mapRed;
 
     while(num_elem < n){
-        pair<string, int> p = queue_i.pop();
-        cout << p.first << " " << p.second << "\n";
+        optional<pair<string, int>> op = queue_i.pop();
+        pair<string, int> p;
+        if(op.has_value())
+            p = op.value();
+        else
+            break;
         if(mapRed.contains(p.first)){
             mapRed[p.first] += p.second;
         }else{
@@ -48,6 +51,7 @@ vector<pair<string, int>> reducer(blockingqueue<pair<string, int>>& queue_i, int
 void mapper(int start, int end, vector<string>& words, vector<blockingqueue<pair<string, int>>>& reducer_queue){
     //first transform words in a vector of pair
     vector<pair<string, int>> out_map(end - start);
+    cout << end-start << "\n";
     transform(words.begin()+start, words.begin()+end, out_map.begin(), map_f);
     map<string, int> pairs;
 
@@ -82,6 +86,7 @@ int main(int argc, char* argv[]){
     }
 
     vector<thread> map_pool; 
+    cout << map_pool.max_size() << "\n";
     vector<blockingqueue<pair<string, int>>> reducers_queues;
     for(int i = 0; i < reducers; i++){
         blockingqueue<pair<string, int>> queue;
@@ -110,6 +115,12 @@ int main(int argc, char* argv[]){
         reduce_pool.push_back(async(std::launch::async, reducer, ref(reducers_queues[i]), words.size()));
     }
 
+    for(int i = 0; i < mappers; i++)
+        map_pool[i].join();
+    
+    for(int i = 0; i < reducers; i++)
+        reducers_queues[i].push({});
+
     vector<pair<string, int>> output; //final output of the map-reduce
     for(int i = 0; i < reducers; i++){
         //merge of results of asyncs
@@ -117,8 +128,7 @@ int main(int argc, char* argv[]){
         output.insert(output.end(), res.begin(), res.end());
     }
 
-    for(int i = 0; i < mappers; i++)
-        map_pool[i].join();
-    
-    cout << "ciao";
+    for(pair<string, int> p : output){
+        cout << p.first << "-" << p.second << "\n";
+    }
 }
