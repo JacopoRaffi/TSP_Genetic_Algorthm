@@ -12,8 +12,6 @@
 
 using namespace std;
 
-atomic<int> num_elem = 0;
-
 pair<string, int> map_f(string word){
     return make_pair(word, 1);
 }
@@ -24,11 +22,11 @@ int hash_to_reducer(string word, int dim){
 }
 
 //reducer made with async (parameter is its blockingqueue)
-vector<pair<string, int>> reducer(blockingqueue<pair<string, int>>& queue_i, int n){
+vector<pair<string, int>> reducer(blockingqueue<pair<string, int>>& queue_i){
     vector<pair<string, int>> v;
     map<string, int> mapRed;
 
-    while(num_elem < n){
+    while(true){
         optional<pair<string, int>> op = queue_i.pop();
         pair<string, int> p;
         if(op.has_value())
@@ -40,7 +38,6 @@ vector<pair<string, int>> reducer(blockingqueue<pair<string, int>>& queue_i, int
         }else{
             mapRed[p.first] = p.second;
         }
-        num_elem += p.second;
     }
     for(pair<string, int> pa : mapRed){
         v.push_back(pa);
@@ -51,7 +48,6 @@ vector<pair<string, int>> reducer(blockingqueue<pair<string, int>>& queue_i, int
 void mapper(int start, int end, vector<string>& words, vector<blockingqueue<pair<string, int>>>& reducer_queue){
     //first transform words in a vector of pair
     vector<pair<string, int>> out_map(end - start);
-    cout << end-start << "\n";
     transform(words.begin()+start, words.begin()+end, out_map.begin(), map_f);
     map<string, int> pairs;
 
@@ -86,7 +82,6 @@ int main(int argc, char* argv[]){
     }
 
     vector<thread> map_pool; 
-    cout << map_pool.max_size() << "\n";
     vector<blockingqueue<pair<string, int>>> reducers_queues;
     for(int i = 0; i < reducers; i++){
         blockingqueue<pair<string, int>> queue;
@@ -112,7 +107,7 @@ int main(int argc, char* argv[]){
     }
     vector<future<vector<pair<string, int>>>> reduce_pool;
     for(int i = 0; i < reducers; i++){
-        reduce_pool.push_back(async(std::launch::async, reducer, ref(reducers_queues[i]), words.size()));
+        reduce_pool.push_back(async(std::launch::async, reducer, ref(reducers_queues[i])));
     }
 
     for(int i = 0; i < mappers; i++)
