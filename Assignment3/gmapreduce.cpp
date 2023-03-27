@@ -63,7 +63,6 @@ void mapper(int start, int end, vector<string>& words, vector<blockingqueue<pair
     }
     //send pair <word, value> to reducer
     for(pair<string, int> p : pairs){
-        //todo: insert in reducers queue
         int index = hash_to_reducer(p.first, reducer_queue.size());
         reducer_queue[index].push(p);
     }
