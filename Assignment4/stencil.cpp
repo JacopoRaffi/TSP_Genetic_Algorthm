@@ -59,11 +59,11 @@ int main(int argc, char* argv[]){
             A[i][j] = rand();
             B[i][j] = A[i][j];
         }
-    {
-        string str = "Threads " + to_string(nw) + ": ";
-        utimer t(str);
-    }
+    
+    string str = "Threads " + to_string(nw) + ": ";
+    utimer t(str);
 
+    
     return 0;
 }
 
