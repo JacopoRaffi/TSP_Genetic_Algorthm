@@ -8,7 +8,7 @@
 
 using namespace std;
 
-#define N 10
+#define N 1000
 
 inline float f(int i, int j, float M[][N]){
     float res = M[i][j] + (i!=0)*M[i-1][j] + (j!=0)*M[i][j-1] + (j!=(N-1))*M[i][j+1] + (i!=(N-1))*M[i+1][j];
@@ -68,20 +68,20 @@ int main(int argc, char* argv[]){
         }
     int it = 0;
     bool run = true;
+    int i, j;
     string str = "Threads " + to_string(nw) + ": ";
     {
         utimer t(str);
         while(run && (it <= max_it)){
             run = false;
-
-            for(int i = 0; i < N; i++){
-                for(int j = 0; j < N; j++){
-                    A[i][j] = f(i, j, B);
-                    
-                    if(abs(A[i][j] - B[i][j]) > epsilon)
-                        run = true;
+            //TODO: pragma omp
+                for(i = 0; i < N; i++){
+                    for(j = 0; j < N; j++){
+                        A[i][j] = f(i, j, B);
+                        if(abs(A[i][j] - B[i][j]) > epsilon)
+                           run = true;
+                    }
                 }
-            }
             swap(A, B);
             it++;
         }
