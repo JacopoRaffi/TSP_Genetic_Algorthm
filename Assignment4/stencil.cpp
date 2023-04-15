@@ -6,9 +6,8 @@
 #include <limits>
 
 using namespace std;
-#define N 1000
 
-float f(int i, int j, float M[][N]){
+float f(int i, int j, float** M, int N){
     float res = M[i][j];
     float count = 1.0;
 
@@ -35,7 +34,7 @@ float f(int i, int j, float M[][N]){
     return (res/count);
 }
 
-void printM(float M[][N]){
+void printM(float **M, int N){
     cout << "\n";
     for(int i = 0; i < N; i++){
         for(int j = 0; j < N; j++)
@@ -52,9 +51,15 @@ int main(int argc, char* argv[]){
     int max_it = atoi(argv[1]);
     float epsilon = atof(argv[2]);
     int nw = atoi(argv[3]);
+    int N = atoi(argv[4]);
 
-    float A[N][N];
-    float B[N][N];
+    float **A = new float*[N];
+    float **B = new float*[N];
+
+    for(int i = 0; i < N; i++){
+        A[i] = new float[N];
+        B[i] = new float[N];
+    }
 
     for(int i = 0; i < N; i++)
         for(int j = 0; j < N; j++){
@@ -66,16 +71,16 @@ int main(int argc, char* argv[]){
     bool run = true;
     utimer ut("croficihisset: ");
 
-    #pragma omp parallel num_threads(nw) shared(A,B) firstprivate(it,epsilon) private(i,j)
+    #pragma omp parallel num_threads(nw) shared(A,B,run) firstprivate(it,epsilon)
     {
         #pragma omp single
         {
             while(run && (it < max_it)){
                 run = false;
-                #pragma omp taskloop
+                #pragma omp taskloop private(i,j)
                     for(i = 0; i < N; i++){
                         for(j = 0; j < N; j++){
-                            A[i][j] = f(i, j, B);
+                            A[i][j] = f(i, j, B, N);
                             if(abs(A[i][j] - B[i][j]) >= epsilon){
                                 run = true;
                             }
