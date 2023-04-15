@@ -9,14 +9,13 @@ using namespace std;
 
 float f(int i, int j, float** M, int N){
     float res = M[i][j];
-    float count = 1 + (i!=0) + (j!=0) + (j!=(N-1)) + (i != (N-1));
 
-    res += (i!=0)*M[i-1][j]; //Nord
-    res += (i!=(N-1))*M[i+1][j]; //Sud
-    res += (j!=(N-1))*M[i][j+1]; //Est
-    res += (j!=0)*M[i][j-1]; //Ovest
+    res += (i !=0 )*M[i-1][j]; //Nord
+    res += (i != (N-1))*M[i+1][j]; //Sud
+    res += (j != (N-1))*M[i][j+1]; //Est
+    res += (j != 0)*M[i][j-1]; //Ovest
     
-    return (res/count);
+    return (res);
 }
 
 void printM(float **M, int N){
@@ -56,22 +55,17 @@ int main(int argc, char* argv[]){
     bool run = true;
     utimer ut("TIME: ");
 
-    #pragma omp parallel num_threads(nw) shared(A,B,run) firstprivate(it,epsilon,max_it)
-    {
-        #pragma omp single
-        {
-            while(run && (it < max_it)){
-                run = false;
-                #pragma omp taskloop private(i,j) collapse(2)
-                    for(i = 0; i < N; i++){
-                        for(j = 0; j < N; j++){
-                            A[i][j] = f(i, j, B, N);
-                            run = abs(A[i][j] - B[i][j]) >= epsilon;
-                        }
-                    }
-                swap(A, B);
-                it++;
+    while(run && (it < max_it)){
+        run = false;
+        for(i = 0; i < N; i++){
+            //TODO: how to use #pragma omp simd?
+            for(j = 0; j < N; j++){
+                float count = 1 + (i!=0) + (j!=0) + (j!=(N-1)) + (i != (N-1));
+                A[i][j] = f(i, j, B, N) / count;
+                run = abs(A[i][j] - B[i][j]) >= epsilon;
             }
         }
-    } 
+        swap(A, B);
+        it++;
+    }
 }
