@@ -1,92 +1,89 @@
+#include <thread>
 #include <iostream>
-#include <vector>
-#include <omp.h>
-#include <cmath>
-#include <unistd.h>
-#include <utility>
 #include "../utimer.hpp"
+#include <omp.h>
+#include <utility>
+#include <limits>
 
 using namespace std;
-
 #define N 1000
 
-inline float f(int i, int j, float M[][N]){
-    float res = M[i][j] + (i!=0)*M[i-1][j] + (j!=0)*M[i][j-1] + (j!=(N-1))*M[i][j+1] + (i!=(N-1))*M[i+1][j];
-    float count = (i!=0) + (j!=0) + (i!=(N-1)) + (j!=(N-1)) + 1;
+float f(int i, int j, float M[][N]){
+    float res = M[i][j];
+    float count = 1.0;
+
+    if(i != 0){ //Nord
+        res += M[i-1][j];
+        count++;
+    }
+
+    if(i != (N-1)){ //Sud
+        res += M[i+1][j];
+        count++;
+    }
+
+    if(j != 0){ //Ovest
+        res += M[i][j-1];
+        count++;
+    }
+
+    if(j != (N-1)){ //Est
+        res += M[i][j+1];
+        count++;
+    }
 
     return (res/count);
 }
 
-//compile with -O3 -fopt-info-vec-all grep <file_name>.cpp 2>&1 | grep <file_name>.cpp for seeing vectorization
-int main(int argc, char* argv[]){
-    /*
-    * command line args:
-    * -N: dim-matrix,
-    * -i: max_iterations,
-    * -e: delta-error(epsilon),
-    * -w: num_threads 
-    */
-
-    int16_t epsilon = -1;
-    uint32_t max_it = 1000;
-    uint32_t nw = 1; //thread workers
-    int32_t seed = 123;
-    char opt;
-    while((opt = (char)getopt(argc, argv, "i:e:w:s:h")) != -1){
-        switch(opt){
-            case 'i':
-                max_it = atoi(optarg);
-                break;
-            case 'e':
-                epsilon = atoi(optarg);
-                break;
-            case 'w':
-                nw = atoi(optarg);
-                break;
-            case 's':
-                seed = atoi(optarg);
-                break;
-            case 'h':{
-                cout << "Usage: " << argv[0] << " " << "[-i iterations] [-e error] [-w threads] \n";
-                exit(EXIT_SUCCESS);   
-            }break;  
-            default: ;
-        }
+void printM(float M[][N]){
+    cout << "\n";
+    for(int i = 0; i < N; i++){
+        for(int j = 0; j < N; j++)
+            cout << M[i][j] << " ";
+        cout << "\n";
     }
-    cout << "Matrix: " << N << " \n";
-    cout << "Error: " << epsilon << " \n";
-    cout << "Iterations: " << max_it << " \n";
-    cout << "Workers: " << nw << " \n";
-    float A[N][N], B[N][N];
-    srand(seed);
-    
-    //initializing matrix
-    for(int i = 0; i < N; i++)
-        for(int j = 0; j < N; j++){
-            A[i][j] = rand();
-            B[i][j] = A[i][j];
-        }
-    int it = 0;
-    bool run = true;
-    int i, j;
-    string str = "Threads " + to_string(nw) + ": ";
-    {
-        utimer t(str);
-        while(run && (it <= max_it)){
-            run = false;
-            //TODO: pragma omp
-                for(i = 0; i < N; i++){
-                    for(j = 0; j < N; j++){
-                        A[i][j] = f(i, j, B);
-                        if(abs(A[i][j] - B[i][j]) > epsilon)
-                           run = true;
-                    }
-                }
-            swap(A, B);
-            it++;
-        }
-    
-    }
-    return 0;
 }
 
+int main(int argc, char* argv[]){
+    if(argc < 4){
+        cerr << "Pochi argomenti!\n";
+        return -1;
+    }
+    int max_it = atoi(argv[1]);
+    float epsilon = atof(argv[2]);
+    int nw = atoi(argv[3]);
+
+    float A[N][N];
+    float B[N][N];
+
+    for(int i = 0; i < N; i++)
+        for(int j = 0; j < N; j++){
+            A[i][j] = i + j;
+            B[i][j] = A[i][j];
+        }
+    
+    int it = 0, i, j;
+    bool run = true;
+    utimer ut("croficihisset: ");
+
+    #pragma omp parallel num_threads(nw) shared(A,B) firstprivate(it,epsilon) private(i,j)
+    {
+        #pragma omp single
+        {
+            while(run && (it < max_it)){
+                run = false;
+                #pragma omp taskloop
+                    for(i = 0; i < N; i++){
+                        for(j = 0; j < N; j++){
+                            A[i][j] = f(i, j, B);
+                            if(abs(A[i][j] - B[i][j]) >= epsilon){
+                                run = true;
+                            }
+                        }
+                    }
+                swap(A, B);
+                it++;
+            }
+        }
+    } 
+}
