@@ -9,28 +9,13 @@ using namespace std;
 
 float f(int i, int j, float** M, int N){
     float res = M[i][j];
-    float count = 1.0;
+    float count = 1 + (i!=0) + (j!=0) + (j!=(N-1)) + (i != (N-1));
 
-    if(i != 0){ //Nord
-        res += M[i-1][j];
-        count++;
-    }
-
-    if(i != (N-1)){ //Sud
-        res += M[i+1][j];
-        count++;
-    }
-
-    if(j != 0){ //Ovest
-        res += M[i][j-1];
-        count++;
-    }
-
-    if(j != (N-1)){ //Est
-        res += M[i][j+1];
-        count++;
-    }
-
+    res += (i!=0)*M[i-1][j]; //Nord
+    res += (i!=(N-1))*M[i+1][j]; //Sud
+    res += (j!=(N-1))*M[i][j+1]; //Est
+    res += (j!=0)*M[i][j-1]; //Ovest
+    
     return (res/count);
 }
 
