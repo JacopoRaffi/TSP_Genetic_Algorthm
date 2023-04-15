@@ -69,21 +69,19 @@ int main(int argc, char* argv[]){
     
     int it = 0, i, j;
     bool run = true;
-    utimer ut("croficihisset: ");
+    utimer ut("TIME: ");
 
-    #pragma omp parallel num_threads(nw) shared(A,B,run) firstprivate(it,epsilon)
+    #pragma omp parallel num_threads(nw) shared(A,B,run) firstprivate(it,epsilon,max_it)
     {
         #pragma omp single
         {
             while(run && (it < max_it)){
                 run = false;
-                #pragma omp taskloop private(i,j)
+                #pragma omp taskloop private(i,j) collapse(2)
                     for(i = 0; i < N; i++){
                         for(j = 0; j < N; j++){
                             A[i][j] = f(i, j, B, N);
-                            if(abs(A[i][j] - B[i][j]) >= epsilon){
-                                run = true;
-                            }
+                            run = abs(A[i][j] - B[i][j]) >= epsilon;
                         }
                     }
                 swap(A, B);
