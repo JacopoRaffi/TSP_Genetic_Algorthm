@@ -7,32 +7,6 @@
 
 using namespace std;
 
-float croficihisset(int i, int j, float** M, int N){
-    float res = M[i][j];
-    float count = 1.0;
-
-    if(i != 0){
-        count++;
-        res += M[i-1][j];
-    }
-
-    if(i != (N-1)){
-        count++;
-        res += M[i+1][j];
-    }
-
-    if(j != 0){
-        count++;
-        res += M[i][j-1];
-    }
-
-    if(j != (N-1)){
-        count++;
-        res += M[i][j+1];
-    }
-    return res/count;
-}
-
 void printM(float **M, int N){
     cout << "\n";
     for(int i = 0; i < N; i++){
@@ -65,27 +39,22 @@ int main(int argc, char* argv[]){
             A[i][j] = i + j;
             B[i][j] = i + j;
         }
-    
+
     int it = 0, i, j;
     bool run = true;
-    utimer ut("croficihisset: ");
+    utimer ut("TIME: "); 
+    //printM(A,N);
 
-    #pragma omp parallel num_threads(nw) shared(run) firstprivate(it,epsilon,A,B)
-    {
-        #pragma omp single
-        {
-            while(run && (it < max_it)){
-                run = false;
-                #pragma omp taskloop collapse(2) private(i,j)
-                    for(i = 0; i < N; i++){
-                        for(j = 0; j < N; j++){
-                            A[i][j] = croficihisset(i, j, B, N);
-                            run = abs(A[i][j] - B[i][j]) >= epsilon;
-                        }
-                    }
-                swap(A, B);
-                it++;
-            }
-        }
-    } 
+    while(run && (it < max_it)){
+        run = false;
+        it++;
+        /*Vectorizable code:
+        * The idea is to split the matrix to create vectorizable code without going out of boundary
+        * Split the matrix in 6 parts: 
+        * 1) The four corners;
+        * 2) Elem without North, South, East and West split them in 4 separated loops;
+        * 3) Elem with all cardinal points in a single loop.
+        */
+        
+    }
 }
