@@ -1,24 +1,41 @@
 #include <thread>
 #include <iostream>
-#include "../utimer.hpp"
+#include "utimer.hpp"
 #include <omp.h>
 #include <utility>
 #include <limits>
 
 using namespace std;
+#define N 1000
 
-float f(int i, int j, float** M, int N){
-    float res = M[i][j];
+float croficihisset(int i, int j, float M[][N]){
+    float res = 0.0;
+    float count = 1.0;
 
-    res += (i !=0 )*M[i-1][j]; //Nord
-    res += (i != (N-1))*M[i+1][j]; //Sud
-    res += (j != (N-1))*M[i][j+1]; //Est
-    res += (j != 0)*M[i][j-1]; //Ovest
-    
-    return (res);
+    if(i != 0){
+        count++;
+        res += M[i-1][j];
+    }
+
+    if(i != (N-1)){
+        count++;
+        res += M[i+1][j];
+    }
+
+    if(j != 0){
+        count++;
+        res += M[i][j-1];
+    }
+
+    if(j != (N-1)){
+        count++;
+        res += M[i][j+1];
+    }
+
+    return res;
 }
 
-void printM(float **M, int N){
+void printM(float M[][N]){
     cout << "\n";
     for(int i = 0; i < N; i++){
         for(int j = 0; j < N; j++)
@@ -32,18 +49,13 @@ int main(int argc, char* argv[]){
         cerr << "Pochi argomenti!\n";
         return -1;
     }
+
     int max_it = atoi(argv[1]);
     float epsilon = atof(argv[2]);
     int nw = atoi(argv[3]);
-    int N = atoi(argv[4]);
 
-    float **A = new float*[N];
-    float **B = new float*[N];
-
-    for(int i = 0; i < N; i++){
-        A[i] = new float[N];
-        B[i] = new float[N];
-    }
+    float A[N][N];
+    float B[N][N];
 
     for(int i = 0; i < N; i++)
         for(int j = 0; j < N; j++){
@@ -53,19 +65,27 @@ int main(int argc, char* argv[]){
     
     int it = 0, i, j;
     bool run = true;
-    utimer ut("TIME: ");
+    float max_err = 0;
+    utimer ut("croficihisset: ");
 
-    while(run && (it < max_it)){
-        run = false;
-        for(i = 0; i < N; i++){
-            //TODO: how to use #pragma omp simd?
-            for(j = 0; j < N; j++){
-                float count = 1 + (i!=0) + (j!=0) + (j!=(N-1)) + (i != (N-1));
-                A[i][j] = f(i, j, B, N) / count;
-                run = abs(A[i][j] - B[i][j]) >= epsilon;
+    #pragma omp parallel num_threads(nw) shared(A,B,max_err) firstprivate(it,epsilon) private(i,j)
+    {
+        #pragma omp single
+        {
+            while(run && (it < max_it)){
+                run = false;
+                #pragma omp taskloop
+                    for(i = 0; i < N; i++){
+                        for(j = 0; j < N; j++){
+                            A[i][j] = croficihisset(i, j, B);
+                            if(abs(A[i][j] - B[i][j]) >= epsilon){
+                                run = true;
+                            }
+                        }
+                    }
+                swap(A, B);
+                it++;
             }
         }
-        swap(A, B);
-        it++;
-    }
+    } 
 }
