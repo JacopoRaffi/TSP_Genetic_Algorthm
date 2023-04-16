@@ -1,6 +1,6 @@
 #include <thread>
 #include <iostream>
-#include "utimer.hpp"
+#include "../utimer.hpp"
 #include <omp.h>
 #include <utility>
 #include <limits>
@@ -8,7 +8,7 @@
 using namespace std;
 
 float croficihisset(int i, int j, float** M, int N){
-    float res = 0.0;
+    float res = M[i][j];
     float count = 1.0;
 
     if(i != 0){
@@ -30,8 +30,7 @@ float croficihisset(int i, int j, float** M, int N){
         count++;
         res += M[i][j+1];
     }
-
-    return res;
+    return res/count;
 }
 
 void printM(float **M, int N){
@@ -64,21 +63,20 @@ int main(int argc, char* argv[]){
     for(int i = 0; i < N; i++)
         for(int j = 0; j < N; j++){
             A[i][j] = i + j;
-            B[i][j] = A[i][j];
+            B[i][j] = i + j;
         }
     
     int it = 0, i, j;
     bool run = true;
-    float max_err = 0;
     utimer ut("croficihisset: ");
 
-    #pragma omp parallel num_threads(nw) shared(A,B,max_err) firstprivate(it,epsilon) private(i,j)
+    #pragma omp parallel num_threads(nw) shared(run) firstprivate(it,epsilon,A,B)
     {
         #pragma omp single
         {
             while(run && (it < max_it)){
                 run = false;
-                #pragma omp taskloop
+                #pragma omp taskloop collapse(2) private(i,j)
                     for(i = 0; i < N; i++){
                         for(j = 0; j < N; j++){
                             A[i][j] = croficihisset(i, j, B, N);
