@@ -81,7 +81,7 @@ int main(int argc, char* argv[]){
                 #pragma omp taskloop
                     for(i = 0; i < N; i++){
                         for(j = 0; j < N; j++){
-                            A[i][j] = croficihisset(i, j, B);
+                            A[i][j] = croficihisset(i, j, B, N);
                             if(abs(A[i][j] - B[i][j]) >= epsilon){
                                 run = true;
                             }
