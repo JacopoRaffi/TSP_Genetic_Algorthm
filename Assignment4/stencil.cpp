@@ -6,9 +6,8 @@
 #include <limits>
 
 using namespace std;
-#define N 1000
 
-float croficihisset(int i, int j, float M[][N]){
+float croficihisset(int i, int j, float** M, int N){
     float res = 0.0;
     float count = 1.0;
 
@@ -53,9 +52,14 @@ int main(int argc, char* argv[]){
     int max_it = atoi(argv[1]);
     float epsilon = atof(argv[2]);
     int nw = atoi(argv[3]);
+    int N = atoi(argv[4]);
 
-    float A[N][N];
-    float B[N][N];
+    float **A = new float*[N], **B = new float*[N];
+
+    for(int i = 0; i < N; i++){
+        A[i] = new float[N];
+        B[i] = new float[N];
+    }
 
     for(int i = 0; i < N; i++)
         for(int j = 0; j < N; j++){
