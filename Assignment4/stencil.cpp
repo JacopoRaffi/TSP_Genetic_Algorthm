@@ -34,7 +34,7 @@ float croficihisset(int i, int j, float** M, int N){
     return res;
 }
 
-void printM(float M[][N]){
+void printM(float **M, int N){
     cout << "\n";
     for(int i = 0; i < N; i++){
         for(int j = 0; j < N; j++)
@@ -82,9 +82,7 @@ int main(int argc, char* argv[]){
                     for(i = 0; i < N; i++){
                         for(j = 0; j < N; j++){
                             A[i][j] = croficihisset(i, j, B, N);
-                            if(abs(A[i][j] - B[i][j]) >= epsilon){
-                                run = true;
-                            }
+                            run = abs(A[i][j] - B[i][j]) >= epsilon;
                         }
                     }
                 swap(A, B);
