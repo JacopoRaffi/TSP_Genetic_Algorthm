@@ -3,11 +3,11 @@
 #include "../utimer.hpp"
 #include <omp.h>
 #include <utility>
-#include <limits>
+#include <vector>
 
 using namespace std;
 
-void printM(float **M, int N){
+void printM(vector<float> M[], int N){
     cout << "\n";
     for(int i = 0; i < N; i++){
         for(int j = 0; j < N; j++)
@@ -27,11 +27,12 @@ int main(int argc, char* argv[]){
     int nw = atoi(argv[3]);
     int N = atoi(argv[4]);
 
-    float **A = new float*[N], **B = new float*[N];
+    vector<float> *A = new vector<float>[N];
+    vector<float> *B = new vector<float>[N];
 
     for(int i = 0; i < N; i++){
-        A[i] = new float[N];
-        B[i] = new float[N];
+        A[i] = vector<float>(N);
+        B[i] = vector<float>(N);
     }
 
     for(int i = 0; i < N; i++)
@@ -41,20 +42,42 @@ int main(int argc, char* argv[]){
         }
 
     int it = 0, i, j;
-    bool run = true;
+    int run = 1;
     utimer ut("TIME: "); 
-    //printM(A,N);
+    //TODO: try to write inline functions for the "Borders loops"
 
     while(run && (it < max_it)){
-        run = false;
+        run = 0;
         it++;
-        /*Vectorizable code:
-        * The idea is to split the matrix to create vectorizable code without going out of boundary
-        * Split the matrix in 6 parts: 
-        * 1) The four corners;
-        * 2) Elem without North, South, East and West split them in 4 separated loops;
-        * 3) Elem with all cardinal points in a single loop.
-        */
-        
+        //Four corners  
+
+        //Borders of Matrix
+        #pragma omp simd reduction(+:run)
+        //North border
+        for(int j = 1; j < N-1; j++){
+            A[0][j] = (B[0][j-1] + B[0][j] + B[0][j+1] + B[1][j]) / 4.0;
+            run = run + (abs(A[0][j] - B[0][j]) >= epsilon);
+        }
+
+        #pragma omp simd reduction(+:run)
+        //South Border
+        for(int j = 1; j < N-1; j++){
+            A[N-1][j] = (B[N-1][j-1] + B[N-1][j] + B[N-1][j+1] + B[N-2][j]) / 4.0;
+            run = run + (abs(A[N-1][j] - B[N-1][j]) >= epsilon);
+        }
+
+        //TODO: East/West Border
+
+        //Center of Matrix
+        for(int i = 1; i < N-1; i++){
+            #pragma omp simd reduction(+:run)
+            for(int j = 1; j < N-1; j++){
+                A[i][j] = (B[i-1][j] + B[i][j-1] + B[i+1][j] + B[i][j+1] + B[i][j]) / 5.0;
+                run = run + (abs(A[i][j] - B[i][j]) >= epsilon);
+            }
+        }
+        swap(A, B);
     }
+
+    printM(A,N);
 }
