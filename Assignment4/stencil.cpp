@@ -44,14 +44,18 @@ int main(int argc, char* argv[]){
     int it = 0, i, j;
     int run = 1;
     utimer ut("TIME: "); 
-    //TODO: try to write inline functions for the "Borders loops"
 
     while(run && (it < max_it)){
         run = 0;
         it++;
         //Four corners  
+        A[0][0] = (B[0][0] + B[1][0] + B[0][1])/3.0;
+        A[N-1][N-1] = (B[N-1][N-1] + B[N-2][N-1] + B[N-1][N-1])/3.0;
+        A[N-1][0] = (B[N-1][0] + B[N-2][0] + B[N-1][1])/3.0;
+        A[0][N-1] = (B[0][N-1] + B[1][N-1] + B[0][N-2])/3.0;
 
         //Borders of Matrix
+
         #pragma omp simd reduction(+:run)
         //North border
         for(int j = 1; j < N-1; j++){
@@ -66,7 +70,19 @@ int main(int argc, char* argv[]){
             run = run + (abs(A[N-1][j] - B[N-1][j]) >= epsilon);
         }
 
-        //TODO: East/West Border
+        #pragma omp simd reduction(+:run)
+        //East Border
+        for(int i = 1; i < N-1; i++){
+            A[i][0] = (B[i][0] + B[i-1][0] + B[i+1][0] + B[i][1]) / 4.0;
+            run = run + (abs(A[i][0] - B[i][0]) >= epsilon);
+        }
+
+        #pragma omp simd reduction(+:run)
+        //West Border
+        for(int i = 1; i < N-1; i++){
+            A[i][N-1] = (B[i][N-1] + B[i-1][N-1] + B[i+1][N-1] + B[i][N-2]) / 4.0;
+            run = run + (abs(A[i][0] - B[i][N-1]) >= epsilon);
+        }
 
         //Center of Matrix
         for(int i = 1; i < N-1; i++){
