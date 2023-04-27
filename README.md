@@ -19,3 +19,6 @@ Parallel implementation of a simplified version of google map reduce pattern, on
 
 ## Assignment 4:
  consider a matrix NxN. In a cycle,  turn the i,j value of the matrix into the average of the i,j value and of its N, S, E, W neighbours (if present. N value is the i,(j-1), E value is the (i+1),j, etc.), for any i,j up to either maxIter iterations have been computed or to the point the sum of the absolute value of the differences in between old and new i,j values runs below some epsilon (epsilon and maxiter being parameters from the command line). You must use openMP.
+
+## Assignment 5:
+Re-implement assignment 1 using FastFlow. Two implementations are required, using respectively a parallel for (any variant) or a farm pattern (only). 
