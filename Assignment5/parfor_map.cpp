@@ -33,5 +33,5 @@ int main(int argc, char* argv[]){
     ParallelFor pf(nw, spin);
 
     utimer ut("TIME: ");
-    pf.parallel_for(0, size, 1, [&](int i) {v[i] = f(i);}, nw);
+    pf.parallel_for(0, size, 1, [&](int i) {v[i] = f(v[i]);}, nw);
 }
