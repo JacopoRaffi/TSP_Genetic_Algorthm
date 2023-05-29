@@ -1,4 +1,4 @@
 # SPM Course 
 
-## The "Assignments" folder contains the assignments made during the course. <br />
-## The "Project" contains the final project of the course. 
+## The "Assignments" directory contains the assignments made during the course. <br />
+## The "Project" directory contains the final project of the course. 
