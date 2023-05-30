@@ -3,23 +3,23 @@
 
 #include <vector>
 #include <unordered_map>
+#include <random>
 
 using Key = uint64_t;
-using Value = double;
 using std::vector, std::unordered_map, std::pair;
 
 class Graph{
     private:
     //Key of the map is the neighbour and the double double is the distance
-        vector<unordered_map<Key, Value>> *graph;
+        vector<unordered_map<Key, double>> *graph;
         uint64_t num_nodes;
     public:
-        Graph(uint64_t size){
+        Graph(uint64_t size, int seed){
+            //generate a random graph (the goal of the project if the Genetic Algorithm phase)
             graph = new vector<unordered_map<Key, double>>(size);
             num_nodes = size;
         }
 
-        //TODO: add vertex and their neighbourhood
         void add_vertex(Key vertex, vector<pair<Key, double>> neighbourhood){
             for(pair<Key, double> p : neighbourhood){
                 (*graph)[vertex][p.first] = p.second; //add neghbour and the weight of the edge
