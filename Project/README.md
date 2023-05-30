@@ -1,4 +1,4 @@
-### Parallel and Distributed Systems: Paradigms and Models final Project
+# Parallel and Distributed Systems: Paradigms and Models final Project
 
 ## Project Text
 Given a list of cities and the distances between each pair of cities, the TSP algorithm aims at finding the shortest possible route that visits each city exactly once and returns to the origin city. The genetic
