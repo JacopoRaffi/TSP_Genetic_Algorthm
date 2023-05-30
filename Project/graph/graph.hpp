@@ -10,12 +10,13 @@ using std::vector, std::unordered_map, std::pair;
 
 class Graph{
     private:
-    //Key of the map is the neighbour and the double double is the distance
-        vector<unordered_map<Key, double>> *graph;
-        uint64_t num_nodes;
+        vector<unordered_map<Key, double>> *graph; //Key is the neighbour and the double value is the wieght of the edge
+        uint64_t num_nodes; //size of the graph
     public:
-        Graph(uint64_t size, int seed){
-            //generate a random graph (the goal of the project if the Genetic Algorithm phase)
+        /* generate a random graph (the goal of the project if the Genetic Algorithm phase)
+        * @param size: number of vertexes  
+        */
+        Graph(uint64_t size){
             graph = new vector<unordered_map<Key, double>>(size);
             num_nodes = size;
         }
