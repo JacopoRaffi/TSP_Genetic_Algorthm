@@ -8,7 +8,7 @@
 #include <numeric>
 #include "../utimer.hpp"
 
-using std::vector;
+using std::vector, std::pair;
 using Graph = vector<vector<double>>; //Adjiacency Matrix
 
 struct chromosome{
@@ -73,17 +73,38 @@ class TSPSeq{
      * Compute the fitness of all chromosomes in the population.
      */
     void evaluation(){
-        std::cout << "\n";
         utimer ut("EVALUATION: ");
         for(int i = 0; i < population.size(); i++)
             fitness(population[i]);
         
-        printPopulation();
+        //printPopulation();
     }
 
-    void selection();
+    /**
+     * Select the chromosome for crossover (roulette wheel selection).
+     * @param selection_number is the number of chromosome to be selected for crossover phase
+     */
+    void selection(int& selection_number){
+        double total_fitness = 0.0;
+        std::random_device rd;
+        std::mt19937 generator(rd());
+        std::uniform_real_distribution<double> distribution(0.0, 1.0); //generate the value to compare to choose population
+
+        int size = population.size();
+        for(int i = 0; i < population.size(); i++){
+            total_fitness += population[i].fitness;
+        }
+
+        
+
+    }
+
     void crossover();
-    void mutation();
+    
+    void mutation(vector<int> path){
+        
+    }
+
     void merge();
 
     public:
@@ -100,6 +121,7 @@ class TSPSeq{
      */
     void genetic_algorithm(int& generations, double& crossover_rate, double& mutation_rate, int& selection_size){
         evaluation();
+        selection(selection_size);
         /*for(int i = 0; i < generations; i++){
             evaluation();
             selection();

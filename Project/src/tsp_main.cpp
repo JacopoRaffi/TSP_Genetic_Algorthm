@@ -23,18 +23,7 @@ Graph graph_init(int size, int seed){
     }
     return g;
 }
-
-/*  Parameters from command line:
-    * Number of Threads;
-    * Number of Vertexes;
-    * Number of Generations;
-    * population size
-    * mode (sq, ff, par)
-    * mutation rate (optional);
-    * crossover rate (optional);
-    * Selection number (optional);
-    * seed for graph values (optional);
-*/  
+ 
 
 int main(int argc, char *argv[]){
     if(argc < 6){
@@ -76,7 +65,8 @@ int main(int argc, char *argv[]){
     Graph g = graph_init(size, seed);
 
     if(mode == "sq"){ //sequential mode
-
+        TSPSeq tsp(g, population_size, start_vertex);
+        tsp.genetic_algorithm(generations, crossover_rate, mutation_rate, selection_number);
     }
 
     if(mode == "par"){ //naive C++ threads mode
@@ -86,9 +76,6 @@ int main(int argc, char *argv[]){
     if(mode == "ff"){ //fastFlow
 
     }
-   
-    TSPSeq tsp(g, population_size, start_vertex);
-    tsp.genetic_algorithm(generations, crossover_rate, mutation_rate, selection_number);
 
     return 0;
 }
