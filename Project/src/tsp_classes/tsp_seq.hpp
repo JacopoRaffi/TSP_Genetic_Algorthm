@@ -4,6 +4,7 @@
 #include <vector>
 #include <algorithm>
 #include <random>
+#include <numeric>
 #include "../utimer.hpp"
 
 using std::vector;
@@ -23,17 +24,31 @@ class TSPSeq{
      * @param population_size is the number of chromosome in the population.
      */
     void generation(int& population_size, int& start_vertex){
+        utimer t("GENERATION: ");
         population = vector<chromosome>(population_size);
         std::random_device rd;
         std::mt19937 gen(rd());
+
         for(int i = 0; i < population_size; i++){
             population[i].path = vector<int>(graph.size());
             population[i].path[0] = start_vertex;
-            std::shuffle(population[i].path.begin() + 1, population[i].path.end(), gen);
+            
+            shuffle(population[i].path.begin() + 1, population[i].path.end(), gen);
         }
     }
 
-    /**
+    void fitness();
+    void selection();
+    void crossover();
+    void mutation();
+    void merge();
+
+    public:
+    TSPSeq(Graph& g, int& population_size, int& start_vertex) : graph{g} {
+        generation(population_size, start_vertex);
+    }
+
+      /**
      * Create the initial population.
      * @param population_size is the number of iterations.
      * @param crossover_rate is the probability that a crossover occurs.
@@ -49,19 +64,6 @@ class TSPSeq{
             merge();
         }
     }
-
-    void fitness();
-    void selection();
-    void crossover();
-    void mutation();
-    void merge();
-
-    public:
-    TSPSeq(Graph& g, int& population_size, int& start_vertex) : graph{g} {
-        generation(population_size, start_vertex);
-    }
-
-
 };
 
 #endif

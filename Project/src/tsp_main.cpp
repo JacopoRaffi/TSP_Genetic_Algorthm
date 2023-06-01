@@ -70,13 +70,6 @@ int main(int argc, char *argv[]){
     
     Graph g = graph_init(size, seed);
 
-    for(int i = 0; i < g.size(); i++){
-        for(int j = 0; j < size; j++){
-            cout << g[i][j] << " ";
-        }
-        cout << "\n";
-    }
-
     if(mode == "sq"){ //sequential mode
 
     }
@@ -90,7 +83,9 @@ int main(int argc, char *argv[]){
     }
     std::random_device rd;
     std::mt19937 rng(rd());
-    vector<int> v = {1,2,3,4,5,6,7,8,9,10};
+    vector<int> v(g.size());
+    v[0] = 0;
+    iota(v.begin() + 1, v.end(), 1);
     shuffle(v.begin()+1, v.end(), rng);
     for(int i = 0; i < v.size(); i++)
         cout << v[i] << " ";
