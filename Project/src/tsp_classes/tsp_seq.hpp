@@ -119,7 +119,7 @@ class TSPSeq{
      * @param mutation_rate is the probability that a mutation occurs
      * @param selection_size is the number of chromosome selected for crossover.
      */
-    void genetic_algorithm(int& generations, double& crossover_rate, double& mutation_rate, int& selection_size){
+    void genetic_algorithm(int& generations, double& mutation_rate, int& selection_size){
         evaluation();
         selection(selection_size);
         /*for(int i = 0; i < generations; i++){

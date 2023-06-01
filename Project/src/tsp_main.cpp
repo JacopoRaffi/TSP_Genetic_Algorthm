@@ -27,7 +27,7 @@ Graph graph_init(int size, int seed){
 
 int main(int argc, char *argv[]){
     if(argc < 6){
-        cerr << "Usage: " << argv[0] << " workers vertexes iterations population mode mutationRate(optional) crossoverRate(optional) selectionNumber(optional) seed(optional) start(optional)\n";
+        cerr << "Usage: " << argv[0] << " workers vertexes iterations population mode mutationRate(optional) crossoverRate(optional) seed(optional) start(optional)\n";
         return -1;
     }
     
@@ -37,8 +37,7 @@ int main(int argc, char *argv[]){
     int population_size = atoi(argv[4]);
     string mode = argv[5];
     double mutation_rate = 0.3;
-    double crossover_rate = 0.7;
-    int selection_number = size/4;
+    int selection_number = 0.7 * population_size;
     int seed = 1234;
     int start_vertex = 0;
 
@@ -47,18 +46,14 @@ int main(int argc, char *argv[]){
     }
 
     if(argv[7]){
-        crossover_rate = atof(argv[7]);
+        selection_number = atof(argv[8]) * population_size;
     }
 
     if(argv[8]){
-        selection_number = atoi(argv[8]);
-    }
-
-    if(argv[9]){
         seed = atoi(argv[9]);
     }
 
-    if(argv[10]){
+    if(argv[9]){
         start_vertex = atoi(argv[10]);
     }
     
@@ -66,7 +61,7 @@ int main(int argc, char *argv[]){
 
     if(mode == "sq"){ //sequential mode
         TSPSeq tsp(g, population_size, start_vertex);
-        tsp.genetic_algorithm(generations, crossover_rate, mutation_rate, selection_number);
+        tsp.genetic_algorithm(generations, mutation_rate, selection_number);
     }
 
     if(mode == "par"){ //naive C++ threads mode
