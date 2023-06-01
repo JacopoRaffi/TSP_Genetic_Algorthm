@@ -4,6 +4,7 @@
 #include <vector>
 #include <algorithm>
 #include <random>
+#include <iostream>
 #include <numeric>
 #include "../utimer.hpp"
 
@@ -32,11 +33,23 @@ class TSPSeq{
         for(int i = 0; i < population_size; i++){
             population[i].path = vector<int>(graph.size());
             population[i].path[0] = start_vertex;
-            
-            shuffle(population[i].path.begin() + 1, population[i].path.end(), gen);
+
+            std::iota(population[i].path.begin(), population[i].path.end(), 0);
+            std::swap(population[i].path[0], population[i].path[start_vertex]);
+            std::shuffle(population[i].path.begin() + 1, population[i].path.end(), gen);
+        }
+
+        printPopulation();
+    }
+    
+    void printPopulation(){
+        for(int i = 0; i < population.size(); i++){
+            for(int j = 0; j < graph.size(); j++){
+                std::cout << population[i].path[j] << " ";
+            }
+            std::cout << "Chromosome: " << i << "\n";
         }
     }
-
     void fitness();
     void selection();
     void crossover();

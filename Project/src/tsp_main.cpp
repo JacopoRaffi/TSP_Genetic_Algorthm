@@ -7,7 +7,7 @@
 
 using namespace std;
 
-using Graph = vector<vector<double>>; //Adjiacency Matrix (directed graph) 
+//using Graph = vector<vector<double>>; //Adjiacency Matrix (directed graph) 
 
 Graph graph_init(int size, int seed){
     Graph g(size);
@@ -38,7 +38,7 @@ Graph graph_init(int size, int seed){
 
 int main(int argc, char *argv[]){
     if(argc < 6){
-        cerr << "Usage: " << argv[0] << " workers vertexes iterations population mode mutationRate(optional) crossoverRate(optional) selectionNumber(optional) seed(optional)\n";
+        cerr << "Usage: " << argv[0] << " workers vertexes iterations population mode mutationRate(optional) crossoverRate(optional) selectionNumber(optional) seed(optional) start(optional)\n";
         return -1;
     }
     
@@ -51,6 +51,7 @@ int main(int argc, char *argv[]){
     double crossover_rate = 0.7;
     int selection_number = size/4;
     int seed = 1234;
+    int start_vertex = 0;
 
     if(argv[6]){
         mutation_rate = atof(argv[6]);
@@ -67,6 +68,10 @@ int main(int argc, char *argv[]){
     if(argv[9]){
         seed = atoi(argv[9]);
     }
+
+    if(argv[10]){
+        start_vertex = atoi(argv[10]);
+    }
     
     Graph g = graph_init(size, seed);
 
@@ -81,15 +86,8 @@ int main(int argc, char *argv[]){
     if(mode == "ff"){ //fastFlow
 
     }
-    std::random_device rd;
-    std::mt19937 rng(rd());
-    vector<int> v(g.size());
-    v[0] = 0;
-    iota(v.begin() + 1, v.end(), 1);
-    shuffle(v.begin()+1, v.end(), rng);
-    for(int i = 0; i < v.size(); i++)
-        cout << v[i] << " ";
-    cout << "\n";
+   
+    TSPSeq tsp(g, population_size, start_vertex);
 
     return 0;
 }
