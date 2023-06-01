@@ -13,7 +13,7 @@ using Graph = vector<vector<double>>; //Adjiacency Matrix
 
 struct chromosome{
     vector<int> path;
-    long fitness;
+    double fitness;
 };
 
 class TSPSeq{
@@ -33,6 +33,7 @@ class TSPSeq{
         for(int i = 0; i < population_size; i++){
             population[i].path = vector<int>(graph.size());
             population[i].path[0] = start_vertex;
+            population[i].fitness = 0;
 
             std::iota(population[i].path.begin(), population[i].path.end(), 0);
             std::swap(population[i].path[0], population[i].path[start_vertex]);
@@ -41,7 +42,8 @@ class TSPSeq{
 
         printPopulation();
     }
-    
+
+    //Just for test purposes.
     void printPopulation(){
         for(int i = 0; i < population.size(); i++){
             for(int j = 0; j < graph.size(); j++){
@@ -50,7 +52,28 @@ class TSPSeq{
             std::cout << "Chromosome: " << i << "\n";
         }
     }
-    void fitness();
+    
+    /**
+     * Compute the fitness of a given chromosome.
+     * @param chr is a chromosome of the population.
+     */
+    void fitness(chromosome& chr){
+        for(int i = 0; i < chr.path.size() - 1; i++){
+            chr.fitness += graph[i][i + 1];
+        }
+        chr.fitness += graph[chr.path.size() - 1][0]; //edge between last element and start city
+
+        chr.fitness = 1 / chr.fitness; //lower the distance better the fitness
+    }
+
+    /**
+     * Compute the fitness of all chromosomes in the population.
+     */
+    void evaluation(){
+        for(int i = 0; i < population.size(); i++)
+            fitness(population[i]);
+    }
+
     void selection();
     void crossover();
     void mutation();
@@ -70,7 +93,7 @@ class TSPSeq{
      */
     void genetic_algorithm(int& generations, double& crossover_rate, double& mutation_rate, int& selection_size){
         for(int i = 0; i < generations; i++){
-            fitness();
+            evaluation();
             selection();
             crossover();
             mutation();
