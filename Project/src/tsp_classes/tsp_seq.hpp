@@ -81,7 +81,7 @@ class TSPSeq{
     }
 
     /**
-     * Select the chromosome for crossover (roulette wheel selection).
+     * Select the chromosome for crossover (stochastic acceptance).
      * @param selection_number is the number of chromosome to be selected for crossover phase
      */
     void selection(int& selection_number){
@@ -89,20 +89,28 @@ class TSPSeq{
         std::random_device rd;
         std::mt19937 generator(rd());
         std::uniform_real_distribution<double> distribution(0.0, 1.0); //generate the value to compare to choose population
-
-        int size = population.size();
-        for(int i = 0; i < population.size(); i++){
-            total_fitness += population[i].fitness;
-        }
-
-        
-
     }
 
     void crossover();
     
-    void mutation(vector<int> path){
-        
+    /**
+     * Apply, with a certain probability, them mutation of the chromosome.
+     * @param path is the chromosome to mutate.
+     * @param mutation_rate is the probability that the mutation occurs.
+     */
+    void mutation(vector<int>& path, double& mutation_rate){
+        std::random_device rd;
+        std::mt19937 gen(rd());
+        std::uniform_int_distribution<int> index_gen(1, path.size() - 1); //generate the value to compare to choose population
+        std::uniform_real_distribution<double> prob_gen(0.0, 1.0); //generate the value to compare to choose population
+
+        //TODO: print path before and after mutation
+        if(prob_gen(gen) <= mutation_rate){
+            int parent_1 = index_gen(gen);
+            int parent_2 = index_gen(gen);
+
+            std::swap(path[parent_1], path[parent_2]);
+        }
     }
 
     void merge();
@@ -129,6 +137,8 @@ class TSPSeq{
             mutation();
             merge();
         }*/
+
+        evaluation(); //final evaluation to take the best path
     }
 };
 
