@@ -40,7 +40,7 @@ class TSPSeq{
             std::shuffle(population[i].path.begin() + 1, population[i].path.end(), gen);
         }
 
-        printPopulation();
+        //printPopulation();
     }
 
     //Just for test purposes.
@@ -49,7 +49,8 @@ class TSPSeq{
             for(int j = 0; j < graph.size(); j++){
                 std::cout << population[i].path[j] << " ";
             }
-            std::cout << "Chromosome: " << i << "\n";
+            std::cout << "FITNESS:" << population[i].fitness;
+            std::cout << " Chromosome: " << i << "\n";
         }
     }
     
@@ -59,7 +60,9 @@ class TSPSeq{
      */
     void fitness(chromosome& chr){
         for(int i = 0; i < chr.path.size() - 1; i++){
-            chr.fitness += graph[i][i + 1];
+            int row = chr.path[i];
+            int col = chr.path[i+1];
+            chr.fitness += graph[row][col];
         }
         chr.fitness += graph[chr.path.size() - 1][0]; //edge between last element and start city
 
@@ -70,8 +73,12 @@ class TSPSeq{
      * Compute the fitness of all chromosomes in the population.
      */
     void evaluation(){
+        std::cout << "\n";
+        utimer ut("EVALUATION: ");
         for(int i = 0; i < population.size(); i++)
             fitness(population[i]);
+        
+        printPopulation();
     }
 
     void selection();
@@ -92,13 +99,14 @@ class TSPSeq{
      * @param selection_size is the number of chromosome selected for crossover.
      */
     void genetic_algorithm(int& generations, double& crossover_rate, double& mutation_rate, int& selection_size){
-        for(int i = 0; i < generations; i++){
+        evaluation();
+        /*for(int i = 0; i < generations; i++){
             evaluation();
             selection();
             crossover();
             mutation();
             merge();
-        }
+        }*/
     }
 };
 

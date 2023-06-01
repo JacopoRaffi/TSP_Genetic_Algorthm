@@ -88,6 +88,7 @@ int main(int argc, char *argv[]){
     }
    
     TSPSeq tsp(g, population_size, start_vertex);
+    tsp.genetic_algorithm(generations, crossover_rate, mutation_rate, selection_number);
 
     return 0;
 }
