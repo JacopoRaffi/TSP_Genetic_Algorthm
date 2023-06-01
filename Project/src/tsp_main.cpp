@@ -1,20 +1,23 @@
 #include <vector> 
 #include <iostream>
 #include <random>
+#include <limits>
+
+#include "./tsp_classes/tsp_seq.hpp"
 
 using namespace std;
 
-using Graph = vector<vector<double>>; //Adjiacency Matrix (lower triangular matrix)
+using Graph = vector<vector<double>>; //Adjiacency Matrix (directed graph) 
 
 Graph graph_init(int size, int seed){
     Graph g(size);
     default_random_engine gen;
     gen.seed(seed);
-    uniform_real_distribution<double> unif(0, 200); 
+    uniform_real_distribution<double> unif(1, 200); 
 
     for(int i = 0; i < size; i++){
-        g[i] = vector<double>(i);
-        for(int j = 0; j < i; j++){
+        g[i] = vector<double>(size);
+        for(int j = 0; j < size; j++){
             g[i][j] = unif(gen);
         }
     }
@@ -25,6 +28,7 @@ Graph graph_init(int size, int seed){
     * Number of Threads;
     * Number of Vertexes;
     * Number of Generations;
+    * population size
     * mode (sq, ff, par)
     * mutation rate (optional);
     * crossover rate (optional);
@@ -33,44 +37,45 @@ Graph graph_init(int size, int seed){
 */  
 
 int main(int argc, char *argv[]){
-    if(argc < 5){
-        cerr << "Usage: " << argv[0] << " workers vertexes iterations mode mutationRate(optional) crossoverRate(optional) selectionNumber(optional) seed(optional)\n";
+    if(argc < 6){
+        cerr << "Usage: " << argv[0] << " workers vertexes iterations population mode mutationRate(optional) crossoverRate(optional) selectionNumber(optional) seed(optional)\n";
         return -1;
     }
     
     int workers = atoi(argv[1]);
     int size = atoi(argv[2]);
     int generations = atoi(argv[3]);
-    string mode = argv[4];
+    int population_size = atoi(argv[4]);
+    string mode = argv[5];
     double mutation_rate = 0.3;
     double crossover_rate = 0.7;
     int selection_number = size/4;
     int seed = 1234;
 
-    if(argv[5]){
-        mutation_rate = atof(argv[5]);
-    }
-
     if(argv[6]){
-        crossover_rate = atof(argv[6]);
+        mutation_rate = atof(argv[6]);
     }
 
     if(argv[7]){
-        selection_number = atoi(argv[7]);
+        crossover_rate = atof(argv[7]);
     }
 
     if(argv[8]){
-        seed = atoi(argv[8]);
+        selection_number = atoi(argv[8]);
+    }
+
+    if(argv[9]){
+        seed = atoi(argv[9]);
     }
     
     Graph g = graph_init(size, seed);
 
-    /*for(int i = 0; i < g.size(); i++){
-        for(int j = 0; j < i; j++){
+    for(int i = 0; i < g.size(); i++){
+        for(int j = 0; j < size; j++){
             cout << g[i][j] << " ";
         }
         cout << "\n";
-    }*/
+    }
 
     if(mode == "sq"){ //sequential mode
 
@@ -83,6 +88,13 @@ int main(int argc, char *argv[]){
     if(mode == "ff"){ //fastFlow
 
     }
+    std::random_device rd;
+    std::mt19937 rng(rd());
+    vector<int> v = {1,2,3,4,5,6,7,8,9,10};
+    shuffle(v.begin()+1, v.end(), rng);
+    for(int i = 0; i < v.size(); i++)
+        cout << v[i] << " ";
+    cout << "\n";
 
     return 0;
 }
