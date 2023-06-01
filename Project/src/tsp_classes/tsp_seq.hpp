@@ -85,13 +85,19 @@ class TSPSeq{
      * @param selection_number is the number of chromosome to be selected for crossover phase
      */
     void selection(int& selection_number){
+        utimer ut("SELECTION: ");
         double total_fitness = 0.0;
         std::random_device rd;
         std::mt19937 generator(rd());
         std::uniform_real_distribution<double> distribution(0.0, 1.0); //generate the value to compare to choose population
-    }
 
-    void crossover();
+        double max_fitness = (*std::max_element(population.begin(), population.end(), [](const chromosome& a, const chromosome& b) {return a.fitness < b.fitness; })).fitness;
+    
+    }   
+
+    void crossover(){
+        utimer ut("CROSSOVER: ");
+    }
     
     /**
      * Apply, with a certain probability, them mutation of the chromosome.
@@ -99,6 +105,7 @@ class TSPSeq{
      * @param mutation_rate is the probability that the mutation occurs.
      */
     void mutation(vector<int>& path, double& mutation_rate){
+        utimer ut("MUTATION: ");
         std::random_device rd;
         std::mt19937 gen(rd());
         std::uniform_int_distribution<int> index_gen(1, path.size() - 1); //generate the value to compare to choose population
@@ -113,7 +120,9 @@ class TSPSeq{
         }
     }
 
-    void merge();
+    void merge(){
+        utimer ut("MERGE: ");
+    }
 
     public:
     TSPSeq(Graph& g, int& population_size, int& start_vertex) : graph{g} {
