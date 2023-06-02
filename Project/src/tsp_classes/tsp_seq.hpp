@@ -139,7 +139,7 @@ class TSPSeq{
                 //TODO: print path before and after mutation
                 int gene_1 = index_gen(generator);
                 int gene_2 = index_gen(generator);
-                //Don't check if gene_1 == gene_2 because is quite unlikely being computed with uniform distribution
+                //Don't check if gene_1 == gene_2 because is quite unlikely being computed with uniform distribution (it would be (1/n)^2)
                 std::swap(selected[i].path[gene_1], selected[i].path[gene_2]);
             }
         }
