@@ -94,8 +94,9 @@ class TSPSeq{
     /**
      * Select the chromosome for crossover (stochastic acceptance).
      * @param selection_number is the number of chromosome to be selected for crossover phase
+     * @return the chromosome selected for crossover
      */
-    void selection(int& selection_number){
+    vector<chromosome> selection(int& selection_number){
         utimer ut("SELECTION: ");
         double total_fitness = 0.0;
         std::uniform_real_distribution<double> distribution(0.0, 1.0); //generate the value to compare to choose population
@@ -104,7 +105,11 @@ class TSPSeq{
     
     }   
 
-    void crossover(vector<chromosome> selected){
+    /**
+     * Apply crossover.
+     * @param selected is the vector of parent chromosome
+     */
+    void crossover(vector<chromosome>& selected){
         utimer ut("CROSSOVER: ");
         std::uniform_int_distribution<int> index_gen(3, graph.size() - 2); //i want to avoid parts of one element
         int index = index_gen(generator);
