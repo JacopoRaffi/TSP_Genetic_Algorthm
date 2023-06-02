@@ -129,17 +129,19 @@ class TSPSeq{
      * @param path is the chromosome to mutate.
      * @param mutation_rate is the probability that the mutation occurs.
      */
-    void mutation(vector<int>& path, double& mutation_rate){
-        utimer ut("MUTATION: ");
-        std::uniform_int_distribution<int> index_gen(1, path.size() - 1); //generate the value to compare to choose population
+    void mutation(vector<chromosome>& selected, double& mutation_rate){
+        utimer ut("MUTATION: ");    
+        std::uniform_int_distribution<int> index_gen(1, selected.size() - 1); //generate the value to compare to choose population
         std::uniform_real_distribution<double> prob_gen(0.0, 1.0); //generate the value to compare to choose population
 
-        //TODO: print path before and after mutation
-        if(prob_gen(generator) <= mutation_rate){
-            int parent_1 = index_gen(generator);
-            int parent_2 = index_gen(generator);
-
-            std::swap(path[parent_1], path[parent_2]);
+        for(int i = 0; i < selected.size(); i++){
+            if(prob_gen(generator) <= mutation_rate){
+                //TODO: print path before and after mutation
+                int gene_1 = index_gen(generator);
+                int gene_2 = index_gen(generator);
+                //Don't check if gene_1 == gene_2 because is quite unlikely being computed with uniform distribution
+                std::swap(selected[i].path[gene_1], selected[i].path[gene_2]);
+            }
         }
     }
 
