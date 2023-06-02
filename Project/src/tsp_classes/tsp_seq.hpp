@@ -104,10 +104,19 @@ class TSPSeq{
     
     }   
 
-    void crossover(){
+    void crossover(vector<chromosome> selected){
         utimer ut("CROSSOVER: ");
-        std::uniform_int_distribution<int> index_gen(2, graph.size() - 2); //i want to avoid parts of one element
+        std::uniform_int_distribution<int> index_gen(3, graph.size() - 2); //i want to avoid parts of one element
         int index = index_gen(generator);
+        
+        //aply crossover (i, i+1)
+        for(int i = 0; i < selected.size() - 1; i++){
+            //TODO: print before crossover and after crossover
+            auto begin_first = selected[i].path.begin();
+            auto begin_second = selected[i+1].path.begin();
+
+            std::swap_ranges(begin_first, begin_first + index, begin_second);
+        }
     }
     
     /**
