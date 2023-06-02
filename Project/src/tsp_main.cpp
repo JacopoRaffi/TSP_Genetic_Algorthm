@@ -21,7 +21,6 @@ vector<pair<double, double>> read_coord_file(string file){
         string x, y;
         parser >> x >> y;
         cities.push_back(make_pair(stod(x), stod(y)));
-
         parser.clear();
     }
 
@@ -59,7 +58,7 @@ int main(int argc, char *argv[]){
     int population_size = atoi(argv[4]);
     string mode = argv[5];
     double mutation_rate = 0.3;
-    int selection_number = 0.7 * population_size;
+    int selection_number = 0.6 * population_size;
     int seed = 1234;
     int start_vertex = 0;
 
@@ -82,12 +81,12 @@ int main(int argc, char *argv[]){
     vector<pair<double, double>> cities = read_coord_file("../cities.txt");
     Graph g = graph_init(cities, seed);
 
-    for(int i = 1; i < 10; i++){
+    /*for(int i = 1; i < 10; i++){
         for(int j = 0; j < i; j++){
             cout << g[i][j] << " ";
         }
         cout << "\n";
-    }
+    }*/
 
     if(mode == "sq"){ //sequential mode
         TSPSeq tsp(g, population_size, start_vertex);

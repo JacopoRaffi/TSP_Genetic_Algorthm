@@ -20,6 +20,8 @@ class TSPSeq{
     private:
     Graph& graph; 
     vector<chromosome> population;
+    std::random_device rd;
+    std::mt19937 generator{rd()};
     /**
      * Create the initial population.
      * @param population_size is the number of chromosome in the population.
@@ -27,8 +29,6 @@ class TSPSeq{
     void generation(int& population_size, int& start_vertex){
         utimer t("GENERATION: ");
         population = vector<chromosome>(population_size);
-        std::random_device rd;
-        std::mt19937 gen(rd());
 
         for(int i = 0; i < population_size; i++){
             population[i].path = vector<int>(graph.size());
@@ -37,9 +37,8 @@ class TSPSeq{
 
             std::iota(population[i].path.begin(), population[i].path.end(), 0);
             std::swap(population[i].path[0], population[i].path[start_vertex]);
-            std::shuffle(population[i].path.begin() + 1, population[i].path.end(), gen);
+            std::shuffle(population[i].path.begin() + 1, population[i].path.end(), generator);
         }
-
         //printPopulation();
     }
 
@@ -59,12 +58,24 @@ class TSPSeq{
      * @param chr is a chromosome of the population.
      */
     void fitness(chromosome& chr){
-        for(int i = 0; i < chr.path.size() - 1; i++){
-            int row = chr.path[i];
-            int col = chr.path[i+1];
+        int row, col;
+        bool greater;
+        int size = chr.path.size();
+        for(int i = 0; i < size - 1; i++){
+            //for lower triangular matrix row must be the greater of the two value
+            //avoid too many if-else
+            greater = (chr.path[i] > chr.path[i+1]);
+            row = greater*(chr.path[i]) + (!greater)*(chr.path[i+1]);
+            col = greater*(chr.path[i+1]) + (!greater)*(chr.path[i]);
+
             chr.fitness += graph[row][col];
         }
-        chr.fitness += graph[chr.path.size() - 1][0]; //edge between last element and start city
+
+        greater = (chr.path[0] > chr.path[size-1]);
+        row = greater*(chr.path[0]) + (!greater)*(chr.path[size-1]);
+        col = greater*(chr.path[size-1]) + (!greater)*(chr.path[0]);
+
+        chr.fitness += graph[row][col]; //edge between last element and start city
 
         chr.fitness = 1 / chr.fitness; //lower the distance better the fitness
     }
@@ -87,8 +98,6 @@ class TSPSeq{
     void selection(int& selection_number){
         utimer ut("SELECTION: ");
         double total_fitness = 0.0;
-        std::random_device rd;
-        std::mt19937 generator(rd());
         std::uniform_real_distribution<double> distribution(0.0, 1.0); //generate the value to compare to choose population
 
         double max_fitness = (*std::max_element(population.begin(), population.end(), [](const chromosome& a, const chromosome& b) {return a.fitness < b.fitness; })).fitness;
@@ -97,6 +106,8 @@ class TSPSeq{
 
     void crossover(){
         utimer ut("CROSSOVER: ");
+        std::uniform_int_distribution<int> index_gen(2, graph.size() - 2); //i want to avoid parts of one element
+        int index = index_gen(generator);
     }
     
     /**
@@ -106,15 +117,13 @@ class TSPSeq{
      */
     void mutation(vector<int>& path, double& mutation_rate){
         utimer ut("MUTATION: ");
-        std::random_device rd;
-        std::mt19937 gen(rd());
         std::uniform_int_distribution<int> index_gen(1, path.size() - 1); //generate the value to compare to choose population
         std::uniform_real_distribution<double> prob_gen(0.0, 1.0); //generate the value to compare to choose population
 
         //TODO: print path before and after mutation
-        if(prob_gen(gen) <= mutation_rate){
-            int parent_1 = index_gen(gen);
-            int parent_2 = index_gen(gen);
+        if(prob_gen(generator) <= mutation_rate){
+            int parent_1 = index_gen(generator);
+            int parent_2 = index_gen(generator);
 
             std::swap(path[parent_1], path[parent_2]);
         }
