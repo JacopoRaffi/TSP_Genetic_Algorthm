@@ -92,7 +92,7 @@ class TSPSeq{
     }
 
     /**
-     * Select the chromosome for crossover (stochastic acceptance).
+     * Select the chromosome for crossover (stochastic acceptance or Stochastic Unversal Sampling).
      * @param selection_number is the number of chromosome to be selected for crossover phase
      * @return the chromosome selected for crossover
      */
@@ -145,6 +145,7 @@ class TSPSeq{
 
     void merge(){
         utimer ut("MERGE: ");
+        //use in this case swap_ranges after sorting population based on fitness
     }
 
     public:
@@ -163,11 +164,11 @@ class TSPSeq{
         evaluation();
         selection(selection_size);
         /*for(int i = 0; i < generations; i++){
-            evaluation();
-            selection();
-            crossover();
-            mutation();
-            merge();
+            evaluation(); done
+            selection(); todo
+            crossover(); todo
+            mutation(); done
+            merge(); todo
         }*/
 
         evaluation(); //final evaluation to take the best path
