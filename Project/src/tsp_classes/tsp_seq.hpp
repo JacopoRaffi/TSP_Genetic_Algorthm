@@ -166,7 +166,9 @@ class TSPSeq{
 
         for(int i = 0; i < chr.path.size(); i++){
             duplicate[chr.path[i]] += 1;
-            need_fix = (duplicate[chr.path[i]] == 2); //it means there is at least 1 duplicate (it is necessary to fix)
+            if(duplicate[chr.path[i]] == 2)
+                need_fix = true;
+
         }
 
         if(need_fix){
