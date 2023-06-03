@@ -46,14 +46,14 @@ Graph graph_init(vector<pair<double, double>>& cities, int seed){
 }
  
 Graph rand_graph(){
-    Graph g(50);
+    Graph g(1000);
     srand(5400);
     //lower triangular matrix (un-directed graph) so I save, more or less, half space 
     //Start from 1 because I exclude the diagonal
-    for(int i = 1; i < 50; i++){ //10 is just for test in my pc
+    for(int i = 1; i < 1000; i++){ //10 is just for test in my pc
         g[i] = vector<double>(i);
         for(int j = 0; j < i; j++){
-            g[i][j] = rand() % 10;
+            g[i][j] = 1 + rand() % 10;
         }
     }
     return g;

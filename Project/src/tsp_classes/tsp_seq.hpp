@@ -135,7 +135,7 @@ class TSPSeq{
         utimer ut("CROSSOVER: ");
         std::uniform_int_distribution<int> index_gen(3, graph.size() - 2); //i want to avoid parts of one element
         //aply crossover (i, i+1)
-        for(int i = 0; i < selected.size() - 1; i++){
+        for(int i = 0; i < selected.size() - 1; i += 2){
             int index = index_gen(generator);
             auto begin_first = selected[i].first.begin();
             auto begin_second = selected[i+1].first.begin();
