@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <random>
 #include <iostream>
+#include <unordered_map>
 #include <numeric>
 #include "../utimer.hpp"
 
@@ -57,7 +58,7 @@ class TSPSeq{
         for(int i = 0; i < chr.first.size(); i++){
             std::cout << chr.first[i] << " ";
         }
-        std::cout << "\n";
+        std::cout << "FTNESS: " << chr.second << "\n";
     }
     
     /**
@@ -99,7 +100,7 @@ class TSPSeq{
     }
 
     /**
-     * Select the chromosome for crossover (stochastic acceptance or Stochastic Unversal Sampling).
+     * Select the chromosome for crossover (stochastic acceptance N times).
      * @param selection_number is the number of chromosome to be selected for crossover phase
      * @return the chromosome selected for crossover
      */
@@ -107,9 +108,23 @@ class TSPSeq{
         utimer ut("SELECTION: ");
         double total_fitness = 0.0;
         std::uniform_real_distribution<double> distribution(0.0, 1.0); //generate the value to compare to choose population
-        //double max_fitness = (*std::max_element(population.begin(), population.end(), [](const chromosome& a, const chromosome& b) {return a.second < b.second; })).second;
-        //std::copy(begin_first, begin_first + index, child_1.first.begin());
-        std::copy(population.begin(), population.begin() + selected.size(), selected.begin());
+        std::uniform_int_distribution<int> index_gen(0, population.size()-1);
+        double max_fitness = (*std::max_element(population.begin(), population.end(), [](const chromosome& a, const chromosome& b) {return a.second < b.second; })).second;
+
+        vector<bool> founds(population.size(), false); //optimized by C++ to be like a bit vector
+        int count = 0;
+
+        while(count < selection_number){
+            int index = index_gen(generator);
+            if(!founds.at(index)){ //not already taken
+                double probability = distribution(generator);
+                if(probability <= (population.at(index).second / max_fitness)){
+                    selected.at(count) = population.at(index);
+                    founds[index] = true;
+                    count++;
+                }
+            } 
+        }
     }   
 
     /**
@@ -183,8 +198,6 @@ class TSPSeq{
                 std::swap(selected[i].first[gene_1], selected[i].first[gene_2]);
             }
         }
-        
-        //merge(selected);
     }
 
     void merge(vector<chromosome>& selected){
@@ -192,7 +205,6 @@ class TSPSeq{
         //use in this case swap_ranges after sorting population based on fitness
         std::sort(population.begin(), population.end(), [](chromosome& a, chromosome& b) {return a.second < b.second; });
         std::swap_ranges(selected.begin(), selected.end(), population.begin()); //substitute worse chromosome with children
-        //printPopulation();
     }
 
     public:
@@ -215,8 +227,12 @@ class TSPSeq{
             selection(selection_size, selected); 
             crossover(selected); 
             mutation(selected, mutation_rate); 
+            merge(selected);
         }
-        std::cout << "\nFINALE\n";
+        //printPopulation();
+        double max_fitness = (*std::max_element(population.begin(), population.end(), [](const chromosome& a, const chromosome& b) {return a.second < b.second; })).second;
+
+        std::cout << "\n\nBEST PATH: " << (1/max_fitness) << "\n";
     }
 };
 

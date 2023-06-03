@@ -46,11 +46,11 @@ Graph graph_init(vector<pair<double, double>>& cities, int seed){
 }
  
 Graph rand_graph(){
-    Graph g(10);
+    Graph g(50);
     srand(5400);
     //lower triangular matrix (un-directed graph) so I save, more or less, half space 
     //Start from 1 because I exclude the diagonal
-    for(int i = 1; i < 10; i++){ //10 is just for test in my pc
+    for(int i = 1; i < 50; i++){ //10 is just for test in my pc
         g[i] = vector<double>(i);
         for(int j = 0; j < i; j++){
             g[i][j] = rand() % 10;
@@ -90,6 +90,10 @@ int main(int argc, char *argv[]){
 
     if(argc >= 9){
         start_vertex = atoi(argv[9]);
+    }
+
+    if(!(selection_number % 2)){ //needs to be even
+        selection_number++;
     }
     
     //vector<pair<double, double>> cities = read_coord_file(file);
