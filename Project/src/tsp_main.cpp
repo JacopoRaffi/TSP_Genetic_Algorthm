@@ -78,22 +78,18 @@ int main(int argc, char *argv[]){
 
     if(argc >= 7){
         mutation_rate = atof(argv[6]);
-        cout << "cazzo\n";
     }
 
     if(argc >= 8){
         selection_number = atof(argv[7]) * population_size;
-        cout << "cazzo\n";
     }
 
     if(argc >= 8){
         seed = atoi(argv[8]);
-        cout << "cazzo\n";
     }
 
     if(argc >= 9){
         start_vertex = atoi(argv[9]);
-        cout << "cazzo\n";
     }
     
     //vector<pair<double, double>> cities = read_coord_file("../cities.txt");
