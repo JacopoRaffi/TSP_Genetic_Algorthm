@@ -47,13 +47,13 @@ Graph graph_init(vector<pair<double, double>>& cities, int seed){
  
 Graph rand_graph(){
     Graph g(10);
-    srand(123);
+    srand(5400);
     //lower triangular matrix (un-directed graph) so I save, more or less, half space 
     //Start from 1 because I exclude the diagonal
     for(int i = 1; i < 10; i++){ //10 is just for test in my pc
         g[i] = vector<double>(i);
         for(int j = 0; j < i; j++){
-            g[i][j] = rand() % 100;
+            g[i][j] = rand() % 10;
         }
     }
     return g;
@@ -104,9 +104,9 @@ int main(int argc, char *argv[]){
     }
 
     if(mode == "sq"){ //sequential mode
-        cout << "Pop_cross: " << selection_number << "\n";
         TSPSeq tsp(rand_g, population_size, start_vertex);
         tsp.genetic_algorithm(generations, mutation_rate, selection_number);
+        cout << "CANE\n\n";
     }
 
     if(mode == "par"){ //naive C++ threads mode
