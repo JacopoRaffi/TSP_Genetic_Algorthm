@@ -54,7 +54,7 @@ class TSPSeq{
     }
 
     //Just for test
-    void printPath(chromosome chr){
+    void printPath(chromosome& chr){
         std::cout << "PATH: ";
         for(int i = 0; i < chr.path.size(); i++){
             std::cout << chr.path[i] << " ";
@@ -97,7 +97,7 @@ class TSPSeq{
         for(int i = 0; i < population.size(); i++)
             fitness(population[i]);
         
-        printPopulation();
+        //printPopulation();
     }
 
     /**
@@ -132,13 +132,12 @@ class TSPSeq{
             auto end_second = selected[i+1].path.end();
 
             //parents crossover
-            std::cout << selected[i].path.size() << "  " << selected[i].path.size() << "\n";
             std::swap_ranges(begin_first, begin_first + index, begin_second);
             std::swap_ranges(begin_second + index, end_second, begin_second + index);
-            printPath(selected[i]);
-            printPath(selected[i+1]);
+            
             fix_chromosome(selected[i]);
             fix_chromosome(selected[i+1]);
+            
         }
     }
 
