@@ -11,10 +11,8 @@
 using std::vector, std::pair;
 using Graph = vector<vector<double>>; //Adjiacency Matrix
 
-struct chromosome{
-    vector<int> path;
-    double fitness;
-};
+using chromosome = pair<vector<int>, double>;
+
 //TODO: Test the done phases
 class TSPSeq{
     private:
@@ -31,13 +29,13 @@ class TSPSeq{
         population = vector<chromosome>(population_size);
 
         for(int i = 0; i < population_size; i++){
-            population[i].path = vector<int>(graph.size());
-            population[i].path[0] = start_vertex;
-            population[i].fitness = 0;
+            population[i].first = vector<int>(graph.size());
+            population[i].first[0] = start_vertex;
+            population[i].second = 0;
 
-            std::iota(population[i].path.begin(), population[i].path.end(), 0);
-            std::swap(population[i].path[0], population[i].path[start_vertex]);
-            std::shuffle(population[i].path.begin() + 1, population[i].path.end(), generator);
+            std::iota(population[i].first.begin(), population[i].first.end(), 0);
+            std::swap(population[i].first[0], population[i].first[start_vertex]);
+            std::shuffle(population[i].first.begin() + 1, population[i].first.end(), generator);
         }
         //printPopulation();
     }
@@ -46,9 +44,9 @@ class TSPSeq{
     void printPopulation(){
         for(int i = 0; i < population.size(); i++){
             for(int j = 0; j < graph.size(); j++){
-                std::cout << population[i].path[j] << " ";
+                std::cout << population[i].first[j] << " ";
             }
-            std::cout << "FITNESS:" << population[i].fitness;
+            std::cout << "FITNESS:" << population[i].second;
             std::cout << " Chromosome: " << i << "\n";
         }
     }
@@ -56,8 +54,8 @@ class TSPSeq{
     //Just for test
     void printPath(chromosome& chr){
         std::cout << "PATH: ";
-        for(int i = 0; i < chr.path.size(); i++){
-            std::cout << chr.path[i] << " ";
+        for(int i = 0; i < chr.first.size(); i++){
+            std::cout << chr.first[i] << " ";
         }
         std::cout << "\n";
     }
@@ -69,24 +67,24 @@ class TSPSeq{
     void fitness(chromosome& chr){
         int row, col;
         bool greater;
-        int size = chr.path.size();
+        int size = chr.first.size();
         for(int i = 0; i < size - 1; i++){
             //for lower triangular matrix row must be the greater of the two value
             //avoid too many if-else
-            greater = (chr.path[i] > chr.path[i+1]);
-            row = greater*(chr.path[i]) + (!greater)*(chr.path[i+1]);
-            col = greater*(chr.path[i+1]) + (!greater)*(chr.path[i]);
+            greater = (chr.first[i] > chr.first[i+1]);
+            row = greater*(chr.first[i]) + (!greater)*(chr.first[i+1]);
+            col = greater*(chr.first[i+1]) + (!greater)*(chr.first[i]);
 
-            chr.fitness += graph[row][col];
+            chr.second += graph[row][col];
         }
 
-        greater = (chr.path[0] > chr.path[size-1]);
-        row = greater*(chr.path[0]) + (!greater)*(chr.path[size-1]);
-        col = greater*(chr.path[size-1]) + (!greater)*(chr.path[0]);
+        greater = (chr.first[0] > chr.first[size-1]);
+        row = greater*(chr.first[0]) + (!greater)*(chr.first[size-1]);
+        col = greater*(chr.first[size-1]) + (!greater)*(chr.first[0]);
 
-        chr.fitness += graph[row][col]; //edge between last element and start city
+        chr.second += graph[row][col]; //edge between last element and start city
 
-        chr.fitness = 1 / chr.fitness; //lower the distance better the fitness
+        chr.second = 1 / chr.second; //lower the distance better the fitness
     }
 
     /**
@@ -109,9 +107,9 @@ class TSPSeq{
         utimer ut("SELECTION: ");
         double total_fitness = 0.0;
         std::uniform_real_distribution<double> distribution(0.0, 1.0); //generate the value to compare to choose population
-        //double max_fitness = (*std::max_element(population.begin(), population.end(), [](const chromosome& a, const chromosome& b) {return a.fitness < b.fitness; })).fitness;
-        //std::copy(begin_first, begin_first + index, child_1.path.begin());
-        std::copy(population.begin(), population.begin() + selection_number, selected.begin());
+        //double max_fitness = (*std::max_element(population.begin(), population.end(), [](const chromosome& a, const chromosome& b) {return a.second < b.second; })).second;
+        //std::copy(begin_first, begin_first + index, child_1.first.begin());
+        std::copy(population.begin(), population.begin() + selected.size(), selected.begin());
     }   
 
     /**
@@ -124,12 +122,11 @@ class TSPSeq{
         //aply crossover (i, i+1)
         for(int i = 0; i < selected.size() - 1; i++){
             int index = index_gen(generator);
-            std::cout << "INDEX: " << index << "\n";
-            auto begin_first = selected[i].path.begin();
-            auto begin_second = selected[i+1].path.begin();
+            auto begin_first = selected[i].first.begin();
+            auto begin_second = selected[i+1].first.begin();
 
-            auto end_first = selected[i].path.end();
-            auto end_second = selected[i+1].path.end();
+            auto end_first = selected[i].first.end();
+            auto end_second = selected[i+1].first.end();
 
             //parents crossover
             std::swap_ranges(begin_first, begin_first + index, begin_second);
@@ -137,7 +134,6 @@ class TSPSeq{
             
             fix_chromosome(selected[i]);
             fix_chromosome(selected[i+1]);
-            
         }
     }
 
@@ -147,23 +143,22 @@ class TSPSeq{
      */
     void fix_chromosome(chromosome& chr){
         //check the occurences of each city
-        vector<int> duplicate(chr.path.size(), 0); //ndexes represent cities
+        vector<int> duplicate(chr.first.size(), 0); //ndexes represent cities
         bool need_fix = false;
 
-        for(int i = 0; i < chr.path.size(); i++){
-            duplicate[chr.path[i]] += 1;
-            if(duplicate[chr.path[i]] == 2)
+        for(int i = 0; i < chr.first.size(); i++){
+            duplicate[chr.first[i]] += 1;
+            if(duplicate[chr.first[i]] == 2)
                 need_fix = true;
         }
         
         if(need_fix){
-            for(int i = 0; i < chr.path.size(); i++){
-                if(duplicate[chr.path[i]] >= 2){
-                    vector<int>::iterator it = std::find(duplicate.begin(), duplicate.end(), 0); //first city with 0 occurences
-                    int city = static_cast<int>(std::distance(duplicate.begin(), it));
+            for(int i = 0; i < chr.first.size(); i++){
+                if(duplicate[chr.first[i]] >= 2){
+                    int city = std::distance(duplicate.begin(), std::find(duplicate.begin(), duplicate.end(), 0));
                     duplicate[city]++;
-                    duplicate[chr.path[i]]--;
-                    std::swap(chr.path[i], city);
+                    duplicate[chr.first[i]]--;
+                    std::swap(chr.first[i], city);
                 }
             }
         }
@@ -176,25 +171,26 @@ class TSPSeq{
      */
     void mutation(vector<chromosome>& selected, double& mutation_rate){
         utimer ut("MUTATION: ");    
-        std::uniform_int_distribution<int> index_gen(1, selected.size() - 1); //generate the value to compare to choose population
+        std::uniform_int_distribution<int> index_gen(1, graph.size() - 1); //generate the value to compare to choose population
         std::uniform_real_distribution<double> prob_gen(0.0, 1.0); //generate the value to compare to choose population
 
         for(int i = 0; i < selected.size(); i++){
+            
             if(prob_gen(generator) <= mutation_rate){
                 int gene_1 = index_gen(generator);
                 int gene_2 = index_gen(generator);
                 //Don't check if gene_1 == gene_2 because is quite unlikely being computed with uniform distribution (it would be (1/n)^2)
-                std::swap(selected[i].path[gene_1], selected[i].path[gene_2]);
+                std::swap(selected[i].first[gene_1], selected[i].first[gene_2]);
             }
         }
-        //printPopulation();
+        
         //merge(selected);
     }
 
     void merge(vector<chromosome>& selected){
         utimer ut("MERGE: ");
         //use in this case swap_ranges after sorting population based on fitness
-        std::sort(population.begin(), population.end(), [](chromosome& a, chromosome& b) {return a.fitness < b.fitness; });
+        std::sort(population.begin(), population.end(), [](chromosome& a, chromosome& b) {return a.second < b.second; });
         std::swap_ranges(selected.begin(), selected.end(), population.begin()); //substitute worse chromosome with children
         //printPopulation();
     }
@@ -221,8 +217,6 @@ class TSPSeq{
             mutation(selected, mutation_rate); 
         }
         std::cout << "\nFINALE\n";
-        //evaluation(); //final evaluation to take the best path
-        //TODO: Find chromosome wth max fitness (use std::max)
     }
 };
 

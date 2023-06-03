@@ -106,7 +106,6 @@ int main(int argc, char *argv[]){
     if(mode == "sq"){ //sequential mode
         TSPSeq tsp(rand_g, population_size, start_vertex);
         tsp.genetic_algorithm(generations, mutation_rate, selection_number);
-        cout << "CANE\n\n";
     }
 
     if(mode == "par"){ //naive C++ threads mode
