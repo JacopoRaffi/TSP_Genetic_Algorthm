@@ -15,7 +15,7 @@ struct chromosome{
     vector<int> path;
     double fitness;
 };
-
+//TODO: Test the done phases
 class TSPSeq{
     private:
     Graph& graph; 
@@ -107,11 +107,16 @@ class TSPSeq{
      */
     vector<chromosome> selection(int& selection_number){
         utimer ut("SELECTION: ");
+        std::cout << selection_number << "\n"; 
         double total_fitness = 0.0;
+        vector<chromosome> selected(selection_number);
         std::uniform_real_distribution<double> distribution(0.0, 1.0); //generate the value to compare to choose population
 
-        double max_fitness = (*std::max_element(population.begin(), population.end(), [](const chromosome& a, const chromosome& b) {return a.fitness < b.fitness; })).fitness;
-    
+        //double max_fitness = (*std::max_element(population.begin(), population.end(), [](const chromosome& a, const chromosome& b) {return a.fitness < b.fitness; })).fitness;
+        //std::copy(begin_first, begin_first + index, child_1.path.begin());
+        std::copy(population.begin(), population.begin() + selection_number, selected.begin());
+
+        return selected;
     }   
 
     /**
@@ -121,12 +126,11 @@ class TSPSeq{
     vector<chromosome> crossover(vector<chromosome>& selected){
         utimer ut("CROSSOVER: ");
         std::uniform_int_distribution<int> index_gen(3, graph.size() - 2); //i want to avoid parts of one element
-        int index = index_gen(generator);
         vector<chromosome> offspring; //future children
         //aply crossover (i, i+1)
         for(int i = 0; i < selected.size() - 1; i++){
-            printPath(selected[i]);
-            printPath(selected[i+1]);
+            int index = index_gen(generator);
+           
             chromosome child_1, child_2;
 
             child_1.path = vector<int>(selected[i].path.size());
@@ -139,17 +143,17 @@ class TSPSeq{
 
             //first child
             std::copy(begin_first, begin_first + index, child_1.path.begin());
-            std::copy(begin_second+(index+1), end_second, child_1.path.begin()+(index+1));
+            std::copy(begin_second + index, end_second, child_1.path.begin()+ index);
 
             //second child
             std::copy(begin_second, begin_second + index, child_2.path.begin());
-            std::copy(begin_first+(index+1), end_first, child_2.path.begin()+(index+1));
+            std::copy(begin_first + index, end_first, child_2.path.begin()+ index);
 
             fix_chromosome(child_1);
             fix_chromosome(child_2);
-
-            printPath(selected[i]);
-            printPath(selected[i+1]);
+            
+            offspring.push_back(child_1);
+            offspring.push_back(child_2);
         }
 
         return offspring;
@@ -168,14 +172,15 @@ class TSPSeq{
             duplicate[chr.path[i]] += 1;
             if(duplicate[chr.path[i]] == 2)
                 need_fix = true;
-
         }
-
+        
         if(need_fix){
             for(int i = 0; i < chr.path.size(); i++){
                 if(duplicate[chr.path[i]] >= 2){
-                    vector<int>::iterator it = std::find(chr.path.begin(), chr.path.end(), 0); //first city with 0 occurences
-                    int city = std::distance(chr.path.begin(), it);
+                    vector<int>::iterator it = std::find(duplicate.begin() + 1, duplicate.end(), 0); //first city with 0 occurences
+                    int city = static_cast<int>(std::distance(duplicate.begin(), it));
+                    duplicate[city]++;
+                    duplicate[chr.path[i]]--;
                     std::swap(chr.path[i], city);
                 }
             }
@@ -194,12 +199,10 @@ class TSPSeq{
 
         for(int i = 0; i < selected.size(); i++){
             if(prob_gen(generator) <= mutation_rate){
-                printPath(selected[i]);
                 int gene_1 = index_gen(generator);
                 int gene_2 = index_gen(generator);
                 //Don't check if gene_1 == gene_2 because is quite unlikely being computed with uniform distribution (it would be (1/n)^2)
                 std::swap(selected[i].path[gene_1], selected[i].path[gene_2]);
-                printPath(selected[i]);
             }
         }
     }
@@ -208,7 +211,7 @@ class TSPSeq{
         utimer ut("MERGE: ");
         //use in this case swap_ranges after sorting population based on fitness
         std::sort(population.begin(), population.end(), [](chromosome& a, chromosome& b) {return a.fitness < b.fitness; });
-        std::swap_ranges(selected.begin(), selected.end(), population.begin() + selected.size()); //substitute worse chromosome with children
+        std::swap_ranges(selected.begin(), selected.end(), population.begin()); //substitute worse chromosome with children
     }
 
     public:
@@ -224,17 +227,15 @@ class TSPSeq{
      * @param selection_size is the number of chromosome selected for crossover.
      */
     void genetic_algorithm(int& generations, double& mutation_rate, int& selection_size){
-        evaluation();
-        selection(selection_size);
-        /*for(int i = 0; i < generations; i++){
-            evaluation(); done
-            selection(); todo
-            crossover(); done
-            mutation(); done
-            merge(); done
-        }*/
-
-        evaluation(); //final evaluation to take the best path
+        for(int i = 0; i < generations; i++){
+            evaluation(); 
+            vector<chromosome> v = selection(selection_size); 
+            v = crossover(v); 
+            mutation(v, mutation_rate); 
+            merge(v); 
+        }
+        //evaluation(); //final evaluation to take the best path
+        //TODO: Find chromosome wth max fitness (use std::max)
     }
 };
 

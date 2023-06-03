@@ -76,34 +76,39 @@ int main(int argc, char *argv[]){
     int seed = 1234;
     int start_vertex = 0;
 
-    if(argv[6]){
+    if(argc >= 7){
         mutation_rate = atof(argv[6]);
+        cout << "cazzo\n";
     }
 
-    if(argv[7]){
-        selection_number = atof(argv[8]) * population_size;
+    if(argc >= 8){
+        selection_number = atof(argv[7]) * population_size;
+        cout << "cazzo\n";
     }
 
-    if(argv[8]){
-        seed = atoi(argv[9]);
+    if(argc >= 8){
+        seed = atoi(argv[8]);
+        cout << "cazzo\n";
     }
 
-    if(argv[9]){
-        start_vertex = atoi(argv[10]);
+    if(argc >= 9){
+        start_vertex = atoi(argv[9]);
+        cout << "cazzo\n";
     }
     
-    vector<pair<double, double>> cities = read_coord_file("../cities.txt");
-    Graph g = graph_init(cities, seed);
+    //vector<pair<double, double>> cities = read_coord_file("../cities.txt");
+    //Graph g = graph_init(cities, seed);
     Graph rand_g = rand_graph(); //just for simple test
 
-    /*for(int i = 1; i < 10; i++){
+    for(int i = 1; i < 10; i++){
         for(int j = 0; j < i; j++){
-            cout << g[i][j] << " ";
+            cout << rand_g[i][j] << " ";
         }
         cout << "\n";
-    }*/
+    }
 
     if(mode == "sq"){ //sequential mode
+        cout << "Pop_cross: " << selection_number << "\n";
         TSPSeq tsp(rand_g, population_size, start_vertex);
         tsp.genetic_algorithm(generations, mutation_rate, selection_number);
     }
