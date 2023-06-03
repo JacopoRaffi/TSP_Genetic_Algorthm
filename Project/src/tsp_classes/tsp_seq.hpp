@@ -132,7 +132,6 @@ class TSPSeq{
             int index = index_gen(generator);
            
             chromosome child_1, child_2;
-
             child_1.path = vector<int>(selected[i].path.size());
             child_2.path = vector<int>(selected[i].path.size());
 
@@ -149,9 +148,13 @@ class TSPSeq{
             std::copy(begin_second, begin_second + index, child_2.path.begin());
             std::copy(begin_first + index, end_first, child_2.path.begin()+ index);
 
+            printPath(child_1);
+            printPath(child_2);
             fix_chromosome(child_1);
             fix_chromosome(child_2);
-            
+            printPath(child_1);
+            printPath(child_2);
+            std::cout << "\n\n";
             offspring.push_back(child_1);
             offspring.push_back(child_2);
         }
@@ -177,7 +180,7 @@ class TSPSeq{
         if(need_fix){
             for(int i = 0; i < chr.path.size(); i++){
                 if(duplicate[chr.path[i]] >= 2){
-                    vector<int>::iterator it = std::find(duplicate.begin() + 1, duplicate.end(), 0); //first city with 0 occurences
+                    vector<int>::iterator it = std::find(duplicate.begin(), duplicate.end(), 0); //first city with 0 occurences
                     int city = static_cast<int>(std::distance(duplicate.begin(), it));
                     duplicate[city]++;
                     duplicate[chr.path[i]]--;

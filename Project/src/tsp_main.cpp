@@ -74,7 +74,7 @@ int main(int argc, char *argv[]){
     double mutation_rate = 0.3;
     int selection_number = 0.6 * population_size;
     int seed = 1234;
-    int start_vertex = 0;
+    int start_vertex = 1;
 
     if(argc >= 7){
         mutation_rate = atof(argv[6]);
@@ -92,7 +92,7 @@ int main(int argc, char *argv[]){
         start_vertex = atoi(argv[9]);
     }
     
-    //vector<pair<double, double>> cities = read_coord_file("../cities.txt");
+    //vector<pair<double, double>> cities = read_coord_file(file);
     //Graph g = graph_init(cities, seed);
     Graph rand_g = rand_graph(); //just for simple test
 
