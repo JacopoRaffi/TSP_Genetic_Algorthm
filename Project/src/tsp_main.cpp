@@ -36,7 +36,7 @@ Graph graph_init(vector<pair<double, double>>& cities, int seed){
 
     //lower triangular matrix (un-directed graph) so I save, more or less, half space 
     //Start from 1 because I exclude the diagonal
-    for(int i = 1; i < 10; i++){ //10 is just for test in my pc
+    for(int i = 1; i < cities.size(); i++){ //10 is just for test in my pc
         g[i] = vector<double>(i);
         for(int j = 0; j < i; j++){
             g[i][j] = euclidean_distance(cities[i], cities[j]);
@@ -46,11 +46,11 @@ Graph graph_init(vector<pair<double, double>>& cities, int seed){
 }
  
 Graph rand_graph(){
-    Graph g(1000);
+    Graph g(100);
     srand(5400);
     //lower triangular matrix (un-directed graph) so I save, more or less, half space 
     //Start from 1 because I exclude the diagonal
-    for(int i = 1; i < 1000; i++){ //10 is just for test in my pc
+    for(int i = 1; i < 100; i++){ //10 is just for test in my pc
         g[i] = vector<double>(i);
         for(int j = 0; j < i; j++){
             g[i][j] = 1 + rand() % 10;
@@ -67,7 +67,7 @@ int main(int argc, char *argv[]){
     }
     
     int workers = atoi(argv[1]);
-    string file_coordinates = argv[2];
+    string file = argv[2];
     int generations = atoi(argv[3]);
     int population_size = atoi(argv[4]);
     string mode = argv[5];
@@ -96,19 +96,12 @@ int main(int argc, char *argv[]){
         selection_number++;
     }
     
-    //vector<pair<double, double>> cities = read_coord_file(file);
-    //Graph g = graph_init(cities, seed);
-    Graph rand_g = rand_graph(); //just for simple test
-
-    for(int i = 1; i < 10; i++){
-        for(int j = 0; j < i; j++){
-            cout << rand_g[i][j] << " ";
-        }
-        cout << "\n";
-    }
+    vector<pair<double, double>> cities = read_coord_file(file);
+    Graph g = graph_init(cities, seed);
+    //Graph rand_g = rand_graph(); //just for simple test
 
     if(mode == "sq"){ //sequential mode
-        TSPSeq tsp(rand_g, population_size, start_vertex);
+        TSPSeq tsp(g, population_size, start_vertex);
         tsp.genetic_algorithm(generations, mutation_rate, selection_number);
     }
 

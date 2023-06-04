@@ -163,8 +163,9 @@ class TSPSeq{
 
         for(int i = 0; i < chr.first.size(); i++){
             duplicate[chr.first[i]] += 1;
-            if(duplicate[chr.first[i]] == 2)
-                need_fix = true;
+            need_fix = need_fix || (duplicate[chr.first[i]] == 2);
+            //if(duplicate[chr.first[i]] == 2)
+                //need_fix = true;
         }
         
         if(need_fix){
@@ -230,9 +231,9 @@ class TSPSeq{
             merge(selected);
         }
         //printPopulation();
-        double max_fitness = (*std::max_element(population.begin(), population.end(), [](const chromosome& a, const chromosome& b) {return a.second < b.second; })).second;
-
-        std::cout << "\n\nBEST PATH: " << (1/max_fitness) << "\n";
+        chromosome max_fitness = (*std::max_element(population.begin(), population.end(), [](const chromosome& a, const chromosome& b) {return a.second < b.second; }));
+        printPath(max_fitness);
+        std::cout << "\n\nBEST PATH: " << (int)(1/max_fitness.second) << "\n";
     }
 };
 
