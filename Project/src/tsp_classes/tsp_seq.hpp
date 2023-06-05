@@ -5,7 +5,6 @@
 #include <algorithm>
 #include <random>
 #include <iostream>
-#include <unordered_map>
 #include <numeric>
 #include "../utimer.hpp"
 
@@ -107,19 +106,21 @@ class TSPSeq{
     void selection(int& selection_number, vector<chromosome>& selected){
         utimer ut("SELECTION: ");
         double total_fitness = 0.0;
+        int size = population.size();
         std::uniform_real_distribution<double> distribution(0.0, 1.0); //generate the value to compare to choose population
-        std::uniform_int_distribution<int> index_gen(0, population.size()-1);
+        std::uniform_int_distribution<int> index_gen(0, size-1);
+        
         double max_fitness = (*std::max_element(population.begin(), population.end(), [](const chromosome& a, const chromosome& b) {return a.second < b.second; })).second;
-
         vector<bool> founds(population.size(), false); //optimized by C++ to be like a bit vector
         int count = 0;
-
+        std::cout << 1/max_fitness << "\n";
+        
         while(count < selection_number){
             int index = index_gen(generator);
-            if(!founds.at(index)){ //not already taken
+            if(!founds[index]){//not already taken
                 double probability = distribution(generator);
-                if(probability <= (population.at(index).second / max_fitness)){
-                    selected.at(count) = population.at(index);
+                if(probability <= (population[index].second / max_fitness)){
+                    selected[count] = population[index];
                     founds[index] = true;
                     count++;
                 }
@@ -198,12 +199,13 @@ class TSPSeq{
                 //Don't check if gene_1 == gene_2 because is quite unlikely being computed with uniform distribution (it would be (1/n)^2)
                 std::swap(selected[i].first[gene_1], selected[i].first[gene_2]);
             }
+            fitness(selected[i]);
         }
     }
 
     void merge(vector<chromosome>& selected){
         utimer ut("MERGE: ");
-        //use in this case swap_ranges after sorting population based on fitness
+        //use in this case swap_ranges after sorting population based on fitness (ascending order)
         std::sort(population.begin(), population.end(), [](chromosome& a, chromosome& b) {return a.second < b.second; });
         std::swap_ranges(selected.begin(), selected.end(), population.begin()); //substitute worse chromosome with children
     }
@@ -222,9 +224,10 @@ class TSPSeq{
      */
     void genetic_algorithm(int& generations, double& mutation_rate, int& selection_size){
         vector<chromosome> selected(selection_size);
+        evaluation(); 
         for(int i = 0; i < generations; i++){
             std::cout << "Generation: " << i << "\n" ;
-            evaluation(); 
+            //evaluation(); 
             selection(selection_size, selected); 
             crossover(selected); 
             mutation(selected, mutation_rate); 
@@ -232,7 +235,6 @@ class TSPSeq{
         }
         //printPopulation();
         chromosome max_fitness = (*std::max_element(population.begin(), population.end(), [](const chromosome& a, const chromosome& b) {return a.second < b.second; }));
-        printPath(max_fitness);
         std::cout << "\n\nBEST PATH: " << (int)(1/max_fitness.second) << "\n";
     }
 };

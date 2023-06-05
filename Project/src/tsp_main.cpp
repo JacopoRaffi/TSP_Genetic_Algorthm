@@ -10,6 +10,7 @@
 using namespace std;
 
 vector<pair<double, double>> read_coord_file(string file){
+    utimer ut("FILE: ");
     ifstream read_file(file);
     string coordinates;
     stringstream parser;
@@ -32,6 +33,7 @@ inline double euclidean_distance(pair<double, double> coord_a, pair<double, doub
 }
 
 Graph graph_init(vector<pair<double, double>>& cities, int seed){ 
+    utimer ut("GRAPH: ");
     Graph g(cities.size());
 
     //lower triangular matrix (un-directed graph) so I save, more or less, half space 
@@ -95,6 +97,7 @@ int main(int argc, char *argv[]){
     if(!(selection_number % 2)){ //needs to be even
         selection_number++;
     }
+    
     
     vector<pair<double, double>> cities = read_coord_file(file);
     Graph g = graph_init(cities, seed);
