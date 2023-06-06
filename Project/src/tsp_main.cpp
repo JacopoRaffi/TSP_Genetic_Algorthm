@@ -38,8 +38,8 @@ Graph graph_init(vector<pair<double, double>>& cities, int seed){
 
     //lower triangular matrix (un-directed graph) so I save, more or less, half space 
     //Start from 1 because I exclude the diagonal
-    for(int i = 1; i < cities.size(); i++){ //10 is just for test in my pc
-        g[i] = vector<double>(i);
+    for(int i = 0; i < cities.size(); i++){ //10 is just for test in my pc
+        g[i] = vector<double>(cities.size());
         for(int j = 0; j < i; j++){
             g[i][j] = euclidean_distance(cities[i], cities[j]);
         }
@@ -98,7 +98,7 @@ int main(int argc, char *argv[]){
         selection_number++;
     }
     
-    
+    utimer time("ALL: ");
     vector<pair<double, double>> cities = read_coord_file(file);
     Graph g = graph_init(cities, seed);
     //Graph rand_g = rand_graph(); //just for simple test

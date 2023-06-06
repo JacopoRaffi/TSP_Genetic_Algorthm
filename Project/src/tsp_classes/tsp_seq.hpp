@@ -69,21 +69,9 @@ class TSPSeq{
         bool greater;
         int size = chr.first.size();
         for(int i = 0; i < size - 1; i++){
-            //for lower triangular matrix row must be the greater of the two value
-            //avoid too many if-else
-            greater = (chr.first[i] > chr.first[i+1]);
-            row = greater*(chr.first[i]) + (!greater)*(chr.first[i+1]);
-            col = greater*(chr.first[i+1]) + (!greater)*(chr.first[i]);
-
-            chr.second += graph[row][col];
+            chr.second += graph[chr.first[i]][chr.first[i+1]];
         }
-
-        greater = (chr.first[0] > chr.first[size-1]);
-        row = greater*(chr.first[0]) + (!greater)*(chr.first[size-1]);
-        col = greater*(chr.first[size-1]) + (!greater)*(chr.first[0]);
-
-        chr.second += graph[row][col]; //edge between last element and start city
-
+        chr.second += graph[chr.first[size-1]][chr.first[0]]; //edge between last element and start city
         chr.second = 1 / chr.second; //lower the distance better the fitness
     }
 
@@ -227,7 +215,6 @@ class TSPSeq{
         evaluation(); 
         for(int i = 0; i < generations; i++){
             std::cout << "Generation: " << i << "\n" ;
-            //evaluation(); 
             selection(selection_size, selected); 
             crossover(selected); 
             mutation(selected, mutation_rate); 
