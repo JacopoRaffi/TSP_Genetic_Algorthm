@@ -99,20 +99,15 @@ class TSPSeq{
         std::uniform_int_distribution<int> index_gen(0, size-1);
         
         double max_fitness = (*std::max_element(population.begin(), population.end(), [](const chromosome& a, const chromosome& b) {return a.second < b.second; })).second;
-        vector<bool> founds(population.size(), false); //optimized by C++ to be like a bit vector
         int count = 0;
-        std::cout << 1/max_fitness << "\n";
         
         while(count < selection_number){
             int index = index_gen(generator);
-            if(!founds[index]){//not already taken
-                double probability = distribution(generator);
-                if(probability <= (population[index].second / max_fitness)){
-                    selected[count] = population[index];
-                    founds[index] = true;
-                    count++;
-                }
-            } 
+            double probability = distribution(generator);
+            if(probability <= (population[index].second / max_fitness)){
+                selected[count] = population[index];
+                count++;
+            }
         }
     }   
 
@@ -149,6 +144,7 @@ class TSPSeq{
         //check the occurences of each city
         vector<int> duplicate(chr.first.size(), 0); //ndexes represent cities
         bool need_fix = false;
+        vector<int> missing;
 
         for(int i = 0; i < chr.first.size(); i++){
             duplicate[chr.first[i]] += 1;
@@ -156,17 +152,30 @@ class TSPSeq{
             //if(duplicate[chr.first[i]] == 2)
                 //need_fix = true;
         }
-        
+    
         if(need_fix){
             for(int i = 0; i < chr.first.size(); i++){
-                if(duplicate[chr.first[i]] >= 2){
+                if(duplicate[i] == 0)
+                    missing.push_back(i);
+            }
+            int miss_index = 0;
+            for(int i = 0; i < chr.first.size(); i++){
+                if(duplicate[chr.first[i]] == 2){
+                    duplicate[chr.first[i]] = missing[miss_index];
+                    miss_index++;
+                    duplicate[chr.first[i]]--;
+                }
+            }
+            
+        }
+            /*for(int i = 0; i < chr.first.size(); i++){
+                if(duplicate[chr.first[i]] == 2){
                     int city = std::distance(duplicate.begin(), std::find(duplicate.begin(), duplicate.end(), 0));
                     duplicate[city]++;
                     duplicate[chr.first[i]]--;
                     std::swap(chr.first[i], city);
                 }
-            }
-        }
+            }*/
     }
     
     /**
