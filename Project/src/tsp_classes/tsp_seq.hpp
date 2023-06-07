@@ -8,7 +8,7 @@
 #include <numeric>
 #include "../utimer.hpp"
 
-using std::vector, std::pair;
+using namespace std;
 using Graph = vector<vector<double>>; //Adjiacency Matrix
 
 using chromosome = pair<vector<int>, double>;
@@ -16,10 +16,10 @@ using chromosome = pair<vector<int>, double>;
 //TODO: Test the done phases
 class TSPSeq{
     private:
-    Graph& graph; 
+    Graph graph; 
     vector<chromosome> population;
-    std::random_device rd;
-    std::mt19937 generator{rd()};
+    random_device rd;
+    mt19937 generator{rd()};
     /**
      * Create the initial population.
      * @param population_size is the number of chromosome in the population.
@@ -33,9 +33,9 @@ class TSPSeq{
             population[i].first[0] = start_vertex;
             population[i].second = 0;
 
-            std::iota(population[i].first.begin(), population[i].first.end(), 0);
-            std::swap(population[i].first[0], population[i].first[start_vertex]);
-            std::shuffle(population[i].first.begin() + 1, population[i].first.end(), generator);
+            iota(population[i].first.begin(), population[i].first.end(), 0);
+            swap(population[i].first[0], population[i].first[start_vertex]);
+            shuffle(population[i].first.begin() + 1, population[i].first.end(), generator);
         }
         //printPopulation();
     }
@@ -44,20 +44,20 @@ class TSPSeq{
     void printPopulation(){
         for(int i = 0; i < population.size(); i++){
             for(int j = 0; j < graph.size(); j++){
-                std::cout << population[i].first[j] << " ";
+                cout << population[i].first[j] << " ";
             }
-            std::cout << "FITNESS:" << population[i].second;
-            std::cout << " Chromosome: " << i << "\n";
+            cout << "FITNESS:" << population[i].second;
+            cout << " Chromosome: " << i << "\n";
         }
     }
 
     //Just for test
     void printPath(chromosome& chr){
-        std::cout << "PATH: ";
+        cout << "PATH: ";
         for(int i = 0; i < chr.first.size(); i++){
-            std::cout << chr.first[i] << " ";
+            cout << chr.first[i] << " ";
         }
-        std::cout << "FTNESS: " << chr.second << "\n";
+        cout << "FTNESS: " << chr.second << "\n";
     }
     
     /**
@@ -65,8 +65,6 @@ class TSPSeq{
      * @param chr is a chromosome of the population.
      */
     void fitness(chromosome& chr){
-        int row, col;
-        bool greater;
         int size = chr.first.size();
         for(int i = 0; i < size - 1; i++){
             chr.second += graph[chr.first[i]][chr.first[i+1]];
@@ -95,10 +93,10 @@ class TSPSeq{
         utimer ut("SELECTION: ");
         double total_fitness = 0.0;
         int size = population.size();
-        std::uniform_real_distribution<double> distribution(0.0, 1.0); //generate the value to compare to choose population
-        std::uniform_int_distribution<int> index_gen(0, size-1);
+        uniform_real_distribution<double> distribution(0.0, 1.0); //generate the value to compare to choose population
+        uniform_int_distribution<int> index_gen(0, size-1);
         
-        double max_fitness = (*std::max_element(population.begin(), population.end(), [](const chromosome& a, const chromosome& b) {return a.second < b.second; })).second;
+        double max_fitness = (*max_element(population.begin(), population.end(), [](const chromosome& a, const chromosome& b) {return a.second < b.second; })).second;
         int count = 0;
         
         while(count < selection_number){
@@ -116,8 +114,7 @@ class TSPSeq{
      * @param selected is the vector of parents chromosome
      */
     void crossover(vector<chromosome>& selected){
-        utimer ut("CROSSOVER: ");
-        std::uniform_int_distribution<int> index_gen(3, graph.size() - 2); //i want to avoid parts of one element
+        uniform_int_distribution<int> index_gen(3, graph.size() - 2); //i want to avoid parts of one element
         //aply crossover (i, i+1)
         for(int i = 0; i < selected.size() - 1; i += 2){
             int index = index_gen(generator);
@@ -128,8 +125,8 @@ class TSPSeq{
             auto end_second = selected[i+1].first.end();
 
             //parents crossover
-            std::swap_ranges(begin_first, begin_first + index, begin_second);
-            std::swap_ranges(begin_second + index, end_second, begin_second + index);
+            swap_ranges(begin_first, begin_first + index, begin_second);
+            swap_ranges(begin_second + index, end_second, begin_second + index);
             
             fix_chromosome(selected[i]);
             fix_chromosome(selected[i+1]);
@@ -161,21 +158,13 @@ class TSPSeq{
             int miss_index = 0;
             for(int i = 0; i < chr.first.size(); i++){
                 if(duplicate[chr.first[i]] == 2){
-                    duplicate[chr.first[i]] = missing[miss_index];
-                    miss_index++;
                     duplicate[chr.first[i]]--;
+                    chr.first[i] = missing[miss_index];
+                    miss_index++;
                 }
             }
             
         }
-            /*for(int i = 0; i < chr.first.size(); i++){
-                if(duplicate[chr.first[i]] == 2){
-                    int city = std::distance(duplicate.begin(), std::find(duplicate.begin(), duplicate.end(), 0));
-                    duplicate[city]++;
-                    duplicate[chr.first[i]]--;
-                    std::swap(chr.first[i], city);
-                }
-            }*/
     }
     
     /**
@@ -185,8 +174,8 @@ class TSPSeq{
      */
     void mutation(vector<chromosome>& selected, double& mutation_rate){
         utimer ut("MUTATION: ");    
-        std::uniform_int_distribution<int> index_gen(1, graph.size() - 1); //generate the value to compare to choose population
-        std::uniform_real_distribution<double> prob_gen(0.0, 1.0); //generate the value to compare to choose population
+        uniform_int_distribution<int> index_gen(1, graph.size() - 1); //generate the value to compare to choose population
+        uniform_real_distribution<double> prob_gen(0.0, 1.0); //generate the value to compare to choose population
 
         for(int i = 0; i < selected.size(); i++){
             
@@ -194,7 +183,7 @@ class TSPSeq{
                 int gene_1 = index_gen(generator);
                 int gene_2 = index_gen(generator);
                 //Don't check if gene_1 == gene_2 because is quite unlikely being computed with uniform distribution (it would be (1/n)^2)
-                std::swap(selected[i].first[gene_1], selected[i].first[gene_2]);
+                swap(selected[i].first[gene_1], selected[i].first[gene_2]);
             }
             fitness(selected[i]);
         }
@@ -203,12 +192,52 @@ class TSPSeq{
     void merge(vector<chromosome>& selected){
         utimer ut("MERGE: ");
         //use in this case swap_ranges after sorting population based on fitness (ascending order)
-        std::sort(population.begin(), population.end(), [](chromosome& a, chromosome& b) {return a.second < b.second; });
-        std::swap_ranges(selected.begin(), selected.end(), population.begin()); //substitute worse chromosome with children
+        sort(population.begin(), population.end(), [](chromosome& a, chromosome& b) {return a.second < b.second; });
+        swap_ranges(selected.begin(), selected.end(), population.begin()); //substitute worse chromosome with children
+    }
+    
+    vector<pair<double, double>> read_coord_file(string file){
+        utimer ut("FILE: ");
+        ifstream read_file(file);
+        string coordinates;
+        stringstream parser;
+
+        vector<pair<double, double>> cities;
+
+        while(getline(read_file, coordinates)){
+            parser.str(coordinates);
+            string x, y;
+            parser >> x >> y;
+            cities.push_back(make_pair(stod(x), stod(y)));
+            parser.clear();
+        }
+
+    return cities;
+}
+
+    inline double euclidean_distance(pair<double, double> coord_a, pair<double, double> coord_b){
+        return sqrt(pow(coord_b.first - coord_a.first, 2) + pow(coord_b.second - coord_a.second, 2));
     }
 
+    Graph graph_init(vector<pair<double, double>>& cities){ 
+        utimer ut("GRAPH: ");
+        Graph g(cities.size());
+
+        //lower triangular matrix (un-directed graph) so I save, more or less, half space 
+        //Start from 1 because I exclude the diagonal
+        for(int i = 0; i < cities.size(); i++){ //10 is just for test in my pc
+            g[i] = vector<double>(cities.size());
+            for(int j = 0; j < i; j++){
+                g[i][j] = euclidean_distance(cities[i], cities[j]);
+            }
+        }
+        return g;
+    }
+    
     public:
-    TSPSeq(Graph& g, int& population_size, int& start_vertex) : graph{g} {
+    TSPSeq(int& population_size, int& start_vertex, string file){
+        vector<pair<double, double>> cities = read_coord_file(file);
+        graph = graph_init(cities);
         generation(population_size, start_vertex);
     }
 
@@ -223,15 +252,15 @@ class TSPSeq{
         vector<chromosome> selected(selection_size);
         evaluation(); 
         for(int i = 0; i < generations; i++){
-            std::cout << "Generation: " << i << "\n" ;
+            cout << "Generation: " << i << "\n" ;
             selection(selection_size, selected); 
             crossover(selected); 
             mutation(selected, mutation_rate); 
             merge(selected);
         }
         //printPopulation();
-        chromosome max_fitness = (*std::max_element(population.begin(), population.end(), [](const chromosome& a, const chromosome& b) {return a.second < b.second; }));
-        std::cout << "\n\nBEST PATH: " << (int)(1/max_fitness.second) << "\n";
+        chromosome max_fitness = (*max_element(population.begin(), population.end(), [](const chromosome& a, const chromosome& b) {return a.second < b.second; }));
+        cout << "\n\nBEST PATH: " << (int)(1/max_fitness.second) << "\n";
     }
 };
 

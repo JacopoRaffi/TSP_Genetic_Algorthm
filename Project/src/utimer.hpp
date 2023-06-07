@@ -1,3 +1,6 @@
+#ifndef UTIMER_H
+#define UTIMER_H
+
 #include <iostream>
 #include <iomanip>
 #include <chrono>
@@ -42,3 +45,5 @@ public:
       (*us_elapsed) = musec;
   }
 };
+
+#endif
