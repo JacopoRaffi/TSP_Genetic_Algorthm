@@ -1,0 +1,3007 @@
+5000 nodi, 1000 iterazioni, 4000 popolazione, 0.7 crossover, 0.3 mutation
+GRAPH:  computed in          109974 usec 
+GENERATION:  computed in          408026 usec 
+SELECTION:  computed in           22103 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          259601 usec 
+MERGE:  computed in             345 usec 
+SELECTION:  computed in            8288 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          270866 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8295 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          265393 usec 
+MERGE:  computed in             313 usec 
+SELECTION:  computed in            8309 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          253250 usec 
+MERGE:  computed in             308 usec 
+SELECTION:  computed in            8299 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          262580 usec 
+MERGE:  computed in             297 usec 
+SELECTION:  computed in            8355 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          274747 usec 
+MERGE:  computed in             307 usec 
+SELECTION:  computed in            8308 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          261297 usec 
+MERGE:  computed in             307 usec 
+SELECTION:  computed in            8306 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          250791 usec 
+MERGE:  computed in             325 usec 
+SELECTION:  computed in            8289 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          261730 usec 
+MERGE:  computed in             304 usec 
+SELECTION:  computed in            8279 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          264911 usec 
+MERGE:  computed in             316 usec 
+SELECTION:  computed in            8293 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          266959 usec 
+MERGE:  computed in             298 usec 
+SELECTION:  computed in           11023 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          266324 usec 
+MERGE:  computed in             305 usec 
+SELECTION:  computed in            8322 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          268020 usec 
+MERGE:  computed in             300 usec 
+SELECTION:  computed in            8286 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          265407 usec 
+MERGE:  computed in             298 usec 
+SELECTION:  computed in            8263 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          261219 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8284 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          262867 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in            8308 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          266510 usec 
+MERGE:  computed in             296 usec 
+SELECTION:  computed in            8287 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          262077 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8323 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          261030 usec 
+MERGE:  computed in             304 usec 
+SELECTION:  computed in            8278 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          261241 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8307 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          263368 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in            8282 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          248600 usec 
+MERGE:  computed in             302 usec 
+SELECTION:  computed in            8274 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          254716 usec 
+MERGE:  computed in             297 usec 
+SELECTION:  computed in            8287 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          259580 usec 
+MERGE:  computed in             300 usec 
+SELECTION:  computed in            8302 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          261241 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8290 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          257650 usec 
+MERGE:  computed in             299 usec 
+SELECTION:  computed in            8260 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          233296 usec 
+MERGE:  computed in             298 usec 
+SELECTION:  computed in            8272 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          257800 usec 
+MERGE:  computed in             303 usec 
+SELECTION:  computed in            8323 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          259749 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8295 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          261072 usec 
+MERGE:  computed in             300 usec 
+SELECTION:  computed in            8312 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          256444 usec 
+MERGE:  computed in             296 usec 
+SELECTION:  computed in            8304 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          243703 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8288 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          249679 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8318 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          257907 usec 
+MERGE:  computed in             299 usec 
+SELECTION:  computed in            8287 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          237100 usec 
+MERGE:  computed in             305 usec 
+SELECTION:  computed in            8306 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          245123 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8281 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          253202 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8278 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          236606 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8321 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          250888 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8298 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          231812 usec 
+MERGE:  computed in             271 usec 
+SELECTION:  computed in            8297 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          250203 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8273 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          247292 usec 
+MERGE:  computed in             301 usec 
+SELECTION:  computed in            8274 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          249563 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8288 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          240221 usec 
+MERGE:  computed in             273 usec 
+SELECTION:  computed in            8276 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          243811 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8363 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          239863 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8282 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          248771 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8282 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          252098 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8279 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          249534 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8289 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          252877 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8303 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          246141 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8563 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          250829 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8305 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          249082 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8307 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          249862 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8292 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          229262 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8325 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          241305 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8774 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          244084 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in           11059 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          284188 usec 
+MERGE:  computed in             324 usec 
+SELECTION:  computed in           20880 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          227422 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in           13689 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          244178 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in           11360 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          247081 usec 
+MERGE:  computed in             297 usec 
+SELECTION:  computed in           11157 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          242421 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in           11083 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          248179 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in           14299 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          235955 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            9196 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          236731 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8576 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          231061 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8455 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          237342 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8385 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          230469 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8343 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          231989 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8323 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          225400 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8296 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          234216 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8302 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          229919 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8320 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          221206 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8319 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          226089 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8343 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          225629 usec 
+MERGE:  computed in             299 usec 
+SELECTION:  computed in            8331 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          225380 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8285 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          224849 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8360 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          221182 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8312 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          223381 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8369 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          217205 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8304 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          217649 usec 
+MERGE:  computed in             294 usec 
+SELECTION:  computed in            8293 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          218562 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8286 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          218662 usec 
+MERGE:  computed in             294 usec 
+SELECTION:  computed in            8310 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          221259 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8364 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          221715 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8314 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214749 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in            8328 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          217276 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8319 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          221620 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8342 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216842 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8310 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          217176 usec 
+MERGE:  computed in             301 usec 
+SELECTION:  computed in            8359 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          199705 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8377 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          217250 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in            8300 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216021 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8346 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214295 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8318 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209476 usec 
+MERGE:  computed in             303 usec 
+SELECTION:  computed in            8328 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          218282 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8344 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          218139 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8320 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          218131 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8349 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215726 usec 
+MERGE:  computed in             294 usec 
+SELECTION:  computed in            8308 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215833 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8315 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212017 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8325 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          218665 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8318 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          218656 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8356 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214312 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8300 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211234 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8316 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          222002 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in            8349 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215468 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8333 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          219486 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8292 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          217076 usec 
+MERGE:  computed in             300 usec 
+SELECTION:  computed in            8336 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          217036 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8343 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          219556 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8317 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          219900 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8360 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212451 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8353 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          220347 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8318 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215174 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8329 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          220024 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8351 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          218668 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8320 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          219787 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8341 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          218658 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8316 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          221425 usec 
+MERGE:  computed in             275 usec 
+SELECTION:  computed in            8306 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          219740 usec 
+MERGE:  computed in             277 usec 
+SELECTION:  computed in            8298 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          219525 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in            8321 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215272 usec 
+MERGE:  computed in             278 usec 
+SELECTION:  computed in            8330 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          218649 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8319 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          221809 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8327 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          218437 usec 
+MERGE:  computed in             275 usec 
+SELECTION:  computed in            8432 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216104 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8360 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          218968 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8442 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          217581 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8332 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216022 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8342 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214891 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8371 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          220866 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8326 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216105 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8335 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          219354 usec 
+MERGE:  computed in             278 usec 
+SELECTION:  computed in            8339 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          220550 usec 
+MERGE:  computed in             277 usec 
+SELECTION:  computed in            8314 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          220972 usec 
+MERGE:  computed in             275 usec 
+SELECTION:  computed in            8359 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          217272 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8377 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          218819 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8362 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209434 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8326 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215490 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8325 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          219681 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8340 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216081 usec 
+MERGE:  computed in             275 usec 
+SELECTION:  computed in            8349 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          220476 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8331 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          219010 usec 
+MERGE:  computed in             278 usec 
+SELECTION:  computed in            8309 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          218808 usec 
+MERGE:  computed in             276 usec 
+SELECTION:  computed in            8298 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214202 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8343 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          219400 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8326 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          219749 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in            8327 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216943 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8323 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216664 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8329 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209835 usec 
+MERGE:  computed in             278 usec 
+SELECTION:  computed in            8342 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214291 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8325 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          218765 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in            8323 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216467 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8338 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213392 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8304 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212637 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8313 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209725 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8323 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214637 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8331 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209635 usec 
+MERGE:  computed in             294 usec 
+SELECTION:  computed in            8313 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          217304 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8361 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210192 usec 
+MERGE:  computed in             278 usec 
+SELECTION:  computed in            8295 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216625 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8325 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208651 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8300 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213517 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8330 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          217785 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8341 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          217757 usec 
+MERGE:  computed in             294 usec 
+SELECTION:  computed in            8355 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215845 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8318 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212569 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8323 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212450 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8336 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211398 usec 
+MERGE:  computed in             274 usec 
+SELECTION:  computed in            8327 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208334 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8345 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216522 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8302 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216603 usec 
+MERGE:  computed in             278 usec 
+SELECTION:  computed in            8328 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          206957 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8342 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216349 usec 
+MERGE:  computed in             301 usec 
+SELECTION:  computed in            8330 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214154 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8329 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209142 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8319 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208091 usec 
+MERGE:  computed in             294 usec 
+SELECTION:  computed in            8305 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212500 usec 
+MERGE:  computed in             298 usec 
+SELECTION:  computed in            8320 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216686 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in            8405 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216806 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8341 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212001 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8340 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216461 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8319 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215009 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8349 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216366 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8332 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216487 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8342 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216279 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8365 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213267 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8341 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          207078 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8325 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213389 usec 
+MERGE:  computed in             301 usec 
+SELECTION:  computed in            8365 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216130 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8339 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215965 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8331 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214211 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8388 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214762 usec 
+MERGE:  computed in             302 usec 
+SELECTION:  computed in            8354 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216109 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8365 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212833 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8363 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208682 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8336 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215972 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8537 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210883 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8437 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213331 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8393 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210860 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8412 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213072 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8403 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216060 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in            8354 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214661 usec 
+MERGE:  computed in             294 usec 
+SELECTION:  computed in            8365 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214246 usec 
+MERGE:  computed in             297 usec 
+SELECTION:  computed in            8355 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213555 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8352 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215668 usec 
+MERGE:  computed in             294 usec 
+SELECTION:  computed in            8332 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211749 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8349 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215847 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8351 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209669 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8360 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209153 usec 
+MERGE:  computed in             298 usec 
+SELECTION:  computed in            8371 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209485 usec 
+MERGE:  computed in             294 usec 
+SELECTION:  computed in            8375 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          218360 usec 
+MERGE:  computed in             301 usec 
+SELECTION:  computed in            8335 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208118 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in            8355 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214498 usec 
+MERGE:  computed in             294 usec 
+SELECTION:  computed in            8317 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210616 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8348 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213044 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8353 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209113 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8373 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211777 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8394 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214825 usec 
+MERGE:  computed in             296 usec 
+SELECTION:  computed in            8363 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210443 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8362 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215151 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8370 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215691 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8379 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209257 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8373 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211194 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8416 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215408 usec 
+MERGE:  computed in             301 usec 
+SELECTION:  computed in            8381 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215079 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8391 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210236 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8367 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212003 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8352 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215030 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8356 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215389 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in            8393 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215165 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8349 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208189 usec 
+MERGE:  computed in             296 usec 
+SELECTION:  computed in            8353 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213133 usec 
+MERGE:  computed in             299 usec 
+SELECTION:  computed in            8350 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211863 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8373 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209772 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8368 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210371 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8373 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209940 usec 
+MERGE:  computed in             296 usec 
+SELECTION:  computed in            8340 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212891 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8387 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215305 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8327 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215165 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in            8378 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215305 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8366 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213181 usec 
+MERGE:  computed in             277 usec 
+SELECTION:  computed in            8390 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213472 usec 
+MERGE:  computed in             297 usec 
+SELECTION:  computed in            8351 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208010 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in            8370 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211212 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8354 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214184 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8387 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215104 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8360 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          218393 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8385 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209569 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in            8347 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215136 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8349 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212792 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8354 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212775 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8344 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215381 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8366 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215488 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8353 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209998 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8368 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208417 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8383 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215464 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8374 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211930 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8379 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211432 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8368 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211476 usec 
+MERGE:  computed in             297 usec 
+SELECTION:  computed in            8348 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213844 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8363 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214517 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8356 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212000 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8365 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213862 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8328 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213966 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8381 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215394 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8348 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210691 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8355 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214149 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8566 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212771 usec 
+MERGE:  computed in             297 usec 
+SELECTION:  computed in            8413 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215359 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8355 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212118 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8379 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210984 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8401 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211272 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8377 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211382 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8348 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215884 usec 
+MERGE:  computed in             297 usec 
+SELECTION:  computed in            8393 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          207977 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8365 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212532 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8353 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213199 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8341 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215881 usec 
+MERGE:  computed in             296 usec 
+SELECTION:  computed in            8369 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215722 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8368 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210424 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8364 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215890 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8354 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209781 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8366 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215813 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in           11034 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214838 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8355 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215623 usec 
+MERGE:  computed in             297 usec 
+SELECTION:  computed in            8349 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210768 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8355 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210888 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8352 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208033 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8371 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216060 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8445 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          206885 usec 
+MERGE:  computed in             300 usec 
+SELECTION:  computed in            8423 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          206309 usec 
+MERGE:  computed in             296 usec 
+SELECTION:  computed in            8385 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215704 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8371 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213068 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8377 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215584 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8361 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215341 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8408 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          207654 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8338 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          207053 usec 
+MERGE:  computed in             303 usec 
+SELECTION:  computed in            8401 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214768 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8449 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214711 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8424 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214858 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8382 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215180 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8348 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213846 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8404 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214370 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8374 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210572 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8394 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215229 usec 
+MERGE:  computed in             276 usec 
+SELECTION:  computed in            8368 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208698 usec 
+MERGE:  computed in             296 usec 
+SELECTION:  computed in            8400 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208491 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8370 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210336 usec 
+MERGE:  computed in             276 usec 
+SELECTION:  computed in            8378 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215195 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in            8363 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209173 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8380 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          204713 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8367 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212702 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8378 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214680 usec 
+MERGE:  computed in             276 usec 
+SELECTION:  computed in            8347 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215713 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8434 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214622 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in            8347 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209111 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8340 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212305 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8358 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214204 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8520 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212101 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8349 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          218367 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8394 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210793 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8386 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210328 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8379 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          207016 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8369 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212106 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8404 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215176 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8439 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213345 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8401 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210403 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8388 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212747 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8441 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215190 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in            8354 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214788 usec 
+MERGE:  computed in             276 usec 
+SELECTION:  computed in            8321 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210575 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in            8423 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214611 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8345 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215025 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8401 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215586 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8595 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211163 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8500 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          206596 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8345 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212656 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8335 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215323 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8373 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212269 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8386 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215869 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8672 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          201557 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8426 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214719 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8605 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208954 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8406 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214797 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8379 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215858 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8378 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213235 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8383 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209064 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8316 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211460 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8339 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          205993 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8367 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213756 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8353 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215513 usec 
+MERGE:  computed in             276 usec 
+SELECTION:  computed in            8440 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          203019 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8362 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216335 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8336 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208796 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8350 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216306 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8359 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          217768 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8485 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214532 usec 
+MERGE:  computed in             294 usec 
+SELECTION:  computed in            8336 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212955 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8358 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210500 usec 
+MERGE:  computed in             300 usec 
+SELECTION:  computed in            8337 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213220 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8338 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216249 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8345 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215927 usec 
+MERGE:  computed in             296 usec 
+SELECTION:  computed in            8422 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210723 usec 
+MERGE:  computed in             294 usec 
+SELECTION:  computed in            8513 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215574 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8368 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215335 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8385 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212458 usec 
+MERGE:  computed in             294 usec 
+SELECTION:  computed in            8361 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215254 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8394 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214839 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8340 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211616 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8373 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213186 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8382 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214311 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8356 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212927 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8340 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210126 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8399 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210922 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8416 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215839 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8376 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215770 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8349 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215346 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8372 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215948 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8375 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213714 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8361 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215918 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8390 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213273 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8393 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215703 usec 
+MERGE:  computed in             297 usec 
+SELECTION:  computed in            8397 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214913 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8369 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215892 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8335 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211824 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8369 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215617 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8346 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215813 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8335 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215498 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8367 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209508 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8349 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214583 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8359 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214350 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8381 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215306 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8369 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215758 usec 
+MERGE:  computed in             278 usec 
+SELECTION:  computed in            8404 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          205963 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8383 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209228 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8348 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215681 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8360 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214745 usec 
+MERGE:  computed in             278 usec 
+SELECTION:  computed in            8382 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210580 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8385 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213189 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8384 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210167 usec 
+MERGE:  computed in             308 usec 
+SELECTION:  computed in            8359 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215809 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8377 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211907 usec 
+MERGE:  computed in             273 usec 
+SELECTION:  computed in            8392 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211232 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8401 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212047 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8355 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208199 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8328 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215530 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8328 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215367 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8392 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214435 usec 
+MERGE:  computed in             294 usec 
+SELECTION:  computed in            8397 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211871 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8401 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210562 usec 
+MERGE:  computed in             300 usec 
+SELECTION:  computed in            8482 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          206074 usec 
+MERGE:  computed in             296 usec 
+SELECTION:  computed in            8382 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208003 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8553 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215064 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8429 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211394 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8422 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          205672 usec 
+MERGE:  computed in             273 usec 
+SELECTION:  computed in            8388 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          207925 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8406 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          201912 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8397 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210914 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8411 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214212 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8437 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215097 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8404 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214912 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in            8424 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212254 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8369 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215039 usec 
+MERGE:  computed in             278 usec 
+SELECTION:  computed in            8379 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214805 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8339 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214971 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8369 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214709 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8362 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214855 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8365 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          217923 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8430 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213561 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8386 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212263 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8386 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          206120 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8368 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214823 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8385 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          207692 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8356 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214873 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8348 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215151 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8389 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214675 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in            8412 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210672 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8398 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          196537 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8367 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215232 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8386 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212194 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in            8374 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215051 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8396 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213692 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8367 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215221 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8373 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214259 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8364 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210880 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8357 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208700 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in            8339 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215142 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in            8392 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214945 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8357 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215259 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in            8401 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215219 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8410 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215205 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8377 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215191 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8394 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215003 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8374 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211412 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8446 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208392 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8395 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210266 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8376 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          204178 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8379 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          204166 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8422 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          199987 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8366 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          206113 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8405 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          205152 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8370 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212202 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8420 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209801 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8385 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215242 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in           11048 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212618 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8380 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214996 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8425 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214857 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8363 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214900 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8373 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214642 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8353 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215066 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8392 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214867 usec 
+MERGE:  computed in             294 usec 
+SELECTION:  computed in            8337 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214109 usec 
+MERGE:  computed in             278 usec 
+SELECTION:  computed in            8372 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214933 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8368 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214678 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8363 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214640 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8363 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214435 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8343 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211882 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8341 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214570 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8386 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210503 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in            8351 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214041 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8352 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214726 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8341 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214689 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8365 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208055 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8371 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215223 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8312 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214975 usec 
+MERGE:  computed in             277 usec 
+SELECTION:  computed in            8355 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215955 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8482 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215449 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in            8417 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214768 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8391 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215075 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8426 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213247 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8385 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214684 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8401 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214703 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8366 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214872 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8362 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214672 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8367 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214494 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8363 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214893 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8380 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          206901 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8371 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214555 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8380 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212913 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8354 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216992 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8336 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211243 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8385 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214798 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8383 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212167 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8353 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214821 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8380 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214000 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8357 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          206106 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8340 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214655 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8396 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214778 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8365 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214899 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8343 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214920 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8368 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214260 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8331 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214273 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8364 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214423 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8352 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214025 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8366 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209493 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8352 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214222 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8394 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212483 usec 
+MERGE:  computed in             273 usec 
+SELECTION:  computed in            8367 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214277 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8362 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214519 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in            8399 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214208 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8366 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214439 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8379 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214198 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8349 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214624 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8366 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214494 usec 
+MERGE:  computed in             274 usec 
+SELECTION:  computed in            8342 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214274 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8374 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209891 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8379 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214699 usec 
+MERGE:  computed in             277 usec 
+SELECTION:  computed in            8323 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214582 usec 
+MERGE:  computed in             277 usec 
+SELECTION:  computed in            8358 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214279 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8387 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214208 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in            8390 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214619 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8405 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214520 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8377 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212953 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8353 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214371 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8365 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          205427 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8352 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          217321 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8297 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214635 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8353 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214595 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8351 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214611 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8375 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214680 usec 
+MERGE:  computed in             277 usec 
+SELECTION:  computed in            8420 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214557 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8384 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214496 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8360 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213153 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8337 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214480 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8369 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214407 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8337 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214344 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8406 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214305 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8350 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212909 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8372 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213894 usec 
+MERGE:  computed in             294 usec 
+SELECTION:  computed in            8341 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213911 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8360 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213542 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8391 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213897 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8340 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213532 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8368 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212107 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8355 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213924 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8375 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213106 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8367 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214158 usec 
+MERGE:  computed in             301 usec 
+SELECTION:  computed in            8842 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210591 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8454 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214048 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8379 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213770 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8385 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213517 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in            8379 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213713 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8361 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213451 usec 
+MERGE:  computed in             301 usec 
+SELECTION:  computed in            8367 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213661 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8390 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213778 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8368 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213684 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8418 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213896 usec 
+MERGE:  computed in             297 usec 
+SELECTION:  computed in            8378 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213800 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8358 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213782 usec 
+MERGE:  computed in             296 usec 
+SELECTION:  computed in            8373 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213803 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8353 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211991 usec 
+MERGE:  computed in             297 usec 
+SELECTION:  computed in            8371 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216593 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8326 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213662 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8377 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213705 usec 
+MERGE:  computed in             294 usec 
+SELECTION:  computed in            8353 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213505 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8385 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213579 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8352 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211303 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8359 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213098 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8349 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213357 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8378 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209887 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in            8378 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210280 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8373 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213231 usec 
+MERGE:  computed in             294 usec 
+SELECTION:  computed in            8368 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213242 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8388 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213020 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8344 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209142 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8365 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212651 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8384 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212428 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8384 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212770 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8379 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208899 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8350 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          205389 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in            8364 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212837 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8360 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212927 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8395 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          207836 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8383 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212987 usec 
+MERGE:  computed in             297 usec 
+SELECTION:  computed in            8371 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213169 usec 
+MERGE:  computed in             294 usec 
+SELECTION:  computed in            8350 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212927 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8383 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213043 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8352 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211865 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8382 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212763 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8392 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          207529 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8386 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212522 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8386 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210092 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8359 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212752 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8391 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213098 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8365 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212963 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8379 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213219 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8417 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          207632 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8392 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          207226 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8403 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215947 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8394 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212815 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8403 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213405 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8371 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          203709 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8353 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213677 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8412 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213677 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8369 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213370 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in            8391 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212240 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8369 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213480 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8345 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213172 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8392 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213099 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in            8375 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213649 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8386 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212599 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8364 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212655 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8384 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213223 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8343 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213387 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8361 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213661 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8386 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208323 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8409 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213920 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8384 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213746 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in            8354 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214008 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8395 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213941 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8372 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214104 usec 
+MERGE:  computed in             297 usec 
+SELECTION:  computed in            8471 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214274 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8406 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213885 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8364 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212281 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in            8382 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208258 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8391 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213996 usec 
+MERGE:  computed in             299 usec 
+SELECTION:  computed in            8386 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213962 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8381 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213703 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in            8382 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214279 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8375 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214122 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8383 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214019 usec 
+MERGE:  computed in             270 usec 
+SELECTION:  computed in            8380 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213618 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8383 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213180 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8369 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208115 usec 
+MERGE:  computed in             277 usec 
+SELECTION:  computed in            8383 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213622 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8401 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213613 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8385 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213488 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8390 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213234 usec 
+MERGE:  computed in             301 usec 
+SELECTION:  computed in            8374 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213546 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8362 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213143 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8383 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213726 usec 
+MERGE:  computed in             278 usec 
+SELECTION:  computed in            8383 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213728 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8353 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212627 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8380 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213461 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8364 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211175 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8392 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213791 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8366 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213497 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8383 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213199 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8373 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212917 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in            8359 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213511 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8358 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210982 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in            8374 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209540 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8373 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211793 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8378 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213433 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in            8361 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213264 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in            8353 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213290 usec 
+MERGE:  computed in             274 usec 
+SELECTION:  computed in            8381 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213426 usec 
+MERGE:  computed in             296 usec 
+SELECTION:  computed in            8374 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213435 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8357 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213050 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8410 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213503 usec 
+MERGE:  computed in             276 usec 
+SELECTION:  computed in            8371 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213368 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8378 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211572 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8385 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213270 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in            8377 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213664 usec 
+MERGE:  computed in             278 usec 
+SELECTION:  computed in            8384 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213855 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8371 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          206074 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8363 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213589 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8368 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213447 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8373 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213700 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8360 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210834 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8345 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213842 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8373 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213511 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8351 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213513 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8355 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213788 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8402 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213129 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8375 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          207717 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8382 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213735 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8392 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212177 usec 
+MERGE:  computed in             278 usec 
+SELECTION:  computed in            8372 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          207979 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in            8364 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213256 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8350 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212218 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8398 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211501 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8386 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209893 usec 
+MERGE:  computed in             276 usec 
+SELECTION:  computed in            8370 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213433 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8365 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208168 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8368 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213535 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8417 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213872 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8408 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209497 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8384 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210921 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8362 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          207121 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8397 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213246 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8372 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213653 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8377 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          217732 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8512 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213703 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8405 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214252 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8395 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213757 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8363 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213029 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8422 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213883 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8363 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213616 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8375 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213586 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8383 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213779 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8381 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213255 usec 
+MERGE:  computed in             278 usec 
+SELECTION:  computed in            8376 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213563 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8406 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213993 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8401 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213445 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8406 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          205856 usec 
+MERGE:  computed in             277 usec 
+SELECTION:  computed in            8415 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216920 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8388 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213480 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8386 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214049 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8420 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214138 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8368 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213431 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8421 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213538 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8414 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213982 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8407 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213518 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8373 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210883 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8396 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213472 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8357 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213468 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8372 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213738 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8372 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213806 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8394 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          207419 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8360 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213206 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8391 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213517 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8400 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213481 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8377 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208794 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8353 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213365 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8402 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212929 usec 
+MERGE:  computed in             275 usec 
+SELECTION:  computed in            8357 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210716 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8403 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          205603 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8418 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          206893 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8385 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          207214 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8353 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          207976 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8388 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211318 usec 
+MERGE:  computed in             298 usec 
+SELECTION:  computed in            8394 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209870 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8370 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213817 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8371 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212467 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8379 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213530 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8394 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209302 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8365 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213697 usec 
+MERGE:  computed in             272 usec 
+SELECTION:  computed in            8372 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212424 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8365 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213682 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8371 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213659 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8381 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213577 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8468 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216832 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8270 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213731 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8359 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214044 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8384 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212288 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8365 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214081 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8368 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213905 usec 
+MERGE:  computed in             273 usec 
+SELECTION:  computed in            8411 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213816 usec 
+MERGE:  computed in             299 usec 
+SELECTION:  computed in            8399 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213790 usec 
+MERGE:  computed in             278 usec 
+SELECTION:  computed in            8402 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210400 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8372 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211141 usec 
+MERGE:  computed in             278 usec 
+SELECTION:  computed in            8376 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214019 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8387 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213682 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8386 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212061 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8372 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213759 usec 
+MERGE:  computed in             277 usec 
+SELECTION:  computed in            8360 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211570 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8371 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213876 usec 
+MERGE:  computed in             273 usec 
+SELECTION:  computed in            8420 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213353 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8396 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213321 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8498 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210918 usec 
+MERGE:  computed in             277 usec 
+SELECTION:  computed in            8394 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213870 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8391 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213325 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8392 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213389 usec 
+MERGE:  computed in             298 usec 
+SELECTION:  computed in            8380 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          217459 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8615 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209186 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8454 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209535 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8429 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213293 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8409 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211439 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in            8460 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208913 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8407 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213519 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8413 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213364 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in            8447 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213388 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8399 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212939 usec 
+MERGE:  computed in             270 usec 
+SELECTION:  computed in            8407 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213146 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8370 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213338 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8389 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213414 usec 
+MERGE:  computed in             296 usec 
+SELECTION:  computed in            8396 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212037 usec 
+MERGE:  computed in             276 usec 
+SELECTION:  computed in            8469 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209191 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8400 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211673 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8396 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212883 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8371 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212867 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in            8405 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212972 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8426 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212918 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8397 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211998 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8395 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212822 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8369 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212878 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8393 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210485 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8388 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210619 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8370 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213036 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8374 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212809 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8373 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213066 usec 
+MERGE:  computed in             276 usec 
+SELECTION:  computed in            8347 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212698 usec 
+MERGE:  computed in             277 usec 
+SELECTION:  computed in            8375 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213313 usec 
+MERGE:  computed in             277 usec 
+SELECTION:  computed in            8388 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212905 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8392 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212601 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8361 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211628 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8363 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213081 usec 
+MERGE:  computed in             276 usec 
+SELECTION:  computed in            8380 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212631 usec 
+MERGE:  computed in             274 usec 
+SELECTION:  computed in            8393 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212537 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8365 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212577 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8361 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212555 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8387 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212160 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8373 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210536 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8390 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212833 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8382 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          205626 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8379 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212560 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8377 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212577 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8395 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212741 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8367 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212476 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8364 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212962 usec 
+MERGE:  computed in             276 usec 
+SELECTION:  computed in            8388 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212795 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8383 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209549 usec 
+MERGE:  computed in             299 usec 
+SELECTION:  computed in            8384 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212821 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8379 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209070 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8369 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          215495 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8360 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212964 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8380 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211767 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8387 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209861 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8391 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212851 usec 
+MERGE:  computed in             278 usec 
+SELECTION:  computed in            8404 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210896 usec 
+MERGE:  computed in             276 usec 
+SELECTION:  computed in            8405 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209968 usec 
+MERGE:  computed in             277 usec 
+SELECTION:  computed in            8403 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208049 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8371 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          201895 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8370 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213113 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8400 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          206331 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8366 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          205878 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8371 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211373 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8393 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212456 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8364 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211761 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8380 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209994 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8344 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209630 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8370 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          207546 usec 
+MERGE:  computed in             277 usec 
+SELECTION:  computed in            8369 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208281 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8358 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213060 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8391 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209570 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8367 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208964 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8404 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210776 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8487 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          201923 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8456 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          206452 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8411 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          204135 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8452 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209716 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8390 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209978 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8379 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212705 usec 
+MERGE:  computed in             297 usec 
+SELECTION:  computed in            8417 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212891 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8383 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          206339 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8383 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212603 usec 
+MERGE:  computed in             277 usec 
+SELECTION:  computed in            8387 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211997 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8374 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213044 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8401 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213041 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8395 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212464 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in            8381 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213540 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8310 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211185 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8377 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212658 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8375 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          205671 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8433 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212991 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8367 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212788 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in            8391 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212708 usec 
+MERGE:  computed in             278 usec 
+SELECTION:  computed in            8382 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212575 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8371 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212929 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8445 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          206198 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8359 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213037 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8378 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212410 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8368 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          206662 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8364 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212555 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8418 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212962 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8365 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212687 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in            8379 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212727 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in            8379 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212941 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8387 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209353 usec 
+MERGE:  computed in             278 usec 
+SELECTION:  computed in            8377 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211764 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8394 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211777 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8364 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211700 usec 
+MERGE:  computed in             277 usec 
+SELECTION:  computed in            8408 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211961 usec 
+MERGE:  computed in             277 usec 
+SELECTION:  computed in            8366 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211534 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8385 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211784 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8346 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208615 usec 
+MERGE:  computed in             292 usec 
+SELECTION:  computed in            8382 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211805 usec 
+MERGE:  computed in             275 usec 
+SELECTION:  computed in            8363 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211226 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8444 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211365 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8366 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211994 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8379 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212286 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8378 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211964 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8382 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211670 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8382 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212202 usec 
+MERGE:  computed in             279 usec 
+SELECTION:  computed in            8358 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211811 usec 
+MERGE:  computed in             278 usec 
+SELECTION:  computed in            8380 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          206961 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8361 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212477 usec 
+MERGE:  computed in             272 usec 
+SELECTION:  computed in            8403 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          214753 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8408 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212124 usec 
+MERGE:  computed in             273 usec 
+SELECTION:  computed in            8376 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212459 usec 
+MERGE:  computed in             276 usec 
+SELECTION:  computed in            8372 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212132 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8378 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212450 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8368 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212218 usec 
+MERGE:  computed in             276 usec 
+SELECTION:  computed in            8387 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212126 usec 
+MERGE:  computed in             274 usec 
+SELECTION:  computed in            8369 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212109 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8355 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211689 usec 
+MERGE:  computed in             273 usec 
+SELECTION:  computed in            8384 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212223 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8389 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212346 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8400 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212549 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8371 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212355 usec 
+MERGE:  computed in             294 usec 
+SELECTION:  computed in            8382 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211934 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8385 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211483 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8379 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211799 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8399 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211788 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8367 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210486 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8380 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211275 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8413 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210955 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8361 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210835 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8381 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210700 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8385 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210917 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8464 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210618 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8395 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210485 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8448 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          207365 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8418 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210579 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8387 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210351 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8362 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208869 usec 
+MERGE:  computed in             296 usec 
+SELECTION:  computed in            8382 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210481 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8493 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209811 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8376 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210359 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8382 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210619 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8377 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210498 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8396 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210455 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8382 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          205984 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8379 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210275 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8379 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211476 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8399 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211347 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8359 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211606 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8380 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211787 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8354 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212218 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8371 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212526 usec 
+MERGE:  computed in             277 usec 
+SELECTION:  computed in            8374 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212867 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8360 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213369 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8477 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212041 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8396 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213002 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8397 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213025 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8402 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213349 usec 
+MERGE:  computed in             349 usec 
+SELECTION:  computed in            8412 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212056 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8393 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213434 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8383 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213550 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8395 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208886 usec 
+MERGE:  computed in             277 usec 
+SELECTION:  computed in            8363 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211402 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8375 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211750 usec 
+MERGE:  computed in             297 usec 
+SELECTION:  computed in            8382 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213652 usec 
+MERGE:  computed in             285 usec 
+SELECTION:  computed in            8376 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213577 usec 
+MERGE:  computed in             278 usec 
+SELECTION:  computed in            8386 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213302 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8398 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213274 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8397 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213356 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8399 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          204474 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8394 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213680 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8373 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213277 usec 
+MERGE:  computed in             278 usec 
+SELECTION:  computed in            8393 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209615 usec 
+MERGE:  computed in             284 usec 
+SELECTION:  computed in            8378 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213470 usec 
+MERGE:  computed in             281 usec 
+SELECTION:  computed in            8370 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213802 usec 
+MERGE:  computed in             294 usec 
+SELECTION:  computed in            8390 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213674 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8373 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213492 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8404 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210632 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8370 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213548 usec 
+MERGE:  computed in             291 usec 
+SELECTION:  computed in            8376 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213589 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8372 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          213876 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8414 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          216972 usec 
+MERGE:  computed in             290 usec 
+SELECTION:  computed in            8287 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212018 usec 
+MERGE:  computed in             289 usec 
+SELECTION:  computed in            8421 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212944 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8394 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209893 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8384 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209872 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8379 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212244 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8397 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210132 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8376 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210867 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8364 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208971 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8358 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211832 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8369 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211454 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8357 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          205748 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8396 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208419 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8429 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          209281 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8353 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211381 usec 
+MERGE:  computed in             287 usec 
+SELECTION:  computed in            8400 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211069 usec 
+MERGE:  computed in             297 usec 
+SELECTION:  computed in            8377 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210923 usec 
+MERGE:  computed in             288 usec 
+SELECTION:  computed in            8366 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          211206 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8376 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210937 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in            8358 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          207398 usec 
+MERGE:  computed in             286 usec 
+SELECTION:  computed in            8398 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210232 usec 
+MERGE:  computed in             280 usec 
+SELECTION:  computed in            8404 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208177 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8411 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210821 usec 
+MERGE:  computed in             297 usec 
+SELECTION:  computed in            8374 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          212601 usec 
+MERGE:  computed in             295 usec 
+SELECTION:  computed in            8575 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210613 usec 
+MERGE:  computed in             293 usec 
+SELECTION:  computed in            8412 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          210901 usec 
+MERGE:  computed in             283 usec 
+SELECTION:  computed in            8371 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208198 usec 
+MERGE:  computed in             282 usec 
+SELECTION:  computed in            8423 usec 
+CROSSOVER + MUTATION + FITNESS:  computed in          208392 usec 
+MERGE:  computed in             284 usec 
+
+
+BEST PATH: 1.41406e+06
+ALL:  computed in       224865874 usec 

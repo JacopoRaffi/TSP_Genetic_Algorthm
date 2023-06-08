@@ -15,6 +15,18 @@ vector<chromosome> population;
 random_device rd;
 mt19937 generator{rd()};
 
+double fitness(vector<int> path){
+    //utimer ut("FITN: ");
+    double sum = 0.0;
+    int size = path.size();
+    for(int i = 0; i < size-1; i++){
+        sum += g[path[i]][path[i+1]];
+    }
+    sum += g[path[size-1]][path[0]];
+
+    return (1/sum);
+}
+
 vector<pair<double, double>> read_coord_file(string file){
     ifstream read_file(file);
     string coordinates;
@@ -36,7 +48,6 @@ inline double euclidean_distance(pair<double, double> coord_a, pair<double, doub
 }
 
 Graph graph_init(vector<pair<double, double>>& cities){ 
-    utimer ut("GRAPH: ");
     Graph g(cities.size());
     //lower triangular matrix (un-directed graph) so I save, more or less, half space 
     //Start from 1 because I exclude the diagonal
@@ -50,7 +61,6 @@ Graph graph_init(vector<pair<double, double>>& cities){
 }
 
 void generation(int population_size, int start_vertex){
-    utimer t("GENERATION: ");
     population = vector<chromosome>(population_size); 
     for(int i = 0; i < population_size; i++){
         population[i].first = vector<int>(g.size());
@@ -61,24 +71,17 @@ void generation(int population_size, int start_vertex){
         swap(population[i].first[0], population[i].first[start_vertex]);
         shuffle(population[i].first.begin() + 1, population[i].first.end(), generator);
 
-        int size = g.size();
-        population[i].second = 0.0;
-        for(int j = 0; j < size - 1; j++){
-            population[i].second += g[population[i].first[j]][population[i].first[j+1]];
-        }
-        population[i].second += g[population[i].first[size-1]][population[i].first[0]];
-        population[i].second = 1/population[i].second;
+        population[i].second = fitness(population[i].first);
     }
 }
 
 void selection(int selection_number, vector<chromosome>& selected){
-    utimer ut("SELECTION: ");
     double total_fitness = 0.0;
     int size = population.size();
     uniform_real_distribution<double> distribution(0.0, 1.0); //generate the value to compare to choose population
     uniform_int_distribution<int> index_gen(0, size-1);
         
-   double max_fitness = (*max_element(population.begin(), population.end(), [](const chromosome& a, const chromosome& b) {return a.second < b.second; })).second;
+   double max_fitness = population[size-1].second; //population is sorted
     int count = 0;
         
     while(count < selection_number){
@@ -131,7 +134,6 @@ void mutation(chromosome& chr, double rate){
 }
 
 void crossover(vector<chromosome>& selected, double mutation_rate){
-    utimer ut("CROSSOVER + MUTATION + FITNESS: ");
     uniform_int_distribution<int> index_gen(3, g.size() - 2); //i want to avoid parts of one element
     
     for(int i = 0; i < selected.size() - 1; i += 2){
@@ -152,17 +154,8 @@ void crossover(vector<chromosome>& selected, double mutation_rate){
         mutation(selected[i], mutation_rate);
         mutation(selected[i+1], mutation_rate);
 
-        int size = g.size();
-        selected[i].second = 0.0;
-        selected[i+1].second = 0.0;
-        for(int j = 0; j < size - 1; j++){
-            selected[i].second += g[selected[i].first[j]][selected[i].first[j+1]];
-            selected[i+1].second += g[selected[i+1].first[j]][selected[i+1].first[j+1]];
-        }
-        selected[i].second += g[selected[i].first[size-1]][selected[i].first[0]];
-        selected[i+1].second += g[selected[i+1].first[size-1]][selected[i+1].first[0]];
-        selected[i].second = 1/selected[i].second;
-        selected[i+1].second = 1/selected[i+1].second; 
+        selected[i].second = fitness(selected[i].first); 
+        selected[i+1].second = fitness(selected[i+1].first); 
     }
 }
 
@@ -174,7 +167,7 @@ int main(int argc, char* argv[]){
     * crossover rate
     */
 
-    if(argc < 6){
+    if(argc < 5){
         cout << "Usage: " << argv[0] << " file populaton mutation_rate crossover_rate generations" << "\n";
         return -1;
     }
@@ -185,20 +178,20 @@ int main(int argc, char* argv[]){
     int generations = atoi(argv[5]);
     
     if(parents%2) 
-        parents++;
+        parents--;
 
     vector<pair<double, double>> cities = read_coord_file(file);
     g = graph_init(cities);
     utimer all("ALL: ");
     generation(population_size, 0); //generation + first evaluation
+    sort(population.begin(), population.end(), [](chromosome& a, chromosome& b) {return a.second < b.second; }); //need sorted
     vector<chromosome> selected(parents);
     for(int i = 0; i < generations; i++){
         selection(parents, selected);
         crossover(selected, mutation_rate);
         {
-            utimer ut("MERGE: ");
-            sort(population.begin(), population.end(), [](chromosome& a, chromosome& b) {return a.second < b.second; });
             swap_ranges(selected.begin(), selected.end(), population.begin());
+            sort(population.begin(), population.end(), [](chromosome& a, chromosome& b) {return a.second < b.second; });
         } 
     }
 
