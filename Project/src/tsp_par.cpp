@@ -9,6 +9,7 @@
 #include <thread>
 #include <barrier>
 #include "utimer.hpp"
+#include <ff/ff.hpp>
 
 using namespace std;
 using Graph = vector<vector<double>>; //Adjiacency Matrix
@@ -103,7 +104,7 @@ pair<int, int> select_parents(mt19937& gen, uniform_real_distribution<double>& p
     }
 
     //select second parent different from first
-    while(probability > (population[par_2].second / max_fitness)){
+    while(probability > (population[par_2].second / max_fitness) && (par_2 != par_1)){
         probability = prob(gen);
         par_2 = ind_gen(gen);
     }
