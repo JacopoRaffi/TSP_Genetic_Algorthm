@@ -87,10 +87,12 @@ void selection(int selection_number, vector<chromosome>& selected){
     while(count < selection_number){
         int index = index_gen(generator);
         double probability = distribution(generator);
-        if(probability <= (population[index].second / max_fitness)){
-            selected[count] = population[index];
-            count++;
+        while(probability > (population[index].second / max_fitness)){
+            index = index_gen(generator);
+            
         }
+        selected[count] = population[index];
+        count++;
     }
 } 
 
