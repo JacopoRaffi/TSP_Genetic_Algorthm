@@ -196,9 +196,5 @@ int main(int argc, char* argv[]){
             sort(population.begin(), population.end(), [](chromosome& a, chromosome& b) {return a.second < b.second; });
         } 
     }
-
-    chromosome max_fitness = (*max_element(selected.begin(), selected.end(), [](const chromosome& a, const chromosome& b) {return a.second < b.second; }));
-    cout << "\n\nBEST PATH: " << (1/max_fitness.second) << "\n";
-
     return 0;
 }

@@ -276,8 +276,4 @@ int main(int argc, char* argv[]){
     for(int i = 0; i < pool.size(); i++){
         pool[i].join();
     }
-
-    chromosome max_fitness = (*max_element(selected.begin(), selected.end(), [](const chromosome& a, const chromosome& b) {return a.second < b.second; }));
-    cout << "\n\nBEST PATH: " << (1/max_fitness.second) << "\n";
-
 }
