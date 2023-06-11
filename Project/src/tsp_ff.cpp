@@ -118,14 +118,14 @@ void mutation(chromosome& chr, double rate, mt19937& generator){
     }
 }
 
-class merge_em : public ff_minode{
+class merge_em : public ff_monode{
     private: 
         vector<chromosome>* population;
         vector<chromosome>* selected; 
         int generations;
         int workers;
+        int counter = 0;
         bool first_gen = true;
-        void *res;
     
     public:
         merge_em(int generations, int workers, vector<chromosome>* pops, vector<chromosome>* parents){
@@ -133,27 +133,26 @@ class merge_em : public ff_minode{
             this->workers = workers;
             population = pops;
             selected = parents;
-            res = new void*[workers];
         }
 
         void* svc(void* inp){
             if(generations != 0){
-                
                 if(first_gen){ 
-                    for(int i = 0; i < workers; i++){
-                        ff_send_out(GO_ON);
-                    }
+                    broadcast_task(GO_ON);
                     first_gen = false;
                     return GO_ON;
                 }
-                all_gather(inp, &res); //wait all workers
-                
-                generations--; //decrease generations
+
+                if(counter < (workers-1)){
+                    counter++;
+                    cout << counter << "\n";
+                    return GO_ON;
+                }
                 swap_ranges(selected->begin(), selected->end(), population->begin());
                 std::sort(population->begin(), population->end(), [](chromosome& a, chromosome& b) {return a.second < b.second; });
-                for(int i = 0; i < workers; i++){
-                    ff_send_out(GO_ON);
-                }
+                counter = 0;
+                generations--;
+                broadcast_task(GO_ON);
                 return GO_ON;
             }
             else{
@@ -214,11 +213,22 @@ class worker_SCMF : public ff_node{
                 (*selected)[count-1].second = fitness((*selected)[count-1].first, *g); 
                
             }
-           
+            cout << "END W: \n";
             ff_send_out(GO_ON);
             return GO_ON;
         }
 };
+
+void printPop(vector<chromosome>& p){
+    for(int i = 0; i < p.size(); i++){
+        cout << "\n\n" << p[i].first.size() << "\n\n";
+        cout << "F: " << p[i].second << "  ";
+        for(int j = 0; j < p[i].first.size(); j++){
+            cout << "" << p[i].first[j] << "  ";
+        }
+        cout << "\n";
+    }
+}
 
 int main(int argc, char* argv[]){
      if(argc < 6){

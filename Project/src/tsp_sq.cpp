@@ -81,7 +81,7 @@ void selection(int selection_number, vector<chromosome>& selected){
     uniform_real_distribution<double> distribution(0.0, 1.0); //generate the value to compare to choose population
     uniform_int_distribution<int> index_gen(0, size-1);
         
-   double max_fitness = population[size-1].second; //population is sorted
+    double max_fitness = population[size-1].second; //population is sorted
     int count = 0;
         
     while(count < selection_number){
@@ -89,7 +89,6 @@ void selection(int selection_number, vector<chromosome>& selected){
         double probability = distribution(generator);
         while(probability > (population[index].second / max_fitness)){
             index = index_gen(generator);
-            
         }
         selected[count] = population[index];
         count++;
