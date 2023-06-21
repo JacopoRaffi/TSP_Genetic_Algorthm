@@ -8,14 +8,19 @@
 
 using namespace std;
 using Graph = vector<vector<double>>; //Adjiacency Matrix
-using chromosome = pair<vector<int>, double>;
+using chromosome = pair<vector<int>, double>; //single individual of the population
 
 Graph g;
 vector<chromosome> population;
 random_device rd;
 mt19937 generator{rd()};
 
-double fitness(vector<int> path){
+/**
+     * @brief Computes the fitness of a chromosome 
+     * @param path is a possible solution for TSP
+     * @return the fitness value
+     */
+double fitness(vector<int>& path){
     //utimer ut("FITN: ");
     double sum = 0.0;
     int size = path.size();
@@ -27,6 +32,11 @@ double fitness(vector<int> path){
     return (1/sum);
 }
 
+/**
+     * @brief Save into a vector of double the coordinates of the cities 
+     * @param file is the txt file with city coordinates.
+     * @return a vector containing the coordinates of each city
+     */
 vector<pair<double, double>> read_coord_file(string file){
     ifstream read_file(file);
     string coordinates;
@@ -43,10 +53,21 @@ vector<pair<double, double>> read_coord_file(string file){
     return cities;
 }
 
+/**
+     * @brief Computes the euclidean distance between two points 
+     * @param coord_a is the first coordinates
+     * @param coord_b is the second coordnates
+     * @return the distance computed
+     */
 inline double euclidean_distance(pair<double, double> coord_a, pair<double, double> coord_b){
     return sqrt(pow(coord_b.first - coord_a.first, 2) + pow(coord_b.second - coord_a.second, 2));
 }
 
+/**
+     * @brief Initialize the adjiacency matrix
+     * @param cities is a vector with coordinates of the cities
+     * @return the Graph
+     */
 Graph graph_init(vector<pair<double, double>>& cities){ 
     Graph g(cities.size());
     //lower triangular matrix (un-directed graph) so I save, more or less, half space 
@@ -60,6 +81,11 @@ Graph graph_init(vector<pair<double, double>>& cities){
     return g;
 }
 
+/**
+     * @brief Create and evaluate the first generation of chromosomes
+     * @param population_size is the dimension of the population of chromosomes
+     * @param start_vertex is the strarting position for the TSP
+     */
 void generation(int population_size, int start_vertex){
     population = vector<chromosome>(population_size); 
     for(int i = 0; i < population_size; i++){
@@ -75,6 +101,11 @@ void generation(int population_size, int start_vertex){
     }
 }
 
+/**
+     * @brief Select the individuals for the crossover and mutation phases
+     * @param selection_number is the number of chromosomes to select
+     * @param selected is the vector containing the selected individuals
+     */
 void selection(int selection_number, vector<chromosome>& selected){
     double total_fitness = 0.0;
     int size = population.size();
@@ -95,6 +126,10 @@ void selection(int selection_number, vector<chromosome>& selected){
     }
 } 
 
+/**
+     * @brief Fix a chromosome after the swap between two parents (avoid repeated nodes)
+     * @param chr is the chromosome to fix
+     */
 void fix_chromosome(chromosome& chr){
         //check the occurences of each city
     vector<int> duplicate(chr.first.size(), 0); //ndexes represent cities
@@ -108,7 +143,7 @@ void fix_chromosome(chromosome& chr){
     
     if(need_fix){
         for(int i = 0; i < chr.first.size(); i++){
-            if(duplicate[i] == 0)
+            if(duplicate[i] == 0) //indexes that have 0 occurrences
                 missing.push_back(i);
         }
         int miss_index = 0;
@@ -122,6 +157,11 @@ void fix_chromosome(chromosome& chr){
     }
 }
 
+/**
+     * @brief Apply, with a certain probability, the mutation on a chromosome
+     * @param chr is a chromosome
+     * @param rate is the probability that the mutation occurs
+     */
 void mutation(chromosome& chr, double rate){
     uniform_int_distribution<int> index_gen(1, g.size() - 1); //generate the value to compare to choose population
     uniform_real_distribution<double> prob_gen(0.0, 1.0); //generate the value to compare to choose population
@@ -134,6 +174,11 @@ void mutation(chromosome& chr, double rate){
     }
 }
 
+/**
+     * @brief Computes crossover, fix, mutation and evaluation phases in a single for loop
+     * @param selected is the vector containing all the chromosome selected for the phases
+     * @param mutation_rate is the probabilty that a mutation occurs
+     */
 void crossover(vector<chromosome>& selected, double mutation_rate){
     uniform_int_distribution<int> index_gen(3, g.size() - 2); //i want to avoid parts of one element
     
@@ -146,7 +191,7 @@ void crossover(vector<chromosome>& selected, double mutation_rate){
         auto end_second = selected[i+1].first.end();
 
         {
-            utimer ut("CROSS: ");
+        //utimer ut("CROSS: ");
         swap_ranges(begin_first, begin_first + index, begin_second);
         swap_ranges(begin_second + index, end_second, begin_second + index);
         }   

@@ -16,6 +16,11 @@ using namespace std;
 using Graph = vector<vector<double>>; //Adjiacency Matrix
 using chromosome = pair<vector<int>, double>;
 
+/**
+     * @brief Computes the fitness of a chromosome 
+     * @param path is a possible solution for TSP
+     * @return the fitness value
+     */
 double fitness(vector<int>& path, Graph& g){
     double sum = 0.0;
     int size = path.size();
@@ -27,6 +32,11 @@ double fitness(vector<int>& path, Graph& g){
     return (1/sum);
 }
 
+/**
+     * @brief Save into a vector of double the coordinates of the cities 
+     * @param file is the txt file with city coordinates.
+     * @return a vector containing the coordinates of each city
+     */
 vector<pair<double, double>> read_coord_file(string file){
     ifstream read_file(file);
     string coordinates;
@@ -43,10 +53,21 @@ vector<pair<double, double>> read_coord_file(string file){
     return cities;
 }
 
+/**
+     * @brief Computes the euclidean distance between two points 
+     * @param coord_a is the first coordinates
+     * @param coord_b is the second coordnates
+     * @return the distance computed
+     */
 inline double euclidean_distance(pair<double, double> coord_a, pair<double, double> coord_b){
     return sqrt(pow(coord_b.first - coord_a.first, 2) + pow(coord_b.second - coord_a.second, 2));
 }
 
+/**
+     * @brief Initialize the adjiacency matrix
+     * @param cities is a vector with coordinates of the cities
+     * @return the Graph
+     */
 Graph graph_init(vector<pair<double, double>>& cities){ 
     Graph g(cities.size());
     //lower triangular matrix (un-directed graph) so I save, more or less, half space 
@@ -60,6 +81,10 @@ Graph graph_init(vector<pair<double, double>>& cities){
     return g;
 }
 
+/**
+     * @brief Fix a chromosome after the swap between two parents (avoid repeated nodes)
+     * @param chr is the chromosome to fix
+     */
 void fix_chromosome(chromosome& chr){
         //check the occurences of each city
     vector<int> duplicate(chr.first.size(), 0); //ndexes represent cities
@@ -87,6 +112,13 @@ void fix_chromosome(chromosome& chr){
     }
 }
 
+/**
+     * @brief Select two parents from population
+     * @param gen is the generator for random values
+     * @param prob is the probability distributon for random values
+     * @param max_fitness is the maximum fitness of the previous generation
+     * @param population is the population of chromosome from which to select
+     */
 pair<int, int> select_parents(mt19937& gen, uniform_real_distribution<double>& prob, double max_fitness, vector<chromosome>& population){
     uniform_int_distribution<int> ind_gen(0, population.size()-1);
     int par_1 = ind_gen(gen), par_2 = ind_gen(gen);
@@ -106,6 +138,12 @@ pair<int, int> select_parents(mt19937& gen, uniform_real_distribution<double>& p
     return (make_pair(par_1, par_2));
 }
 
+/**
+     * @brief Apply, with a certain probability, the mutation on a chromosome
+     * @param chr is a chromosome
+     * @param rate the probability that the mutation occurs
+     * @param generator generator used for random value
+     */
 void mutation(chromosome& chr, double rate, mt19937& generator){
     uniform_int_distribution<int> index_gen(1, chr.first.size() - 1); //generate the value to compare to choose population
     uniform_real_distribution<double> prob_gen(0.0, 1.0); //generate the value to compare to choose population
@@ -118,14 +156,15 @@ void mutation(chromosome& chr, double rate, mt19937& generator){
     }
 }
 
+//The emitter of the farm, it computes the merge phase
 class merge_em : public ff_monode{
     private: 
         vector<chromosome>* population;
         vector<chromosome>* selected; 
-        int generations;
+        int generations; //number of iteratons
         int workers;
-        int counter = 0;
-        bool first_gen = true;
+        int counter = 0; //counter used to understand if all worker completed their iteration
+        bool first_gen = true; //used to understand if this is the first iteration
     
     public:
         merge_em(int generations, int workers, vector<chromosome>* pops, vector<chromosome>* parents){
@@ -136,22 +175,21 @@ class merge_em : public ff_monode{
         }
 
         void* svc(void* inp){
-            if(generations != 0){
-                if(first_gen){ 
+            if(generations != 0){ //still iteration to do
+                if(first_gen){ //no need to do anything, just let the workers start
                     broadcast_task(GO_ON);
                     first_gen = false;
                     return GO_ON;
                 }
 
-                if(counter < (workers-1)){
+                if(counter < (workers-1)){ //understand if all workers have completed their termination
                     counter++;
-                    cout << counter << "\n";
                     return GO_ON;
                 }
                 swap_ranges(selected->begin(), selected->end(), population->begin());
                 std::sort(population->begin(), population->end(), [](chromosome& a, chromosome& b) {return a.second < b.second; });
-                counter = 0;
-                generations--;
+                counter = 0; //reset counter for next iteration
+                generations--; //decrease the number of iteration
                 broadcast_task(GO_ON);
                 return GO_ON;
             }
@@ -161,16 +199,17 @@ class merge_em : public ff_monode{
         }
 };
 
+//The worker of the farm, it computes Selection, Crossover, Mutation, Fitness
 class worker_SCMF : public ff_node{
     private: 
         Graph* g;
         vector<chromosome>* population;
         vector<chromosome>* selected; 
-        int start;
-        int end;
+        int start; //start index
+        int end; //last index excluded
         double mutation_rate;
         random_device rd;
-        mt19937 generator{rd()};
+        mt19937 generator{rd()}; //generator used for random values
 
     public: 
         worker_SCMF(vector<chromosome>* plt, vector<chromosome>* slc, Graph* graph, int start, int end, double m_rate){
@@ -194,7 +233,7 @@ class worker_SCMF : public ff_node{
                 (*selected)[count++] = (*population)[parents.second];
                 
                 int cross_index = cross_gen(generator);
-            
+                //count-2 is the first parent, count-1 is the second parent
                 auto begin_first = (*selected)[count-2].first.begin();
                 auto begin_second = (*selected)[count-1].first.begin();
                 auto end_first = (*selected)[count-2].first.end();
@@ -203,8 +242,8 @@ class worker_SCMF : public ff_node{
                 swap_ranges(begin_first, begin_first + cross_index, begin_second);
                 swap_ranges(begin_second + cross_index, end_second, begin_second + cross_index);
                 
-                fix_chromosome((*selected)[count-2]); //first parent
-                fix_chromosome((*selected)[count-1]); //second parent
+                fix_chromosome((*selected)[count-2]); 
+                fix_chromosome((*selected)[count-1]); 
                
                 mutation((*selected)[count-2], mutation_rate, generator);
                 mutation((*selected)[count-1], mutation_rate, generator);
@@ -213,22 +252,10 @@ class worker_SCMF : public ff_node{
                 (*selected)[count-1].second = fitness((*selected)[count-1].first, *g); 
                
             }
-            cout << "END W: \n";
             ff_send_out(GO_ON);
             return GO_ON;
         }
 };
-
-void printPop(vector<chromosome>& p){
-    for(int i = 0; i < p.size(); i++){
-        cout << "\n\n" << p[i].first.size() << "\n\n";
-        cout << "F: " << p[i].second << "  ";
-        for(int j = 0; j < p[i].first.size(); j++){
-            cout << "" << p[i].first[j] << "  ";
-        }
-        cout << "\n";
-    }
-}
 
 int main(int argc, char* argv[]){
      if(argc < 6){
@@ -256,6 +283,7 @@ int main(int argc, char* argv[]){
     vector<chromosome> population = vector<chromosome>(population_size);
     vector<chromosome> selected = vector<chromosome>(parents);
 
+    //worker function for the first generation of chromosome
     auto gen_work = [&](unsigned int i){
         random_device rd;
         mt19937 generator{rd()};
@@ -271,7 +299,10 @@ int main(int argc, char* argv[]){
 
     utimer ut("ALL: ");
     //Generation phase (parallelized)
+    {
+    //utimer t("GEN: ");
     parallel_for(0, population_size, gen_work, workers);
+    }
     std::sort(population.begin(), population.end(), [](chromosome& a, chromosome& b) {return a.second < b.second; }); //need sorted
     //Selection + Crossover + Mutation + Fitness
     //Distribution of couples among workers

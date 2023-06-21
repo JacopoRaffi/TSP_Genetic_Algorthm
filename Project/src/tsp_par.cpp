@@ -14,13 +14,18 @@ using namespace std;
 using Graph = vector<vector<double>>; //Adjiacency Matrix
 using chromosome = pair<vector<int>, double>;
 
-Graph g; // graph on which the algorithm will iterate
+Graph g;
 vector<chromosome> population;
 vector<chromosome> selected;
 bool go_on = false;
 mutex worker_lock;
-condition_variable wait_merge;
+condition_variable wait_merge; //condition variable used by work to understand when they can start their work
 
+/**
+     * @brief Computes the fitness of a chromosome 
+     * @param path is a possible solution for TSP
+     * @return the fitness value
+     */
 double fitness(vector<int>& path){
     double sum = 0.0;
     int size = path.size();
@@ -32,6 +37,11 @@ double fitness(vector<int>& path){
     return (1/sum);
 }
 
+/**
+     * @brief Save into a vector of double the coordinates of the cities 
+     * @param file is the txt file with city coordinates.
+     * @return a vector containing the coordinates of each city
+     */
 vector<pair<double, double>> read_coord_file(string file){
     ifstream read_file(file);
     string coordinates;
@@ -48,10 +58,21 @@ vector<pair<double, double>> read_coord_file(string file){
     return cities;
 }
 
+/**
+     * @brief Computes the euclidean distance between two points 
+     * @param coord_a is the first coordinates
+     * @param coord_b is the second coordnates
+     * @return the distance computed
+     */
 inline double euclidean_distance(pair<double, double> coord_a, pair<double, double> coord_b){
     return sqrt(pow(coord_b.first - coord_a.first, 2) + pow(coord_b.second - coord_a.second, 2));
 }
 
+/**
+     * @brief Initialize the adjiacency matrix
+     * @param cities is a vector with coordinates of the cities
+     * @return the Graph
+     */
 Graph graph_init(vector<pair<double, double>>& cities){ 
     Graph g(cities.size());
     //lower triangular matrix (un-directed graph) so I save, more or less, half space 
@@ -65,6 +86,10 @@ Graph graph_init(vector<pair<double, double>>& cities){
     return g;
 }
 
+/**
+     * @brief Fix a chromosome after the swap between two parents (avoid repeated nodes)
+     * @param chr is the chromosome to fix
+     */
 void fix_chromosome(chromosome& chr){
         //check the occurences of each city
     vector<int> duplicate(chr.first.size(), 0); //ndexes represent cities
@@ -92,6 +117,12 @@ void fix_chromosome(chromosome& chr){
     }
 }
 
+/**
+     * @brief Select two parents from population
+     * @param gen is the generator for random values
+     * @param prob is the probability distributon for random values
+     * @param max_fitness is the maximum fitness of the previous generation
+     */
 pair<int, int> select_parents(mt19937& gen, uniform_real_distribution<double>& prob, double max_fitness){
     uniform_int_distribution<int> ind_gen(0, population.size()-1);
     int par_1 = ind_gen(gen), par_2 = ind_gen(gen);
@@ -111,6 +142,12 @@ pair<int, int> select_parents(mt19937& gen, uniform_real_distribution<double>& p
     return (make_pair(par_1, par_2));
 }
 
+/**
+     * @brief Apply, with a certain probability, the mutation on a chromosome
+     * @param chr is a chromosome
+     * @param rate the probability that the mutation occurs
+     * @param generator generator used for random value
+     */
 void mutation(chromosome& chr, double rate, mt19937& generator){
     uniform_int_distribution<int> index_gen(1, g.size() - 1); //generate the value to compare to choose population
     uniform_real_distribution<double> prob_gen(0.0, 1.0); //generate the value to compare to choose population
@@ -123,6 +160,14 @@ void mutation(chromosome& chr, double rate, mt19937& generator){
     }
 }
 
+/**
+     * @brief Task executed by workers threads
+     * @param start first index of the interval of a worker
+     * @param end last index(not included) of the interval of a worker
+     * @param generatons is the number of iteration to execute
+     * @param b is the barrier used to understand when merge phase can start
+     * @param mutation_rate is the probability that the mutaton occurs
+     */
 void task(int start, int end, int generations, barrier<void(*)(void) noexcept>& b, double mutation_rate){
     int pop_size = population.size();
     random_device rd;
@@ -194,7 +239,8 @@ int main(int argc, char* argv[]){
     g = graph_init(cities);
     population = vector<chromosome>(population_size);
     utimer ut("ALL: ");
-    //function for generation
+
+    //worker function for the first generation of chromosome
     auto gen_work = [](int start, int end){
         random_device rd;
         mt19937 generator{rd()};
@@ -211,7 +257,7 @@ int main(int argc, char* argv[]){
     };
     vector<thread> pool;
 
-    int remainder = population_size % workers; //try to load balance (distribute remander work among threads)
+    int remainder = population_size % workers; //try to load balance (distribute remainder work among threads)
     int size = population_size / workers;
     int start = 0, end = 0;
     for(int i = 0; i < workers; i++){
@@ -234,7 +280,7 @@ int main(int argc, char* argv[]){
     }
     
     vector<pair<int, int>> indexes(workers);
-    int load = parents / workers;
+    int load = parents / workers; //load to distribute between workers
     if (load % 2)
         load--; 
     int last_index = -1;
@@ -250,7 +296,7 @@ int main(int argc, char* argv[]){
     int count = 1;
 
     selected = vector<chromosome>(parents);
-    barrier<void(*)(void) noexcept> b(workers+1, []() noexcept{ go_on = false;});
+    barrier<void(*)(void) noexcept> b(workers+1, []() noexcept{ go_on = false;}); //barrier used to understand when the merge phase can start
 
     for (int i = workers - loads_to_add; i < workers; i++){
         indexes[i].first = indexes[i-1].second;
