@@ -13,7 +13,7 @@ The only dependency is [FastFlow](https://github.com/fastflow/fastflow).
 Aldinucci, M. , Danelutto, M. , Kilpatrick, P. and Torquati, M. (2017). Fastflow: High‐Level and Efficient Streaming on Multicore. In Programming multi‐core and many‐core computing systems (eds S. Pllana and F. Xhafa).
 
 ## How to Compile 
-To compile and run the various versions of the programme go to the "src" folder.
+To compile the three versions of the programme go to the "src" folder.
 The commands to compile are:
 - **sequential**: g++ -O3 -std=c++20 tsp\_sq.cpp -o sq;
 - **native threads**: g++ -O3 -pthread -std=c++20 tsp\_par.cpp -o par;
