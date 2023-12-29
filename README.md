@@ -6,6 +6,7 @@ algorithm to be implemented assumes a path is represented in a chromosome as a v
 
 ## Dependencies
 The only dependency is [FastFlow](https://github.com/fastflow/fastflow).
+
 Aldinucci, M. , Danelutto, M. , Kilpatrick, P. and Torquati, M. (2017). Fastflow: High‐Level and Efficient Streaming on Multicore. In Programming multi‐core and many‐core computing systems (eds S. Pllana and F. Xhafa).
 
 ## How to Compile 
