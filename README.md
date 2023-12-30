@@ -32,6 +32,7 @@ File must contain, each row, the following values:
 Coord_x Coord_y
 
 Example:
+
 9983.3333 98550.0000
 
 10000.0000 98533.3333
