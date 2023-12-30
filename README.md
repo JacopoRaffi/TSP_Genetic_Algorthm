@@ -20,3 +20,11 @@ The commands to compile are:
 - **FastFlow**: g++ -O3 -pthread -std=c++20 -I fastflow/path tsp\_ff.cpp -o ff.
 
 ## How to Run
+To execute the programs the commands are (with examples):
+- **sequential**: ./sq file population mut_rate cross_rate generations
+- **native threads**: ./par file population mut_rate cross_rate generations workers
+- **FastFlow**: ./ff file population mut_rate cross_rate generations workers
+
+### File .txt format
+
+### Execution examples
