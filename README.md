@@ -26,5 +26,20 @@ To execute the programs the commands are (with examples):
 - **FastFlow**: ./ff file population mut_rate cross_rate generations workers
 
 ### File .txt format
+The .txt files contain the cities' coordinates.
+
+File must contain, each row, the following values:
+Coord_x Coord_y
+
+Example:
+9983.3333 98550.0000
+10000.0000 98533.3333
+10000.0000 98550.0000
+10000.0000 98566.6667
+10016.6667 98516.6667
+10033.3333 98533.3333
+10033.3333 98550.0000
+10033.3333 98583.3333
+10050.0000 98550.0000
 
 ### Execution examples
