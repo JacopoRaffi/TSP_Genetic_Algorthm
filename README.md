@@ -33,13 +33,14 @@ Coord_x Coord_y
 
 Example:
 9983.3333 98550.0000
+
 10000.0000 98533.3333
+
 10000.0000 98550.0000
-10000.0000 98566.6667
-10016.6667 98516.6667
-10033.3333 98533.3333
-10033.3333 98550.0000
-10033.3333 98583.3333
-10050.0000 98550.0000
+
 
 ### Execution examples
+Example on how to run the different versions:
+- **sequential**: ./sq ../cities_500.txt 3000 0.3 0.7 1000
+- **native threads**: ./par ../cities_500.txt 3000 0.3 0.7 1000 4
+- **FastFlow**: ./ff ../cities_500.txt 3000 0.3 0.7 1000 4
