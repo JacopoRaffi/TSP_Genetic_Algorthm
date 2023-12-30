@@ -39,7 +39,7 @@ Example:
 
 
 ### Execution examples
-Example on how to run the different versions:
+Examples on how to run the different versions:
 - **sequential**: ./sq ../cities_500.txt 3000 0.3 0.7 1000
 - **native threads**: ./par ../cities_500.txt 3000 0.3 0.7 1000 4
 - **FastFlow**: ./ff ../cities_500.txt 3000 0.3 0.7 1000 4
